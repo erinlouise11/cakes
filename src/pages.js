@@ -1,18 +1,20 @@
 import React from "react";
+import './App.css';
 import * as s from './styles';
-import {Link} from "react-router-dom";
+import {Link} from 'react-router-dom';
+import logo from './img/logo.png';
 
 export function Home() {
     return (
-        <section class="header-banner">
-            <s.HeroDiv class="header-banner-hero" /> 
-            <s.Nav class="header-banner-nav">
-                <s.Ul class="nav-links">
-                    <s.Li>Cakes</s.Li>
-                    <s.Li>Cupcakes</s.Li>
-                    {/*<s.Li><s.Img src={} /></s.Li>*/}
-                    <s.Li>Our Story</s.Li>
-                    <s.Li>Contact Us</s.Li>
+        <section>
+            <s.HeroDivBig className="home-hero hero" /> 
+            <s.Nav>
+                <s.Ul>
+                    <Link className="nav-link" to="/cakes"><s.Li>Cakes</s.Li></Link>
+                    <Link className="nav-link" to="/cupcakes"><s.Li>Cupcakes</s.Li></Link>
+                    <Link className="nav-link" to="/"><s.Li><s.Img src={logo} /></s.Li></Link>
+                    <Link className="nav-link" to="/about"><s.Li>Our Story</s.Li></Link>
+                    <Link className="nav-link" to="/contact"><s.Li>Contact</s.Li></Link>
                 </s.Ul>
             </s.Nav>
         </section>        
@@ -21,32 +23,68 @@ export function Home() {
 
 export function Cakes() {
     return (
-        <div>
-            <h1>[About]</h1>
-        </div>
+        <section>
+            <s.HeroDivSmall className="cake-hero hero" /> 
+            <s.Nav>
+                <s.Ul>
+                    <Link className="nav-link" to="/cakes"><s.Li>Cakes</s.Li></Link>
+                    <Link className="nav-link" to="/cupcakes"><s.Li>Cupcakes</s.Li></Link>
+                    <Link className="nav-link" to="/"><s.Li><s.Img src={logo} /></s.Li></Link>
+                    <Link className="nav-link" to="/about"><s.Li>Our Story</s.Li></Link>
+                    <Link className="nav-link" to="/contact"><s.Li>Contact</s.Li></Link>
+                </s.Ul>
+            </s.Nav>
+        </section>        
     );
 }
 
 export function Cupcakes() {
     return (
-        <div>
-            <h1>[Events]</h1>
-        </div>
+        <section>
+            <s.HeroDivSmall className="cc-hero hero" /> 
+            <s.Nav>
+                <s.Ul>
+                    <Link className="nav-link" to="/cakes"><s.Li>Cakes</s.Li></Link>
+                    <Link className="nav-link" to="/cupcakes"><s.Li>Cupcakes</s.Li></Link>
+                    <Link className="nav-link" to="/"><s.Li><s.Img src={logo} /></s.Li></Link>
+                    <Link className="nav-link" to="/about"><s.Li>Our Story</s.Li></Link>
+                    <Link className="nav-link" to="/contact"><s.Li>Contact</s.Li></Link>
+                </s.Ul>
+            </s.Nav>
+        </section>        
     );
 }
 
 export function About() {
     return (
-        <div>
-            <h1>[Contact]</h1>
-        </div>
+        <section>
+        <s.HeroDivSmall className="about-hero hero" /> 
+        <s.Nav>
+            <s.Ul>
+                <Link className="nav-link" to="/cakes"><s.Li>Cakes</s.Li></Link>
+                <Link className="nav-link" to="/cupcakes"><s.Li>Cupcakes</s.Li></Link>
+                <Link className="nav-link" to="/"><s.Li><s.Img src={logo} /></s.Li></Link>
+                <Link className="nav-link" to="/about"><s.Li>Our Story</s.Li></Link>
+                <Link className="nav-link" to="/contact"><s.Li>Contact</s.Li></Link>
+            </s.Ul>
+        </s.Nav>
+    </section>        
     );
 }
 
 export function Contact() {
     return (
-        <div>
-            <h1>[Contact]</h1>
-        </div>
+        <section>
+        <s.HeroDivSmall className="contact-hero hero" /> 
+        <s.Nav>
+            <s.Ul>
+                <Link className="nav-link" to="/cakes"><s.Li>Cakes</s.Li></Link>
+                <Link className="nav-link" to="/cupcakes"><s.Li>Cupcakes</s.Li></Link>
+                <Link className="nav-link" to="/"><s.Li><s.Img src={logo} /></s.Li></Link>
+                <Link className="nav-link" to="/about"><s.Li>Our Story</s.Li></Link>
+                <Link className="nav-link" to="/contact"><s.Li>Contact</s.Li></Link>
+            </s.Ul>
+        </s.Nav>
+    </section>        
     );
 }

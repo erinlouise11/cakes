@@ -1,18 +1,14 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import homeHeroImg from './img/homeBG.jpg';
 
-export const HeroDiv = styled.div`
+export const HeroDivBig = styled.div`
     & {
         width: 100%;
         height: 100vh;
         position: relative;
         top: 0;
         margin: 0;
-        background-color: black;
-        background-image: url(${homeHeroImg});
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+        /* background-image: url(${homeHeroImg}); */
     }
     &:after {
         content: '';
@@ -20,6 +16,25 @@ export const HeroDiv = styled.div`
         position: absolute;
         background-color: #666;
         opacity: 0.4;
+        width: 100%;
+        height: 100%;
+    }
+`;
+
+export const HeroDivSmall = styled.div`
+    & {
+        width: 100%;
+        height: 550px;
+        position: relative;
+        top: 0;
+        margin: 0;
+    }
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        background-color: #666;
+        opacity: 0.2;
         width: 100%;
         height: 100%;
     }
@@ -59,3 +74,4 @@ export const Img = styled.img`
     width: 100px;
     height: 100px;
 `;
+
