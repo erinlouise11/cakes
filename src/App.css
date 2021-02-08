@@ -3,16 +3,16 @@
 }
 
 .home-hero {
-  background-image: url('./img/homeBG.jpg');
-  background-position: center;
+  background-image: url('./img/cupcakeshome2.jpg');
+  background-position: top;
 }
 
-.cake-hero {
+.products-hero {
   background-image: url('./img/cakesBG.jpg');
   background-position: top;
 }
 
-.cc-hero {
+.occasions-hero {
   background-image: url('./img/cupcakeBG.jpg');
   background-position: center;
 }
@@ -22,7 +22,7 @@
   background-position: right 50% bottom -150px;
 }
 
-.contact-hero {
+.order-hero {
   background-image: url('./img/callBG.jpg');
   background-position: center;
 }
