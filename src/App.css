@@ -2,32 +2,32 @@
   text-decoration: none;
 }
 
+.bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .home-hero {
-  background-image: url('./img/cupcakeshome2.jpg');
-  background-position: top;
+  background-image: url('./img/homeBG.jpg');
+  background-position: center;
 }
 
 .products-hero {
-  background-image: url('./img/cakesBG.jpg');
+  background-image: url('./img/productsBG.jpg');
   background-position: top;
 }
 
 .occasions-hero {
-  background-image: url('./img/cupcakeBG.jpg');
+  background-image: url('./img/occasionsBG.jpg');
   background-position: center;
 }
 
 .about-hero {
   background-image: url('./img/aboutBG.jpg');
-  background-position: right 50% bottom -150px;
+  background-position: left 50% top 40%;
 }
 
 .order-hero {
-  background-image: url('./img/callBG.jpg');
+  background-image: url('./img/orderBG.jpg');
   background-position: center;
-}
-
-.hero {
-  background-repeat: no-repeat;
-  background-size: cover;
 }
