@@ -14,6 +14,19 @@ export const pinkButton = styled.button`
     letter-spacing: 1px;
 `;
 
+export const bigPinkButton = styled.button`
+    width: auto;
+    height: 60px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #CC84BD;
+    color: #222;
+    border: solid 5px #CC84BD;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 1px;
+`;
+
 export const darkButton = styled.button`
     width: auto;
     height: 60px;
@@ -53,7 +66,7 @@ export const smallerP = styled.p`
 
 export const H2 = styled.h2`
     margin: 0;
-    font-size: 50px;
+    font-size: 45px;
     font-weight: bold;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: 2px;
@@ -89,6 +102,21 @@ export const divImg = styled.img`
     height: 500px;    
     object-fit: cover;
     object-position: top;
+`;
+
+export const sideImg = styled.img`
+    width: 270px;
+    height: 360px;    
+    object-fit: cover;
+    object-position: bottom;
+`;
+
+export const midImg = styled.img`
+    width: 340px;
+    height: 440px;    
+    object-fit: cover;
+    object-position: center;
+    border: solid 5px #CC84BD;
 `;
 
 export const HeroDivBig = styled.div`
@@ -172,11 +200,38 @@ export const whiteDiv = styled.div`
 `;
 
 export const divInfo = styled.div`
-    width: 500px;
-    height: 235px;    
-    padding-left: 100px;
+    width: 650px;
+    height: 230px;    
+    padding-left: 90px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;      
+`;
+
+export const darkDiv = styled.div`
+    width: 100%;
+    height: 600px;    
+    background-color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;     
+
+`;
+
+export const divInfoDark = styled.div`
+    width: 550px;
+    height: 210px;  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;      
+`;
+
+export const divImages = styled.div`
+    width: 870px;
+    height: 440px;    
+    display: flex;
+    align-items: center;
+    justify-content: center;      
 `;

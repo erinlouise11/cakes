@@ -31,3 +31,7 @@
   background-image: url('./img/orderBG.jpg');
   background-position: center;
 }
+
+.dark-p, .dark-h2 {
+  color: white !important;
+}
