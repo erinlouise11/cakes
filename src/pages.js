@@ -1,7 +1,7 @@
 import React from "react";
 import './App.css';
 import * as s from './styles';
-import {NavLink} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 import logo from './img/logo.png';
 import lady from './img/ladySmile.jpg';
 import balloons from './img/balloons.jpg';
@@ -17,8 +17,8 @@ export function Home() {
                     <s.H1>yummm...</s.H1>
                     <s.largerP>Our delicious products are hand crafted and home baked. Shipped with love all over the US.</s.largerP>
                     <s.buttonDiv className="button-container">
-                        <s.pinkButton className="order-button">ORDER NOW</s.pinkButton>
-                        <s.darkButton className="products-button">SEE PRODUCTS</s.darkButton>
+                        <Link to="/order"><s.pinkButton className="button" type="button">ORDER NOW</s.pinkButton></Link>
+                        <Link to="/products"><s.darkButton className="button" type="button">SEE PRODUCTS</s.darkButton></Link>
                     </s.buttonDiv>                    
                 </s.homeHeroFlex>
             </s.HeroDivBig>           
@@ -37,7 +37,7 @@ export function Home() {
                 <s.divInfo>
                     <s.H2>the short intro</s.H2>
                     <s.smallerP>Since a love for baking arose from a high school bake sale, the art of cakes and cupcakes have been what I live for. I can't wait for you to experience some Cool AF Cakes!</s.smallerP>
-                    <s.darkButton to="/about">LEARN MORE</s.darkButton>
+                    <Link to="/about"><s.darkButton className="button" type="button">LEARN MORE</s.darkButton></Link>
                 </s.divInfo>
             </s.whiteDiv>
 
@@ -45,21 +45,21 @@ export function Home() {
                 <s.divInfoDark>
                     <s.H2 className="dark-h2">cakes, cupcakes, or both?</s.H2>
                     <s.smallerP className="dark-p">We offer 'cake with cupcakes' packages for the special occasions that need a little extra!</s.smallerP>
-                    <s.bigPinkButton>SEE ALL PRODUCTS</s.bigPinkButton>
+                    <Link to="/products"><s.bigPinkButton className="button" type="button">SEE ALL PRODUCTS</s.bigPinkButton></Link>
                 </s.divInfoDark>
                 <s.divImages>
                     <s.sideImg src={cake} />
-                    <s.midImg src={middle} />
+                    <s.midImg src={middle} /> 
                     <s.sideImg src={cupcakes} />
                 </s.divImages>
             </s.darkDiv>
-
+   
             <s.whiteDiv className="occasions-div white">
                 <s.divImg src={balloons} />
                 <s.divInfo>
                     <s.H2>celebrations or tragedies</s.H2>
                     <s.smallerP>No matter the occasion, make it special with a Cool AF Cakes product!</s.smallerP>
-                    <s.darkButton>OCCASIONS</s.darkButton>
+                    <Link to="/occasions"><s.darkButton className="button" type="button">OCCASIONS</s.darkButton></Link>
                 </s.divInfo>
             </s.whiteDiv>
             

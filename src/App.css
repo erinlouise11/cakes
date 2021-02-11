@@ -2,6 +2,10 @@
   text-decoration: none;
 }
 
+.button {
+  cursor: pointer;
+}
+
 .selected {
   border-bottom: solid 3px #CC84BD;
 }
