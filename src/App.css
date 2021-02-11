@@ -2,6 +2,10 @@
   text-decoration: none;
 }
 
+.selected {
+  border-bottom: solid 3px #CC84BD;
+}
+
 .bg {
   background-repeat: no-repeat;
   background-size: cover;

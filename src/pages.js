@@ -1,7 +1,7 @@
 import React from "react";
 import './App.css';
 import * as s from './styles';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import logo from './img/logo.png';
 import lady from './img/ladySmile.jpg';
 import balloons from './img/balloons.jpg';
@@ -24,11 +24,11 @@ export function Home() {
             </s.HeroDivBig>           
             <s.Nav>
                 <s.Ul>
-                    <Link className="nav-link" to="/products"><s.Li>Products</s.Li></Link>
-                    <Link className="nav-link" to="/occasions"><s.Li>Occasions</s.Li></Link>
-                    <Link className="nav-link" to="/"><s.Li><s.Logo src={logo} /></s.Li></Link>
-                    <Link className="nav-link" to="/about"><s.Li>Our Story</s.Li></Link>
-                    <Link className="nav-link" to="/order"><s.Li>Order</s.Li></Link>
+                    <NavLink className="nav-link" to="/products"><s.Li>Products</s.Li></NavLink>
+                    <NavLink className="nav-link" to="/occasions"><s.Li>Occasions</s.Li></NavLink>
+                    <NavLink className="nav-link" to="/"><s.Li><s.Logo src={logo} /></s.Li></NavLink>
+                    <NavLink className="nav-link" to="/about"><s.Li>Our Story</s.Li></NavLink>
+                    <NavLink className="nav-link" to="/order"><s.Li>Order</s.Li></NavLink>
                 </s.Ul>
             </s.Nav>
 
@@ -76,11 +76,11 @@ export function Products() {
             <s.HeroDivSmall className="products-hero bg" /> 
             <s.Nav>
                 <s.Ul>
-                    <Link className="nav-link" to="/products"><s.Li>Products</s.Li></Link>
-                    <Link className="nav-link" to="/occasions"><s.Li>Occasions</s.Li></Link>
-                    <Link className="nav-link" to="/"><s.Li><s.Logo src={logo} /></s.Li></Link>
-                    <Link className="nav-link" to="/about"><s.Li>Our Story</s.Li></Link>
-                    <Link className="nav-link" to="/order"><s.Li>Order</s.Li></Link>
+                    <NavLink activeClassName="selected" className="nav-link" to="/products"><s.Li>Products</s.Li></NavLink>
+                    <NavLink className="nav-link" to="/occasions"><s.Li>Occasions</s.Li></NavLink>
+                    <NavLink className="nav-link" to="/"><s.Li><s.Logo src={logo} /></s.Li></NavLink>
+                    <NavLink className="nav-link" to="/about"><s.Li>Our Story</s.Li></NavLink>
+                    <NavLink className="nav-link" to="/order"><s.Li>Order</s.Li></NavLink>
                 </s.Ul>
             </s.Nav>
         </section>        
@@ -93,11 +93,11 @@ export function Occasions() {
             <s.HeroDivSmall className="occasions-hero bg" /> 
             <s.Nav>
                 <s.Ul>
-                    <Link className="nav-link" to="/products"><s.Li>Products</s.Li></Link>
-                    <Link className="nav-link" to="/occasions"><s.Li>Occasions</s.Li></Link>
-                    <Link className="nav-link" to="/"><s.Li><s.Logo src={logo} /></s.Li></Link>
-                    <Link className="nav-link" to="/about"><s.Li>Our Story</s.Li></Link>
-                    <Link className="nav-link" to="/order"><s.Li>Order</s.Li></Link>
+                    <NavLink className="nav-link" to="/products"><s.Li>Products</s.Li></NavLink>
+                    <NavLink activeClassName="selected" className="nav-link" to="/occasions"><s.Li>Occasions</s.Li></NavLink>
+                    <NavLink className="nav-link" to="/"><s.Li><s.Logo src={logo} /></s.Li></NavLink>
+                    <NavLink className="nav-link" to="/about"><s.Li>Our Story</s.Li></NavLink>
+                    <NavLink className="nav-link" to="/order"><s.Li>Order</s.Li></NavLink>
                 </s.Ul>
             </s.Nav>
         </section>        
@@ -110,11 +110,11 @@ export function About() {
         <s.HeroDivSmall className="about-hero bg" /> 
         <s.Nav>
             <s.Ul>
-                <Link className="nav-link" to="/products"><s.Li>Products</s.Li></Link>
-                <Link className="nav-link" to="/occasions"><s.Li>Occasions</s.Li></Link>
-                <Link className="nav-link" to="/"><s.Li><s.Logo src={logo} /></s.Li></Link>
-                <Link className="nav-link" to="/about"><s.Li>Our Story</s.Li></Link>
-                <Link className="nav-link" to="/order"><s.Li>Order</s.Li></Link>
+                <NavLink className="nav-link" to="/products"><s.Li>Products</s.Li></NavLink>
+                <NavLink className="nav-link" to="/occasions"><s.Li>Occasions</s.Li></NavLink>
+                <NavLink className="nav-link" to="/"><s.Li><s.Logo src={logo} /></s.Li></NavLink>
+                <NavLink activeClassName="selected" className="nav-link" to="/about"><s.Li>Our Story</s.Li></NavLink>
+                <NavLink className="nav-link" to="/order"><s.Li>Order</s.Li></NavLink>
             </s.Ul>
         </s.Nav>
     </section>        
@@ -127,11 +127,11 @@ export function Order() {
         <s.HeroDivSmall className="order-hero bg" /> 
         <s.Nav>
             <s.Ul>
-                <Link className="nav-link" to="/products"><s.Li>Products</s.Li></Link>
-                <Link className="nav-link" to="/occasions"><s.Li>Occasions</s.Li></Link>
-                <Link className="nav-link" to="/"><s.Li><s.Logo src={logo} /></s.Li></Link>
-                <Link className="nav-link" to="/about"><s.Li>Our Story</s.Li></Link>
-                <Link className="nav-link" to="/order"><s.Li>Order</s.Li></Link>
+                <NavLink className="nav-link" to="/products"><s.Li>Products</s.Li></NavLink>
+                <NavLink className="nav-link" to="/occasions"><s.Li>Occasions</s.Li></NavLink>
+                <NavLink className="nav-link" to="/"><s.Li><s.Logo src={logo} /></s.Li></NavLink>
+                <NavLink className="nav-link" to="/about"><s.Li>Our Story</s.Li></NavLink>
+                <NavLink activeClassName="selected" className="nav-link" to="/order"><s.Li>Order</s.Li></NavLink>
             </s.Ul>
         </s.Nav>
     </section>        
