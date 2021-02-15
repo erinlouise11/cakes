@@ -52,7 +52,7 @@ export const H1 = styled.h1`
 export const largerP = styled.p`
     margin: 0;
     font-size: 22px;
-    font-family: sans-serif;
+    font-family: 'Segoe Print', Tahoma, Geneva, Verdana, sans-serif;
     color: #222;
 `;
 
@@ -60,7 +60,7 @@ export const smallerP = styled.p`
     width: 500px;
     margin: 0;
     font-size: 18px;
-    font-family: sans-serif;
+    font-family: 'Segoe Print', Tahoma, Geneva, Verdana, sans-serif;
     color: #222;
 `;
 
@@ -74,7 +74,7 @@ export const H2 = styled.h2`
 `;
 
 export const Ul = styled.ul`
-    width: 1000px;
+    width: 900px;
     height: 110px;
     padding-left: 0;
     margin: 0;
@@ -88,7 +88,7 @@ export const Ul = styled.ul`
 export const Li = styled.li`
     display: inline;
     font-size: 22px;
-    font-family: sans-serif;
+    font-family: 'Segoe Print', Tahoma, Geneva, Verdana, sans-serif;
     color: #222;
 `;
 
@@ -141,7 +141,7 @@ export const HeroDivBig = styled.div`
 export const HeroDivSmall = styled.div`
     & {
         width: 100%;
-        height: 550px;
+        height: 480px;
         position: relative;
         top: 0;
         margin: 0;
@@ -179,6 +179,18 @@ export const homeHeroFlex = styled.div`
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;      
+`;
+
+export const heroTitleFlex = styled.div`
+    width: 400px;
+    height: 100px;
+    position: absolute;
+    z-index: 1;
+    bottom: 40%;
+    right: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 `;
 
 export const buttonDiv = styled.div` 

@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import './App.css';
 import * as s from './styles';
 import {Link, NavLink} from 'react-router-dom';
+
 import logo from './img/logo.png';
 import lady from './img/ladySmile.jpg';
 import balloons from './img/balloons.jpg';
@@ -71,9 +72,16 @@ export function Home() {
 }
 
 export function Products() {
+    const products = ["cakes", "cupcakes", "packages"];
+    const [product, setProduct] = useState("");
+
     return (
         <section>
-            <s.HeroDivSmall className="products-hero bg" /> 
+            <s.HeroDivSmall className="products-hero bg">
+                <s.heroTitleFlex className="hero-intro-div">
+                    <s.H1>products</s.H1>
+                </s.heroTitleFlex>
+            </s.HeroDivSmall> 
             <s.Nav>
                 <s.Ul>
                     <NavLink activeClassName="selected" className="nav-link" to="/products"><s.Li>Products</s.Li></NavLink>
@@ -83,6 +91,7 @@ export function Products() {
                     <NavLink className="nav-link" to="/order"><s.Li>Order</s.Li></NavLink>
                 </s.Ul>
             </s.Nav>
+
         </section>        
     );
 }
@@ -90,7 +99,11 @@ export function Products() {
 export function Occasions() {
     return (
         <section>
-            <s.HeroDivSmall className="occasions-hero bg" /> 
+            <s.HeroDivSmall className="occasions-hero bg">
+                <s.heroTitleFlex className="hero-intro-div">
+                    <s.H1>occasions</s.H1>
+                </s.heroTitleFlex>
+            </s.HeroDivSmall> 
             <s.Nav>
                 <s.Ul>
                     <NavLink className="nav-link" to="/products"><s.Li>Products</s.Li></NavLink>
@@ -107,7 +120,11 @@ export function Occasions() {
 export function About() {
     return (
         <section>
-        <s.HeroDivSmall className="about-hero bg" /> 
+        <s.HeroDivSmall className="about-hero bg">
+            <s.heroTitleFlex className="hero-intro-div">
+                <s.H1>our story</s.H1>
+            </s.heroTitleFlex>
+        </s.HeroDivSmall> 
         <s.Nav>
             <s.Ul>
                 <NavLink className="nav-link" to="/products"><s.Li>Products</s.Li></NavLink>
@@ -124,7 +141,11 @@ export function About() {
 export function Order() {
     return (
         <section>
-        <s.HeroDivSmall className="order-hero bg" /> 
+        <s.HeroDivSmall className="order-hero bg">
+            <s.heroTitleFlex className="hero-intro-div">
+                <s.H1>order now</s.H1>
+            </s.heroTitleFlex>
+        </s.HeroDivSmall> 
         <s.Nav>
             <s.Ul>
                 <NavLink className="nav-link" to="/products"><s.Li>Products</s.Li></NavLink>
