@@ -257,16 +257,15 @@ export const divSubNav = styled.div`
     justify-content: center;
 `;
 
-export const subNavElem = styled.button`
-    width: 280px;
-    height: 60px;
-    color: #CC84BD;
-    background-color: #222;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 30px;
-    text-align: center;
-    border: none;
-`;
+// export const subNavElem = styled.button`
+//     width: 280px;
+//     height: 60px;
+//     color: #CC84BD;
+//     background-color: #222;
+    
+//     text-align: center;
+//     border: none;
+// `;
 
 export const productsDiv = styled.div`
     width: 100%;

@@ -10,6 +10,7 @@ import cake from './img/cake.jpg';
 import middle from './img/package.jpg';
 import cupcakes from './img/rainbowCupcakes.jpg';
 
+
 export function Home() {
     return (
         <>
@@ -82,17 +83,17 @@ export function Products() {
             <s.Nav>
                 <s.Ul>
                     <NavLink activeClassName="selected" className="nav-link" to="/products"><s.Li>Products</s.Li></NavLink>
-                    <NavLink className="nav-link" to="/occasions"><s.Li>Occasions</s.Li></NavLink>
+                    <NavLink activeClassName="selected" className="nav-link" to="/occasions"><s.Li>Occasions</s.Li></NavLink>
                     <NavLink className="nav-link" to="/"><s.Li><s.Logo src={logo} /></s.Li></NavLink>
-                    <NavLink className="nav-link" to="/about"><s.Li>Our Story</s.Li></NavLink>
-                    <NavLink className="nav-link" to="/order"><s.Li>Order</s.Li></NavLink>
+                    <NavLink activeClassName="selected" className="nav-link" to="/about"><s.Li>Our Story</s.Li></NavLink>
+                    <NavLink activeClassName="selected" className="nav-link" to="/order"><s.Li>Order</s.Li></NavLink>
                 </s.Ul>
             </s.Nav>
 
             <s.divSubNav>
-                <NavLink className="nav-link" to="/products/cakes"><s.subNavElem className="button">cakes</s.subNavElem></NavLink>
-                <NavLink className="nav-link" to="/products/cupcakes"><s.subNavElem className="button">cupcakes</s.subNavElem></NavLink>
-                <NavLink className="nav-link" to="/products/packages"><s.subNavElem className="button">packages</s.subNavElem></NavLink>
+                <NavLink activeClassName="sub-selected" className="sub-nav-link" to="/products/cakes">cakes</NavLink>
+                <NavLink activeClassName="sub-selected" className="sub-nav-link" to="/products/cupcakes">cupcakes</NavLink>
+                <NavLink activeClassName="sub-selected" className="sub-nav-link" to="/products/packages">packages</NavLink>
             </s.divSubNav>
 
             <s.productsDiv>

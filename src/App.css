@@ -2,12 +2,30 @@
   text-decoration: none;
 }
 
+.sub-nav-link {
+  width: 280px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 30px;
+  text-decoration: none;
+  color: #CC84BD;  
+}
+
 .button {
   cursor: pointer;
 }
 
 .selected {
   border-bottom: solid 3px #CC84BD;
+}
+
+.sub-selected {  
+  color: #222;
+  background-color: #CC84BD;
 }
 
 .bg {
