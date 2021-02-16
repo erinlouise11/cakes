@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import './App.css';
 import * as s from './styles';
-import {Link, NavLink} from 'react-router-dom';
+import {Link, NavLink, Outlet} from 'react-router-dom';
 
 import logo from './img/logo.png';
 import lady from './img/ladySmile.jpg';
@@ -72,9 +72,6 @@ export function Home() {
 }
 
 export function Products() {
-    const products = ["cakes", "cupcakes", "packages"];
-    const [theProduct, setProduct] = useState("cakes");
-
     return (
         <>
             <s.HeroDivSmall className="products-hero bg">
@@ -93,38 +90,39 @@ export function Products() {
             </s.Nav>
 
             <s.divSubNav>
-                {products.map(product => (
-                    <s.subNavElem 
-                        className={"button"} 
-                        type="button" 
-                        key={product} 
-                        onClick={() => setProduct(product)}
-                    >                    
-                    {product.toLocaleLowerCase()}    
-                    </s.subNavElem>
-                ))}
+                <NavLink className="nav-link" to="/products/cakes"><s.subNavElem className="button">cakes</s.subNavElem></NavLink>
+                <NavLink className="nav-link" to="/products/cupcakes"><s.subNavElem className="button">cupcakes</s.subNavElem></NavLink>
+                <NavLink className="nav-link" to="/products/packages"><s.subNavElem className="button">packages</s.subNavElem></NavLink>
             </s.divSubNav>
 
             <s.productsDiv>
-                {theProduct === "cakes" && (
-                    <s.productsDivContent>
-                        <p>cakes</p>
-                    </s.productsDivContent>
-                )}
-                {theProduct === "cupcakes" && (
-                    <s.productsDivContent>
-                        <p>cupcakes</p>
-                    </s.productsDivContent>
-                )}
-                {theProduct === "packages" && (
-                    <s.productsDivContent>
-                        <p>packages</p>
-                    </s.productsDivContent>
-                )}
-                
-            </s.productsDiv>
-        
+                <Outlet />
+            </s.productsDiv>        
         </>        
+    );
+}
+
+export function Cakes() {
+    return (
+        <div>
+            <p>cakes</p>
+        </div>
+    );
+}
+
+export function Cupcakes() {
+    return (
+        <div>
+            <p>cupcakes</p>
+        </div>
+    );
+}
+
+export function Packages() {
+    return (
+        <div>
+            <p>Packages</p>
+        </div>
     );
 }
 
