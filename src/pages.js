@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import './App.css';
+import Slider from 'react-slick';
 import * as s from './styles';
 import {Link, NavLink, Outlet} from 'react-router-dom';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 import logo from './img/logo.png';
 import lady from './img/ladySmile.jpg';
@@ -10,6 +12,19 @@ import cake from './img/cake.jpg';
 import middle from './img/package.jpg';
 import cupcakes from './img/rainbowCupcakes.jpg';
 
+import cake1 from './img/cake1.jpg';
+import cake2 from './img/cake2.jpg';
+import cake3 from './img/cake3.jpg';
+import cake4 from './img/cake4.jpg';
+import cake5 from './img/cake5.jpg';
+import cake6 from './img/cake6.jpg';
+import cake7 from './img/cake7.jpg';
+import cake8 from './img/cake8.jpg';
+import cake9 from './img/cake9.jpg';
+import cake10 from './img/cake10.jpg';
+import cake11 from './img/cake11.jpg';
+
+const images = [cake, cake1, cake2, cake3, cake4, cake5, cake6, cake7, cake8, cake9, cake10, cake11];
 
 export function Home() {
     return (
@@ -95,35 +110,86 @@ export function Products() {
                 <NavLink activeClassName="sub-selected" className="sub-nav-link" to="/products/cupcakes">cupcakes</NavLink>
                 <NavLink activeClassName="sub-selected" className="sub-nav-link" to="/products/packages">packages</NavLink>
             </s.divSubNav>
-
-            <s.productsDiv>
-                <Outlet />
-            </s.productsDiv>        
+            <Outlet />    
         </>        
     );
 }
 
 export function Cakes() {
+    const NextArrow = ({onClick}) => {
+        return (
+            <div className="arrow next" onClick={onClick}>
+                <FaArrowRight />                
+            </div>
+        );
+    }
+
+    const PrevArrow = ({onClick}) => {
+        return (
+            <div className="arrow prev" onClick={onClick}>
+                <FaArrowLeft />                
+            </div>
+        );
+    }
+
+    const [imageIndex, setImageIndex] = useState(0);
+
+    const settings = {
+        infinite: true, 
+        lazyLoad: true, 
+        speed: 300, 
+        slidesToShow: 3, 
+        centerMode: true, 
+        centerPadding: 0,
+        nextArrow: <NextArrow />, 
+        prevArrow: <PrevArrow />,
+        beforeChange: (current, next) => setImageIndex(next)
+    };
+
     return (
         <div>
-            <p>cakes</p>
+            <s.productsDivContent className="product-text-div">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi. Aliquam erat volutpat. Ut eu tempus sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam neque lacus, ultrices sed aliquam nec, consectetur ac augue. Maecenas fringilla arcu augue, sit amet egestas tellus vestibulum eu. Suspendisse potenti. Cras dignissim, elit non hendrerit elementum, odio nibh consectetur mauris, a pretium lorem justo eget mi. <br/><br/>Integer euismod risus nec erat scelerisque, a imperdiet ante placerat. Ut vel tellus non diam tincidunt consequat vel id diam. Aenean ac mi ipsum.</p>
+                <Link to="/order"><s.pinkButton className="button" type="button">ORDER NOW</s.pinkButton></Link>
+            </s.productsDivContent>
+            <div className="image-slider-div">
+                <Slider {...settings}>
+                    {images.map((img, idx) => (
+                        <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>
+                            <img className="carousel-img" src={img} alt={img} />
+                        </div>
+                    ))}
+                </Slider>
+            </div>
         </div>
     );
 }
 
 export function Cupcakes() {
     return (
-        <div>
-            <p>cupcakes</p>
-        </div>
+        <s.productsDiv>
+            <s.productsDivContent className="product-text-div">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi. Aliquam erat volutpat. Ut eu tempus sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam neque lacus, ultrices sed aliquam nec, consectetur ac augue. Maecenas fringilla arcu augue, sit amet egestas tellus vestibulum eu. Suspendisse potenti. Cras dignissim, elit non hendrerit elementum, odio nibh consectetur mauris, a pretium lorem justo eget mi. <br/><br/>Integer euismod risus nec erat scelerisque, a imperdiet ante placerat. Ut vel tellus non diam tincidunt consequat vel id diam. Aenean ac mi ipsum.</p>
+                <Link to="/order"><s.pinkButton className="button" type="button">ORDER NOW</s.pinkButton></Link>
+            </s.productsDivContent>
+            <s.productsDivContent className="image-slider-div">
+
+            </s.productsDivContent>
+        </s.productsDiv>
     );
 }
 
 export function Packages() {
     return (
-        <div>
-            <p>Packages</p>
-        </div>
+        <s.productsDiv>
+            <s.productsDivContent className="product-text-div">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi. Aliquam erat volutpat. Ut eu tempus sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam neque lacus, ultrices sed aliquam nec, consectetur ac augue. Maecenas fringilla arcu augue, sit amet egestas tellus vestibulum eu. Suspendisse potenti. Cras dignissim, elit non hendrerit elementum, odio nibh consectetur mauris, a pretium lorem justo eget mi. <br/><br/>Integer euismod risus nec erat scelerisque, a imperdiet ante placerat. Ut vel tellus non diam tincidunt consequat vel id diam. Aenean ac mi ipsum.</p>
+                <Link to="/order"><s.pinkButton className="button" type="button">ORDER NOW</s.pinkButton></Link>
+            </s.productsDivContent>
+            <s.productsDivContent className="image-slider-div">
+
+            </s.productsDivContent>
+        </s.productsDiv>
     );
 }
 

@@ -257,31 +257,21 @@ export const divSubNav = styled.div`
     justify-content: center;
 `;
 
-// export const subNavElem = styled.button`
-//     width: 280px;
-//     height: 60px;
-//     color: #CC84BD;
-//     background-color: #222;
-    
-//     text-align: center;
-//     border: none;
-// `;
-
 export const productsDiv = styled.div`
     width: 100%;
     height: 700px;
     background-color: white;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 `;
 
 export const productsDivContent = styled.div`
-    width: 650px;
+    width: 600px;
     height: 500px;    
     padding: 0px 50px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-evenly;      
 `;

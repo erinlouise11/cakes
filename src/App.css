@@ -1,9 +1,12 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
 .nav-link {
   text-decoration: none;
 }
 
 .sub-nav-link {
-  width: 280px;
+  width: 230px;
   height: 60px;
   display: flex;
   align-items: center;
@@ -60,4 +63,56 @@
 
 .dark-p, .dark-h2 {
   color: white !important;
+}
+
+.image-slider-div {
+  width: 50%;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.carousel-img {
+  width: 300px;
+  height: 450px;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+.slide {
+  transform: scale(0.75);
+  transition: transform 300ms;
+  opacity: 0.5;
+}
+
+.activeSlide {
+  transform: scale(1.0);
+  opacity: 1;
+  position: relative;
+  z-index: 10;
+}
+
+.arrow {
+  background-color: #fff;
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;  
+}
+
+.arrow svg {
+  transition: color 300ms;
+  color: #222;
+}
+
+.arrow svg:hover {
+  color: #CC84BD;
+}
+
+.next {
+  right: 0%;
+  top: 50%;
+}
+
+.prev {
+  left: 0%;
+  top: 50%;
 }
