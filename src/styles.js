@@ -141,7 +141,7 @@ export const HeroDivBig = styled.div`
 export const HeroDivSmall = styled.div`
     & {
         width: 100%;
-        height: 480px;
+        height: 500px;
         position: relative;
         top: 0;
         margin: 0;
@@ -246,4 +246,43 @@ export const divImages = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;      
+`;
+
+export const divSubNav = styled.div`
+    width: 100%;
+    height: 60px;    
+    background-color: #222;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
+
+export const subNavElem = styled.button`
+    width: 280px;
+    height: 60px;
+    color: #CC84BD;
+    background-color: #222;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    border: none;
+`;
+
+export const productsDiv = styled.div`
+    width: 100%;
+    height: 700px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
+
+export const productsDivContent = styled.div`
+    width: 650px;
+    height: 500px;    
+    padding: 0px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;      
 `;

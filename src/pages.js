@@ -12,7 +12,7 @@ import cupcakes from './img/rainbowCupcakes.jpg';
 
 export function Home() {
     return (
-        <section>
+        <>
             <s.HeroDivBig className="home-hero bg">
                 <s.homeHeroFlex className="hero-intro-div">
                     <s.H1>yummm...</s.H1>
@@ -67,16 +67,16 @@ export function Home() {
             <s.darkDiv className="reviews-div dark">
 
             </s.darkDiv>
-        </section>       
+        </>       
     );
 }
 
 export function Products() {
     const products = ["cakes", "cupcakes", "packages"];
-    const [product, setProduct] = useState("");
+    const [theProduct, setProduct] = useState("cakes");
 
     return (
-        <section>
+        <>
             <s.HeroDivSmall className="products-hero bg">
                 <s.heroTitleFlex className="hero-intro-div">
                     <s.H1>products</s.H1>
@@ -92,13 +92,45 @@ export function Products() {
                 </s.Ul>
             </s.Nav>
 
-        </section>        
+            <s.divSubNav>
+                {products.map(product => (
+                    <s.subNavElem 
+                        className={"button"} 
+                        type="button" 
+                        key={product} 
+                        onClick={() => setProduct(product)}
+                    >                    
+                    {product.toLocaleLowerCase()}    
+                    </s.subNavElem>
+                ))}
+            </s.divSubNav>
+
+            <s.productsDiv>
+                {theProduct === "cakes" && (
+                    <s.productsDivContent>
+                        <p>cakes</p>
+                    </s.productsDivContent>
+                )}
+                {theProduct === "cupcakes" && (
+                    <s.productsDivContent>
+                        <p>cupcakes</p>
+                    </s.productsDivContent>
+                )}
+                {theProduct === "packages" && (
+                    <s.productsDivContent>
+                        <p>packages</p>
+                    </s.productsDivContent>
+                )}
+                
+            </s.productsDiv>
+        
+        </>        
     );
 }
 
 export function Occasions() {
     return (
-        <section>
+        <>
             <s.HeroDivSmall className="occasions-hero bg">
                 <s.heroTitleFlex className="hero-intro-div">
                     <s.H1>occasions</s.H1>
@@ -113,13 +145,13 @@ export function Occasions() {
                     <NavLink className="nav-link" to="/order"><s.Li>Order</s.Li></NavLink>
                 </s.Ul>
             </s.Nav>
-        </section>        
+        </>        
     );
 }
 
 export function About() {
     return (
-        <section>
+        <>
         <s.HeroDivSmall className="about-hero bg">
             <s.heroTitleFlex className="hero-intro-div">
                 <s.H1>our story</s.H1>
@@ -134,13 +166,13 @@ export function About() {
                 <NavLink className="nav-link" to="/order"><s.Li>Order</s.Li></NavLink>
             </s.Ul>
         </s.Nav>
-    </section>        
+    </>        
     );
 }
 
 export function Order() {
     return (
-        <section>
+        <>
         <s.HeroDivSmall className="order-hero bg">
             <s.heroTitleFlex className="hero-intro-div">
                 <s.H1>order now</s.H1>
@@ -155,6 +187,6 @@ export function Order() {
                 <NavLink activeClassName="selected" className="nav-link" to="/order"><s.Li>Order</s.Li></NavLink>
             </s.Ul>
         </s.Nav>
-    </section>        
+    </>        
     );
 }
