@@ -135,10 +135,12 @@ export function Cakes() {
     const [imageIndex, setImageIndex] = useState(0);
 
     const settings = {
+        dots: true, 
         infinite: true, 
         lazyLoad: true, 
         speed: 300, 
         slidesToShow: 3, 
+        slidesToScroll: 1,
         centerMode: true, 
         centerPadding: 0,
         nextArrow: <NextArrow />, 
@@ -147,7 +149,7 @@ export function Cakes() {
     };
 
     return (
-        <div>
+        <div className="content-flex">
             <s.productsDivContent className="product-text-div">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi. Aliquam erat volutpat. Ut eu tempus sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam neque lacus, ultrices sed aliquam nec, consectetur ac augue. Maecenas fringilla arcu augue, sit amet egestas tellus vestibulum eu. Suspendisse potenti. Cras dignissim, elit non hendrerit elementum, odio nibh consectetur mauris, a pretium lorem justo eget mi. <br/><br/>Integer euismod risus nec erat scelerisque, a imperdiet ante placerat. Ut vel tellus non diam tincidunt consequat vel id diam. Aenean ac mi ipsum.</p>
                 <Link to="/order"><s.pinkButton className="button" type="button">ORDER NOW</s.pinkButton></Link>

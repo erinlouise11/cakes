@@ -250,7 +250,7 @@ export const divImages = styled.div`
 
 export const divSubNav = styled.div`
     width: 100%;
-    height: 60px;    
+    height: 50px;    
     background-color: #222;    
     display: flex;
     align-items: center;
@@ -267,9 +267,9 @@ export const productsDiv = styled.div`
 `;
 
 export const productsDivContent = styled.div`
-    width: 600px;
-    height: 500px;    
-    padding: 0px 50px;
+    width: 350px;
+    height: auto;    
+    padding: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
