@@ -57,9 +57,9 @@ export const largerP = styled.p`
 `;
 
 export const smallerP = styled.p`
-    width: 500px;
+    width: 450px;
     margin: 0;
-    font-size: 18px;
+    font-size: 16px;
     font-family: 'Segoe Print', Tahoma, Geneva, Verdana, sans-serif;
     color: #222;
 `;
@@ -260,6 +260,7 @@ export const divSubNav = styled.div`
 export const productsDiv = styled.div`
     width: 100%;
     height: 700px;
+    padding-top: 30px;
     background-color: white;
     display: flex;
     align-items: center;
@@ -267,11 +268,11 @@ export const productsDiv = styled.div`
 `;
 
 export const productsDivContent = styled.div`
-    width: 350px;
-    height: auto;    
-    padding: 30px;
+    width: auto;
+    height: 450px;    
+    padding-right: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;      
+    justify-content: space-evenly;     
 `;

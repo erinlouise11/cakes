@@ -22,9 +22,38 @@ import cake7 from './img/cake7.jpg';
 import cake8 from './img/cake8.jpg';
 import cake9 from './img/cake9.jpg';
 import cake10 from './img/cake10.jpg';
-import cake11 from './img/cake11.jpg';
+import cake11 from './img/cake11.jpg';   
 
-const images = [cake, cake1, cake2, cake3, cake4, cake5, cake6, cake7, cake8, cake9, cake10, cake11];
+import cc1 from './img/cupcakes1.jpg'; 
+import cc2 from './img/cupcakes2.jpg';
+import cc3 from './img/cupcakes3.jpg';
+import cc4 from './img/cupcakes4.jpg';
+import cc5 from './img/cupcakes5.jpg';
+import cc6 from './img/cupcakes6.jpg';
+
+import pack1 from './img/package1.jpg';
+import pack2 from './img/package2.jpg';
+import pack3 from './img/package3.jpg';
+
+const cakeImages = [cake, cake1, cake2, cake3, cake4, cake5, cake6, cake7, cake8, cake9, cake10, cake11];
+const cupcakeImages = [cupcakes, cc1, cc2, cc3, cc4, cc5, cc6];
+const packageImages = [middle, pack1, pack2, pack3];
+
+const NextArrow = ({onClick}) => {
+    return (
+        <div className="arrow next" onClick={onClick}>
+            <FaArrowRight />                
+        </div>
+    );
+}
+
+const PrevArrow = ({onClick}) => {
+    return (
+        <div className="arrow prev" onClick={onClick}>
+            <FaArrowLeft />                
+        </div>
+    );
+}
 
 export function Home() {
     return (
@@ -116,22 +145,6 @@ export function Products() {
 }
 
 export function Cakes() {
-    const NextArrow = ({onClick}) => {
-        return (
-            <div className="arrow next" onClick={onClick}>
-                <FaArrowRight />                
-            </div>
-        );
-    }
-
-    const PrevArrow = ({onClick}) => {
-        return (
-            <div className="arrow prev" onClick={onClick}>
-                <FaArrowLeft />                
-            </div>
-        );
-    }
-
     const [imageIndex, setImageIndex] = useState(0);
 
     const settings = {
@@ -151,12 +164,12 @@ export function Cakes() {
     return (
         <div className="content-flex">
             <s.productsDivContent className="product-text-div">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi. Aliquam erat volutpat. Ut eu tempus sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam neque lacus, ultrices sed aliquam nec, consectetur ac augue. Maecenas fringilla arcu augue, sit amet egestas tellus vestibulum eu. Suspendisse potenti. Cras dignissim, elit non hendrerit elementum, odio nibh consectetur mauris, a pretium lorem justo eget mi. <br/><br/>Integer euismod risus nec erat scelerisque, a imperdiet ante placerat. Ut vel tellus non diam tincidunt consequat vel id diam. Aenean ac mi ipsum.</p>
+                <s.smallerP>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam neque lacus, ultrices sed aliquam nec, consectetur ac augue. Maecenas fringilla arcu augue, sit amet egestas tellus vestibulum eu. <br/><br/>Suspendisse potenti. Cras dignissim, elit non hendrerit elementum, odio nibh consectetur mauris, a pretium lorem justo eget mi.</s.smallerP>
                 <Link to="/order"><s.pinkButton className="button" type="button">ORDER NOW</s.pinkButton></Link>
             </s.productsDivContent>
             <div className="image-slider-div">
                 <Slider {...settings}>
-                    {images.map((img, idx) => (
+                    {cakeImages.map((img, idx) => (
                         <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>
                             <img className="carousel-img" src={img} alt={img} />
                         </div>
@@ -168,30 +181,74 @@ export function Cakes() {
 }
 
 export function Cupcakes() {
+    const [imageIndex, setImageIndex] = useState(0);
+
+    const settings = {
+        dots: true, 
+        infinite: true, 
+        lazyLoad: true, 
+        speed: 300, 
+        slidesToShow: 3, 
+        slidesToScroll: 1,
+        centerMode: true, 
+        centerPadding: 0,
+        nextArrow: <NextArrow />, 
+        prevArrow: <PrevArrow />,
+        beforeChange: (current, next) => setImageIndex(next)
+    };
+
     return (
-        <s.productsDiv>
+        <div className="content-flex">
             <s.productsDivContent className="product-text-div">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi. Aliquam erat volutpat. Ut eu tempus sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam neque lacus, ultrices sed aliquam nec, consectetur ac augue. Maecenas fringilla arcu augue, sit amet egestas tellus vestibulum eu. Suspendisse potenti. Cras dignissim, elit non hendrerit elementum, odio nibh consectetur mauris, a pretium lorem justo eget mi. <br/><br/>Integer euismod risus nec erat scelerisque, a imperdiet ante placerat. Ut vel tellus non diam tincidunt consequat vel id diam. Aenean ac mi ipsum.</p>
+                <s.smallerP>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam neque lacus, ultrices sed aliquam nec, consectetur ac augue. Maecenas fringilla arcu augue, sit amet egestas tellus vestibulum eu. <br/><br/>Suspendisse potenti. Cras dignissim, elit non hendrerit elementum, odio nibh consectetur mauris, a pretium lorem justo eget mi.</s.smallerP>
                 <Link to="/order"><s.pinkButton className="button" type="button">ORDER NOW</s.pinkButton></Link>
             </s.productsDivContent>
-            <s.productsDivContent className="image-slider-div">
-
-            </s.productsDivContent>
-        </s.productsDiv>
+            <div className="image-slider-div">
+                <Slider {...settings}>
+                    {cupcakeImages.map((img, idx) => (
+                        <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>
+                            <img className="carousel-img" src={img} alt={img} />
+                        </div>
+                    ))}
+                </Slider>
+            </div>
+        </div>
     );
 }
 
 export function Packages() {
+    const [imageIndex, setImageIndex] = useState(0);
+
+    const settings = {
+        dots: true, 
+        infinite: true, 
+        lazyLoad: true, 
+        speed: 300, 
+        slidesToShow: 3, 
+        slidesToScroll: 1,
+        centerMode: true, 
+        centerPadding: 0,
+        nextArrow: <NextArrow />, 
+        prevArrow: <PrevArrow />,
+        beforeChange: (current, next) => setImageIndex(next)
+    };
+
     return (
-        <s.productsDiv>
+        <div className="content-flex">
             <s.productsDivContent className="product-text-div">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi. Aliquam erat volutpat. Ut eu tempus sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam neque lacus, ultrices sed aliquam nec, consectetur ac augue. Maecenas fringilla arcu augue, sit amet egestas tellus vestibulum eu. Suspendisse potenti. Cras dignissim, elit non hendrerit elementum, odio nibh consectetur mauris, a pretium lorem justo eget mi. <br/><br/>Integer euismod risus nec erat scelerisque, a imperdiet ante placerat. Ut vel tellus non diam tincidunt consequat vel id diam. Aenean ac mi ipsum.</p>
+                <s.smallerP>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam neque lacus, ultrices sed aliquam nec, consectetur ac augue. Maecenas fringilla arcu augue, sit amet egestas tellus vestibulum eu. <br/><br/>Suspendisse potenti. Cras dignissim, elit non hendrerit elementum, odio nibh consectetur mauris, a pretium lorem justo eget mi.</s.smallerP>
                 <Link to="/order"><s.pinkButton className="button" type="button">ORDER NOW</s.pinkButton></Link>
             </s.productsDivContent>
-            <s.productsDivContent className="image-slider-div">
-
-            </s.productsDivContent>
-        </s.productsDiv>
+            <div className="image-slider-div">
+                <Slider {...settings}>
+                    {packageImages.map((img, idx) => (
+                        <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>
+                            <img className="carousel-img" src={img} alt={img} />
+                        </div>
+                    ))}
+                </Slider>
+            </div>
+        </div>
     );
 }
 
