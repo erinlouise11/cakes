@@ -70,7 +70,7 @@ export function Home() {
             </s.HeroDivBig>           
             <s.Nav>
                 <s.Ul>
-                    <NavLink className="nav-link" to="/products"><s.Li>Products</s.Li></NavLink>
+                    <NavLink className="nav-link" to="/products/cakes"><s.Li>Products</s.Li></NavLink>
                     <NavLink className="nav-link" to="/occasions"><s.Li>Occasions</s.Li></NavLink>
                     <NavLink className="nav-link" to="/"><s.Li><s.Logo src={logo} /></s.Li></NavLink>
                     <NavLink className="nav-link" to="/about"><s.Li>Our Story</s.Li></NavLink>
@@ -126,7 +126,7 @@ export function Products() {
             </s.HeroDivSmall> 
             <s.Nav>
                 <s.Ul>
-                    <NavLink activeClassName="selected" className="nav-link" to="/products"><s.Li>Products</s.Li></NavLink>
+                    <NavLink activeClassName="selected" className="nav-link" to="/products/cakes"><s.Li>Products</s.Li></NavLink>
                     <NavLink activeClassName="selected" className="nav-link" to="/occasions"><s.Li>Occasions</s.Li></NavLink>
                     <NavLink className="nav-link" to="/"><s.Li><s.Logo src={logo} /></s.Li></NavLink>
                     <NavLink activeClassName="selected" className="nav-link" to="/about"><s.Li>Our Story</s.Li></NavLink>
@@ -262,7 +262,7 @@ export function Occasions() {
             </s.HeroDivSmall> 
             <s.Nav>
                 <s.Ul>
-                    <NavLink className="nav-link" to="/products"><s.Li>Products</s.Li></NavLink>
+                    <NavLink className="nav-link" to="/products/cakes"><s.Li>Products</s.Li></NavLink>
                     <NavLink activeClassName="selected" className="nav-link" to="/occasions"><s.Li>Occasions</s.Li></NavLink>
                     <NavLink className="nav-link" to="/"><s.Li><s.Logo src={logo} /></s.Li></NavLink>
                     <NavLink className="nav-link" to="/about"><s.Li>Our Story</s.Li></NavLink>
@@ -283,7 +283,7 @@ export function About() {
         </s.HeroDivSmall> 
         <s.Nav>
             <s.Ul>
-                <NavLink className="nav-link" to="/products"><s.Li>Products</s.Li></NavLink>
+                <NavLink className="nav-link" to="/products/cakes"><s.Li>Products</s.Li></NavLink>
                 <NavLink className="nav-link" to="/occasions"><s.Li>Occasions</s.Li></NavLink>
                 <NavLink className="nav-link" to="/"><s.Li><s.Logo src={logo} /></s.Li></NavLink>
                 <NavLink activeClassName="selected" className="nav-link" to="/about"><s.Li>Our Story</s.Li></NavLink>
@@ -304,7 +304,7 @@ export function Order() {
         </s.HeroDivSmall> 
         <s.Nav>
             <s.Ul>
-                <NavLink className="nav-link" to="/products"><s.Li>Products</s.Li></NavLink>
+                <NavLink className="nav-link" to="/products/cakes"><s.Li>Products</s.Li></NavLink>
                 <NavLink className="nav-link" to="/occasions"><s.Li>Occasions</s.Li></NavLink>
                 <NavLink className="nav-link" to="/"><s.Li><s.Logo src={logo} /></s.Li></NavLink>
                 <NavLink className="nav-link" to="/about"><s.Li>Our Story</s.Li></NavLink>
