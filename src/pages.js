@@ -269,6 +269,46 @@ export function Occasions() {
                     <NavLink className="nav-link" to="/order"><s.Li>Order</s.Li></NavLink>
                 </s.Ul>
             </s.Nav>
+
+            <s.whiteDiv className="bio-div white">
+                <s.divImg src={lady} />
+                <s.divInfo>
+                    <s.H2>birthday parties</s.H2>
+                    <s.smallerP>Since a love for baking arose from a high school bake sale, the art of cakes and cupcakes have been what I live for. I can't wait for you to experience some Cool AF Cakes!</s.smallerP>
+                </s.divInfo>
+            </s.whiteDiv>
+
+            <s.whiteDiv className="products-div white">
+                <s.divInfo>
+                    <s.H2>weddings</s.H2>
+                    <s.smallerP>We offer 'cake with cupcakes' packages for the special occasions that need a little extra!</s.smallerP>
+                </s.divInfo>
+                <s.divImages>
+                    <s.sideImg src={cake} />
+                    <s.midImg src={middle} /> 
+                    <s.sideImg src={cupcakes} />
+                </s.divImages>
+            </s.whiteDiv>
+   
+            <s.whiteDiv className="occasions-div white">
+                <s.divImg src={balloons} />
+                <s.divInfo>
+                    <s.H2>work functions</s.H2>
+                    <s.smallerP>No matter the occasion, make it special with a Cool AF Cakes product!</s.smallerP>
+                </s.divInfo>
+            </s.whiteDiv>
+
+            <s.whiteDiv className="products-div white">
+                <s.divInfo>
+                    <s.H2>other events</s.H2>
+                    <s.smallerP>We offer 'cake with cupcakes' packages for the special occasions that need a little extra!</s.smallerP>
+                </s.divInfo>
+                <s.divImages>
+                    <s.sideImg src={cake} />
+                    <s.midImg src={middle} /> 
+                    <s.sideImg src={cupcakes} />
+                </s.divImages>
+            </s.whiteDiv>
         </>        
     );
 }

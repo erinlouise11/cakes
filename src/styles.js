@@ -1,43 +1,63 @@
 import styled from 'styled-components';
-// import homeHeroImg from './img/homeBG.jpg';
 
 export const pinkButton = styled.button`
     width: auto;
-    height: 60px;
+    height: 40px;
     margin-top: 20px;
-    padding: 10px 20px;
+    padding: 5px 10px;
     background-color: #CC84BD;
     color: #222;
     border: solid 5px #222;
-    font-size: 20px;
+    font-size: 18px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: 1px;
+
+    @media (min-width: 600px) {
+        height: 60px;
+        margin-top: 20px;
+        padding: 10px 20px;  
+        font-size: 20px;
+    }
 `;
 
 export const bigPinkButton = styled.button`
     width: auto;
-    height: 60px;
+    height: 40px;
     margin-top: 20px;
-    padding: 10px 20px;
+    padding: 5px 10px;
     background-color: #CC84BD;
     color: #222;
     border: solid 5px #CC84BD;
-    font-size: 20px;
+    font-size: 18px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: 1px;
+
+    @media (min-width: 600px) {
+        height: 60px;
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 20px;
+    }
 `;
 
 export const darkButton = styled.button`
     width: auto;
-    height: 60px;
+    height: 40px;
     margin-top: 20px;
-    padding: 10px 20px;
+    padding: 5px 10px;
     background-color: #222;
     color: #CC84BD;
     border: solid 5px #222;
-    font-size: 20px;
+    font-size: 18px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: 1px;
+
+    @media (min-width: 600px) {
+        height: 60px;
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 20px;
+    }
 `;
 
 export const H1 = styled.h1`
@@ -47,6 +67,14 @@ export const H1 = styled.h1`
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: 2px;
     color: #222;
+
+    @media (min-width: 600px) {
+        
+    }
+
+    @media (min-width: 1000px) {
+        
+    }
 `;
 
 export const largerP = styled.p`
@@ -54,6 +82,14 @@ export const largerP = styled.p`
     font-size: 22px;
     font-family: 'Segoe Print', Tahoma, Geneva, Verdana, sans-serif;
     color: #222;
+
+    @media (min-width: 600px) {
+        
+    }
+
+    @media (min-width: 1000px) {
+        
+    }
 `;
 
 export const smallerP = styled.p`
@@ -62,6 +98,14 @@ export const smallerP = styled.p`
     font-size: 16px;
     font-family: 'Segoe Print', Tahoma, Geneva, Verdana, sans-serif;
     color: #222;
+
+    @media (min-width: 600px) {
+        
+    }
+
+    @media (min-width: 1000px) {
+        
+    }
 `;
 
 export const H2 = styled.h2`
@@ -71,6 +115,14 @@ export const H2 = styled.h2`
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: 2px;
     color: #222;
+
+    @media (min-width: 600px) {
+        
+    }
+
+    @media (min-width: 1000px) {
+        
+    }
 `;
 
 export const Ul = styled.ul`
@@ -83,6 +135,14 @@ export const Ul = styled.ul`
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;    
+
+    @media (min-width: 600px) {
+        
+    }
+
+    @media (min-width: 1000px) {
+        
+    }
 `;
 
 export const Li = styled.li`
@@ -90,6 +150,14 @@ export const Li = styled.li`
     font-size: 22px;
     font-family: 'Segoe Print', Tahoma, Geneva, Verdana, sans-serif;
     color: #222;
+
+    @media (min-width: 600px) {
+        
+    }
+
+    @media (min-width: 1000px) {
+        
+    }
 `;
 
 export const Logo = styled.img`
@@ -102,6 +170,14 @@ export const divImg = styled.img`
     height: 500px;    
     object-fit: cover;
     object-position: top;
+
+    @media (min-width: 600px) {
+        
+    }
+
+    @media (min-width: 1000px) {
+        
+    }
 `;
 
 export const sideImg = styled.img`
@@ -109,6 +185,14 @@ export const sideImg = styled.img`
     height: 360px;    
     object-fit: cover;
     object-position: bottom;
+
+    @media (min-width: 600px) {
+        
+    }
+
+    @media (min-width: 1000px) {
+        
+    }
 `;
 
 export const midImg = styled.img`
@@ -117,6 +201,14 @@ export const midImg = styled.img`
     object-fit: cover;
     object-position: center;
     border: solid 5px #CC84BD;
+
+    @media (min-width: 600px) {
+        
+    }
+
+    @media (min-width: 1000px) {
+        
+    }
 `;
 
 export const HeroDivBig = styled.div`
@@ -136,6 +228,14 @@ export const HeroDivBig = styled.div`
         width: 100%;
         height: 100%;
     }
+
+    @media (min-width: 600px) {
+        
+    }
+
+    @media (min-width: 1000px) {
+        
+    }
 `;
 
 export const HeroDivSmall = styled.div`
@@ -154,6 +254,14 @@ export const HeroDivSmall = styled.div`
         opacity: 0.1;
         width: 100%;
         height: 100%;
+    }
+
+    @media (min-width: 600px) {
+        
+    }
+
+    @media (min-width: 1000px) {
+        
     }
 `;
 
@@ -178,7 +286,15 @@ export const homeHeroFlex = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-evenly;      
+    justify-content: space-evenly;     
+    
+    @media (min-width: 600px) {
+        
+    }
+
+    @media (min-width: 1000px) {
+        
+    }
 `;
 
 export const heroTitleFlex = styled.div`
@@ -191,6 +307,14 @@ export const heroTitleFlex = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+
+    @media (min-width: 600px) {
+        
+    }
+
+    @media (min-width: 1000px) {
+        
+    }
 `;
 
 export const buttonDiv = styled.div` 
@@ -199,7 +323,15 @@ export const buttonDiv = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;      
+    justify-content: space-between; 
+    
+    @media (min-width: 600px) {
+        
+    }
+
+    @media (min-width: 1000px) {
+        
+    }
 `;
 
 export const whiteDiv = styled.div`
@@ -208,7 +340,15 @@ export const whiteDiv = styled.div`
     background-color: white;
     display: flex;
     align-items: center;
-    justify-content: flex-start;      
+    justify-content: flex-start;  
+    
+    @media (min-width: 600px) {
+        
+    }
+
+    @media (min-width: 1000px) {
+        
+    }
 `;
 
 export const divInfo = styled.div`
@@ -218,7 +358,15 @@ export const divInfo = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-evenly;      
+    justify-content: space-evenly;  
+    
+    @media (min-width: 600px) {
+        
+    }
+
+    @media (min-width: 1000px) {
+        
+    }
 `;
 
 export const darkDiv = styled.div`
@@ -227,8 +375,15 @@ export const darkDiv = styled.div`
     background-color: #222;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;     
+    justify-content: space-evenly;   
 
+    @media (min-width: 600px) {
+        
+    }
+
+    @media (min-width: 1000px) {
+        
+    }
 `;
 
 export const divInfoDark = styled.div`
@@ -237,7 +392,15 @@ export const divInfoDark = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-evenly;      
+    justify-content: space-evenly;     
+    
+    @media (min-width: 600px) {
+        
+    }
+
+    @media (min-width: 1000px) {
+        
+    }
 `;
 
 export const divImages = styled.div`
@@ -246,6 +409,14 @@ export const divImages = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;      
+
+    @media (min-width: 600px) {
+        
+    }
+
+    @media (min-width: 1000px) {
+        
+    }
 `;
 
 export const divSubNav = styled.div`
@@ -255,6 +426,14 @@ export const divSubNav = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (min-width: 600px) {
+        
+    }
+
+    @media (min-width: 1000px) {
+        
+    }
 `;
 
 export const productsDiv = styled.div`
@@ -265,6 +444,14 @@ export const productsDiv = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+
+    @media (min-width: 600px) {
+        
+    }
+
+    @media (min-width: 1000px) {
+        
+    }
 `;
 
 export const productsDivContent = styled.div`
@@ -275,4 +462,12 @@ export const productsDivContent = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;     
+
+    @media (min-width: 600px) {
+        
+    }
+
+    @media (min-width: 1000px) {
+        
+    }
 `;
