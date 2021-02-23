@@ -41,9 +41,9 @@
   background-position: right 28% bottom 0%;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 1000px) {
   .home-hero {
-    background-position: center;
+    background-position: center
   }
 }
 
@@ -65,6 +65,22 @@
 .order-hero {
   background-image: url('./img/orderBG.jpg');
   background-position: center;
+}
+
+.dark-p {
+  width: 300px !important;
+}
+
+@media (min-width: 600px) {
+  .dark-p {
+    width: 370px !important;
+  }
+}
+
+@media (min-width: 1000px) {
+  .dark-p {
+    width: 500px !important;
+  }
 }
 
 .dark-p, .dark-h2 {

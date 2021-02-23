@@ -14,7 +14,6 @@ export const pinkButton = styled.button`
 
     @media (min-width: 600px) {
         height: 60px;
-        margin-top: 20px;
         padding: 10px 20px;  
         font-size: 20px;
     }
@@ -23,7 +22,7 @@ export const pinkButton = styled.button`
 export const bigPinkButton = styled.button`
     width: auto;
     height: 40px;
-    margin-top: 20px;
+    margin-top: 10px;
     padding: 5px 10px;
     background-color: #CC84BD;
     color: #222;
@@ -34,7 +33,7 @@ export const bigPinkButton = styled.button`
 
     @media (min-width: 600px) {
         height: 60px;
-        margin-top: 20px;
+        margin-top: 10px;
         padding: 10px 20px;
         font-size: 20px;
     }
@@ -54,7 +53,6 @@ export const darkButton = styled.button`
 
     @media (min-width: 600px) {
         height: 60px;
-        margin-top: 20px;
         padding: 10px 20px;
         font-size: 20px;
     }
@@ -94,24 +92,26 @@ export const largerP = styled.p`
 `;
 
 export const smallerP = styled.p`
-    width: 450px;
+    width: 150px;
     margin: 0;
-    font-size: 14px;
+    font-size: 13px;
     font-family: 'Segoe Print', Tahoma, Geneva, Verdana, sans-serif;
     color: #222;
 
     @media (min-width: 600px) {
+        width: 300px;
         font-size: 16px;
     }
 
     @media (min-width: 1000px) {
+        width: 450px;
         font-size: 17px;
     }
 `;
 
 export const H2 = styled.h2`
     margin: 0;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: 2px;
@@ -170,9 +170,9 @@ export const Logo = styled.img`
 
 export const divImg = styled.img`
     width: 190px;
-    height: 320px;    
+    height: 380px;    
     object-fit: cover;
-    object-position: top;
+    object-position: top 0% left 45%;
 
     @media (min-width: 600px) {
         width: 385px;
@@ -186,7 +186,7 @@ export const divImg = styled.img`
 `;
 
 export const sideImg = styled.img`
-    width: 110px;
+    width: 100px;
     height: 140px;    
     object-fit: cover;
     object-position: bottom;
@@ -207,11 +207,12 @@ export const midImg = styled.img`
     height: 180px;    
     object-fit: cover;
     object-position: center;
-    border: solid 5px #CC84BD;
+    border: solid 3px #CC84BD;
 
     @media (min-width: 600px) {
         width: 180px;
         height: 240px;
+        border: solid 5px #CC84BD;
     }
 
     @media (min-width: 1000px) {
@@ -290,12 +291,14 @@ export const homeHeroFlex = styled.div`
     justify-content: space-evenly;     
     
     @media (min-width: 600px) {
+        width: 400px;
         height: 270px;
-        bottom: 20%;
-        left: 150px;
+        bottom: 5%;
+        left: 70px;
     }
 
     @media (min-width: 1000px) {
+        width: 600px;
         height: 270px;
         bottom: 20%;
         left: 150px;
@@ -349,86 +352,93 @@ export const buttonDiv = styled.div`
 
 export const whiteDiv = styled.div`
     width: 100%;
-    height: 500px;    
+    height: 380px;    
     background-color: white;
     display: flex;
     align-items: center;
     justify-content: flex-start;  
     
     @media (min-width: 600px) {
-        
-    }
-
-    @media (min-width: 1000px) {
-        
+        height: 500px;
     }
 `;
 
 export const divInfo = styled.div`
-    width: 650px;
+    width: 150px;
     height: 230px;    
-    padding-left: 90px;
+    padding-left: 10px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;  
     
     @media (min-width: 600px) {
-        
+        width: 650px;
+        height: 230px;    
+        padding-left: 50px;
     }
 
     @media (min-width: 1000px) {
-        
+        width: 650px;
+        height: 230px;    
+        padding-left: 90px;
     }
 `;
 
 export const darkDiv = styled.div`
     width: 100%;
-    height: 600px;    
+    height: 430px;    
     background-color: #222;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-evenly;   
 
     @media (min-width: 600px) {
-        
+        height: 530px;
     }
 
     @media (min-width: 1000px) {
-        
+        height: 600px;
+        flex-direction: row;
     }
 `;
 
 export const divInfoDark = styled.div`
-    width: 550px;
-    height: 210px;  
+    width: 100%;
+    height: 150px;  
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-evenly;     
+    align-items: center;
+    justify-content: space-around;     
     
     @media (min-width: 600px) {
-        
+        width: 500px;
+        height: 200px;
     }
 
     @media (min-width: 1000px) {
-        
+        width: 550px;
+        height: 210px;
+        align-items:flex-start;
+        justify-content: space-evenly;
     }
 `;
 
 export const divImages = styled.div`
-    width: 870px;
-    height: 440px;    
+    width: 100%;
+    height: 190px;    
     display: flex;
     align-items: center;
     justify-content: center;      
 
     @media (min-width: 600px) {
-        
+        height: 250px;  
     }
 
     @media (min-width: 1000px) {
-        
+        width: 870px;
+        height: 440px;  
     }
 `;
 
