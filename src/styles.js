@@ -8,11 +8,17 @@ export const pinkButton = styled.button`
     background-color: #CC84BD;
     color: #222;
     border: solid 5px #222;
-    font-size: 18px;
+    font-size: 17px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: 1px;
 
     @media (min-width: 600px) {
+        height: 50px;
+        padding: 10px 20px;  
+        font-size: 18px;
+    }
+
+    @media (min-width: 1440px) {
         height: 60px;
         padding: 10px 20px;  
         font-size: 20px;
@@ -32,9 +38,14 @@ export const bigPinkButton = styled.button`
     letter-spacing: 1px;
 
     @media (min-width: 600px) {
+        height: 50px;
+        padding: 10px 20px;  
+        font-size: 18px;
+    }
+
+    @media (min-width: 1440px) {
         height: 60px;
-        margin-top: 10px;
-        padding: 10px 20px;
+        padding: 10px 20px;  
         font-size: 20px;
     }
 `;
@@ -52,8 +63,14 @@ export const darkButton = styled.button`
     letter-spacing: 1px;
 
     @media (min-width: 600px) {
+        height: 50px;
+        padding: 10px 20px;  
+        font-size: 18px;
+    }
+
+    @media (min-width: 1440px) {
         height: 60px;
-        padding: 10px 20px;
+        padding: 10px 20px;  
         font-size: 20px;
     }
 `;
@@ -71,7 +88,7 @@ export const H1 = styled.h1`
     }
 
     @media (min-width: 1000px) {
-        
+        font-size: 70px;
     }
 
     @media (min-width: 1440px) {
@@ -91,7 +108,7 @@ export const largerP = styled.p`
     }
 
     @media (min-width: 1000px) {
-        
+        font-size: 20px;
     }
 
     @media (min-width: 1440px) {
@@ -114,7 +131,7 @@ export const smallerP = styled.p`
     }
 
     @media (min-width: 1000px) {
-        
+        width: 400px;
     }
 
     @media (min-width: 1440px) {
@@ -138,7 +155,7 @@ export const H2 = styled.h2`
     }
 
     @media (min-width: 1000px) {
-        
+        font-size: 40px; 
     }
 
     @media (min-width: 1440px) {
@@ -163,12 +180,11 @@ export const Ul = styled.ul`
     }
 
     @media (min-width: 1000px) {
-        
+        width: 700px;
     }
 
     @media (min-width: 1440px) {
-        width: 900px;
-        height: 110px;
+        width: 900px; 
     }
 `;
 
@@ -183,7 +199,7 @@ export const Li = styled.li`
     }
 
     @media (min-width: 1000px) {
-        
+        font-size: 20px;
     }
 
     @media (min-width: 1440px) {
@@ -208,12 +224,11 @@ export const divImg = styled.img`
     }
 
     @media (min-width: 1000px) {
-        
+        width: 550px;
     }
 
     @media (min-width: 1440px) {
         width: 1000px;
-        height: 500px;
     }
 `;
 
@@ -392,12 +407,8 @@ export const buttonDiv = styled.div`
     justify-content: space-between; 
     
     @media (min-width: 600px) {
-        width: 350px;
-        height: 60px;
-    }
-
-    @media (min-width: 1000px) {
-        
+        width: 330px;
+        height: 50px;
     }
 
     @media (min-width: 1440px) {
@@ -457,10 +468,6 @@ export const darkDiv = styled.div`
         height: 530px;
     }
 
-    @media (min-width: 1000px) {
-        
-    }
-
     @media (min-width: 1440px) {
         height: 600px;
         flex-direction: row;
@@ -480,10 +487,6 @@ export const divInfoDark = styled.div`
         height: 200px;
     }
 
-    @media (min-width: 1000px) {
-        
-    }
-
     @media (min-width: 1440px) {
         width: 550px;
         height: 210px;
@@ -501,10 +504,6 @@ export const divImages = styled.div`
 
     @media (min-width: 600px) {
         height: 250px;  
-    }
-
-    @media (min-width: 1000px) {
-        
     }
 
     @media (min-width: 1440px) {
