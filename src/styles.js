@@ -71,6 +71,10 @@ export const H1 = styled.h1`
     }
 
     @media (min-width: 1000px) {
+        
+    }
+
+    @media (min-width: 1440px) {
         font-size: 80px;
     }
 `;
@@ -87,6 +91,10 @@ export const largerP = styled.p`
     }
 
     @media (min-width: 1000px) {
+        
+    }
+
+    @media (min-width: 1440px) {
         font-size: 22px;
     }
 `;
@@ -106,6 +114,10 @@ export const smallerP = styled.p`
     }
 
     @media (min-width: 1000px) {
+        
+    }
+
+    @media (min-width: 1440px) {
         width: 450px;
         font-size: 17px;
     }
@@ -113,17 +125,23 @@ export const smallerP = styled.p`
 
 export const H2 = styled.h2`
     margin: 0;
-    font-size: 25px;
+    font-size: 28px;
     font-weight: bold;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: 2px;
     color: #222;
+    text-align: center;
 
     @media (min-width: 600px) {
-        font-size: 35px;   
+        font-size: 35px;  
+        text-align: left; 
     }
 
     @media (min-width: 1000px) {
+        
+    }
+
+    @media (min-width: 1440px) {
         font-size: 45px;
     }
 `;
@@ -145,6 +163,10 @@ export const Ul = styled.ul`
     }
 
     @media (min-width: 1000px) {
+        
+    }
+
+    @media (min-width: 1440px) {
         width: 900px;
         height: 110px;
     }
@@ -161,6 +183,10 @@ export const Li = styled.li`
     }
 
     @media (min-width: 1000px) {
+        
+    }
+
+    @media (min-width: 1440px) {
         font-size: 22px;
     }
 `;
@@ -182,6 +208,10 @@ export const divImg = styled.img`
     }
 
     @media (min-width: 1000px) {
+        
+    }
+
+    @media (min-width: 1440px) {
         width: 1000px;
         height: 500px;
     }
@@ -199,6 +229,10 @@ export const sideImg = styled.img`
     }
 
     @media (min-width: 1000px) {
+        
+    }
+
+    @media (min-width: 1440px) {
         width: 270px;
         height: 360px;
     }
@@ -218,6 +252,10 @@ export const midImg = styled.img`
     }
 
     @media (min-width: 1000px) {
+        
+    }
+
+    @media (min-width: 1440px) {
         width: 340px;
         height: 440px;
     }
@@ -265,6 +303,10 @@ export const HeroDivSmall = styled.div`
     }
 
     @media (min-width: 1000px) {
+        
+    }
+
+    @media (min-width: 1440px) {
         height: 500px; 
     }
 `;
@@ -300,6 +342,10 @@ export const homeHeroFlex = styled.div`
     }
 
     @media (min-width: 1000px) {
+        
+    }
+
+    @media (min-width: 1440px) {
         width: 600px;
         height: 270px;
         bottom: 20%;
@@ -326,6 +372,10 @@ export const heroTitleFlex = styled.div`
     }
 
     @media (min-width: 1000px) {
+        
+    }
+
+    @media (min-width: 1440px) {
         width: 400px;
         height: 100px;
         bottom: 40%;
@@ -347,6 +397,10 @@ export const buttonDiv = styled.div`
     }
 
     @media (min-width: 1000px) {
+        
+    }
+
+    @media (min-width: 1440px) {
         width: 350px;
         height: 60px;
     }
@@ -383,7 +437,7 @@ export const divInfo = styled.div`
         align-items: flex-start;
     }
 
-    @media (min-width: 1000px) {
+    @media (min-width: 1440px) {
         width: 650px;
         height: 230px;    
         padding-left: 90px;
@@ -404,6 +458,10 @@ export const darkDiv = styled.div`
     }
 
     @media (min-width: 1000px) {
+        
+    }
+
+    @media (min-width: 1440px) {
         height: 600px;
         flex-direction: row;
     }
@@ -423,6 +481,10 @@ export const divInfoDark = styled.div`
     }
 
     @media (min-width: 1000px) {
+        
+    }
+
+    @media (min-width: 1440px) {
         width: 550px;
         height: 210px;
         align-items:flex-start;
@@ -442,6 +504,10 @@ export const divImages = styled.div`
     }
 
     @media (min-width: 1000px) {
+        
+    }
+
+    @media (min-width: 1440px) {
         width: 870px;
         height: 440px;  
     }
@@ -462,6 +528,10 @@ export const divSubNav = styled.div`
     @media (min-width: 1000px) {
         
     }
+
+    @media (min-width: 1440px) {
+        
+    }
 `;
 
 export const productsDiv = styled.div`
@@ -480,6 +550,10 @@ export const productsDiv = styled.div`
     @media (min-width: 1000px) {
         
     }
+
+    @media (min-width: 1440px) {
+        
+    }
 `;
 
 export const productsDivContent = styled.div`
@@ -496,6 +570,10 @@ export const productsDivContent = styled.div`
     }
 
     @media (min-width: 1000px) {
+        
+    }
+
+    @media (min-width: 1440px) {
         
     }
 `;
