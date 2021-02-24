@@ -92,15 +92,17 @@ export const largerP = styled.p`
 `;
 
 export const smallerP = styled.p`
-    width: 150px;
+    width: 280px;
     margin: 0;
     font-size: 13px;
     font-family: 'Segoe Print', Tahoma, Geneva, Verdana, sans-serif;
     color: #222;
+    text-align:center;
 
     @media (min-width: 600px) {
         width: 300px;
         font-size: 16px;
+        text-align: left;
     }
 
     @media (min-width: 1000px) {
@@ -138,7 +140,7 @@ export const Ul = styled.ul`
     justify-content: space-evenly;    
 
     @media (min-width: 600px) {
-        width: 500px;
+        width: 600px;
         height: 110px;
     }
 
@@ -169,8 +171,8 @@ export const Logo = styled.img`
 `;
 
 export const divImg = styled.img`
-    width: 190px;
-    height: 380px;    
+    width: 300px;
+    height: 200px;    
     object-fit: cover;
     object-position: top 0% left 45%;
 
@@ -352,30 +354,33 @@ export const buttonDiv = styled.div`
 
 export const whiteDiv = styled.div`
     width: 100%;
-    height: 380px;    
+    height: 500px;    
     background-color: white;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-start;  
+    justify-content: space-evenly;  
     
     @media (min-width: 600px) {
         height: 500px;
+        flex-direction: row;
+        justify-content: flex-start; 
     }
 `;
 
 export const divInfo = styled.div`
-    width: 150px;
-    height: 230px;    
-    padding-left: 10px;
+    width: 280px;
+    height: 210px;    
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-evenly;  
     
     @media (min-width: 600px) {
         width: 650px;
         height: 230px;    
         padding-left: 50px;
+        align-items: flex-start;
     }
 
     @media (min-width: 1000px) {
