@@ -5,7 +5,7 @@ import * as s from './styles';
 import {Link, NavLink, Outlet} from 'react-router-dom';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
-import logo from './img/logo.png';
+import logo from './img/logo222.png';
 import lady from './img/divImages/ladySmile.jpg';
 import balloons from './img/divImages/balloons.jpg';
 import cake from './img/cakes/cake.jpg';

@@ -166,7 +166,7 @@ export const H2 = styled.h2`
 export const Ul = styled.ul`
     width: 300px;
     height: 110px;
-    padding-left: 0;
+    padding: 10px 0px;
     margin: 0;
     list-style: none;
     display: flex;
@@ -176,15 +176,10 @@ export const Ul = styled.ul`
 
     @media (min-width: 600px) {
         width: 600px;
-        height: 110px;
     }
 
     @media (min-width: 1000px) {
         width: 700px;
-    }
-
-    @media (min-width: 1440px) {
-        width: 900px; 
     }
 `;
 
@@ -208,8 +203,8 @@ export const Li = styled.li`
 `;
 
 export const Logo = styled.img`
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
 `;
 
 export const divImg = styled.img`
@@ -307,8 +302,8 @@ export const HeroDivSmall = styled.div`
         content: '';
         display: block;
         position: absolute;
-        background-color: #fff;
-        opacity: 0.25;
+        background-color: #fafafa;
+        opacity: 0.2;
         width: 100%;
         height: 100%;
     }

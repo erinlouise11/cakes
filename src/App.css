@@ -230,8 +230,7 @@
 }
 
 @media (min-width: 1000px) {
-  .content-flex {
-    flex-direction: column;
+  .content-flex {    
     padding: 20px 0;
   }
 }
@@ -239,6 +238,7 @@
 @media (min-width: 1440px) {
   .content-flex {
     padding: 20px 0;
+    flex-direction: row;
   }
 }
 
