@@ -35,7 +35,7 @@ import pack1 from './img/package1.jpg';
 import pack2 from './img/package2.jpg';
 import pack3 from './img/package3.jpg';
 
-const cakeImages = [cake, cake1, cake2, cake3, cake4, cake5, cake6, cake7, cake8, cake9, cake10, cake11];
+const cakeImages = [cake, cake1, cake2, cake3, cake4, cake5, cake7, cake8, cake9, cake10, cake11];
 const cupcakeImages = [cupcakes, cc1, cc2, cc3, cc4, cc5, cc6];
 const packageImages = [middle, pack1, pack2, pack3];
 

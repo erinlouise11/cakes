@@ -7,7 +7,7 @@ export const pinkButton = styled.button`
     padding: 5px 10px;
     background-color: #CC84BD;
     color: #222;
-    border: solid 5px #222;
+    border: solid 3px #222;
     font-size: 17px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: 1px;
@@ -15,12 +15,14 @@ export const pinkButton = styled.button`
     @media (min-width: 600px) {
         height: 50px;
         padding: 10px 20px;  
+        border: solid 4px #222;
         font-size: 18px;
     }
 
     @media (min-width: 1440px) {
         height: 60px;
         padding: 10px 20px;  
+        border: solid 5px #222;
         font-size: 20px;
     }
 `;
@@ -337,6 +339,23 @@ export const Nav = styled.nav`
     justify-content: center;
 `;
 
+export const divSubNav = styled.div`
+    width: 100%;
+    height: 40px;    
+    background-color: #222;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: 600px) {
+        height: 45px;
+    }
+
+    @media (min-width: 1440px) {
+        height: 50px;
+    }
+`;
+
 export const homeHeroFlex = styled.div`
     width: auto;
     height: 200px;
@@ -357,7 +376,10 @@ export const homeHeroFlex = styled.div`
     }
 
     @media (min-width: 1000px) {
-        
+        width: 500px;
+        height: 270px;
+        bottom: 7%;
+        left: 80px;
     }
 
     @media (min-width: 1440px) {
@@ -369,25 +391,18 @@ export const homeHeroFlex = styled.div`
 `;
 
 export const heroTitleFlex = styled.div`
-    width: 200px;
+    width: 100%;
     height: 100px;
     position: absolute;
     z-index: 1;
-    bottom: 10%;
-    right: 60px;
+    bottom: 11%;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: center;
 
     @media (min-width: 600px) {
-        width: 400px;
-        height: 100px;
-        bottom: 40%;
-        right: 300px;
-    }
-
-    @media (min-width: 1000px) {
-        
+        bottom: 35%;        
     }
 
     @media (min-width: 1440px) {
@@ -512,33 +527,13 @@ export const divImages = styled.div`
     }
 `;
 
-export const divSubNav = styled.div`
-    width: 100%;
-    height: 50px;    
-    background-color: #222;    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    @media (min-width: 600px) {
-        
-    }
-
-    @media (min-width: 1000px) {
-        
-    }
-
-    @media (min-width: 1440px) {
-        
-    }
-`;
-
 export const productsDiv = styled.div`
     width: 100%;
     height: 700px;
     padding-top: 30px;
     background-color: white;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 
@@ -547,7 +542,7 @@ export const productsDiv = styled.div`
     }
 
     @media (min-width: 1000px) {
-        
+        flex-direction: row;
     }
 
     @media (min-width: 1440px) {
@@ -557,8 +552,7 @@ export const productsDiv = styled.div`
 
 export const productsDivContent = styled.div`
     width: auto;
-    height: 450px;    
-    padding-right: 30px;
+    height: 400px;   
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -569,10 +563,10 @@ export const productsDivContent = styled.div`
     }
 
     @media (min-width: 1000px) {
-        
+        /* padding-right: 15px; */
     }
 
     @media (min-width: 1440px) {
-        
+        /* padding-right: 30px; */
     }
 `;
