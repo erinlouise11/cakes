@@ -6,38 +6,41 @@ import {Link, NavLink, Outlet} from 'react-router-dom';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 import logo from './img/logo.png';
-import lady from './img/ladySmile.jpg';
-import balloons from './img/balloons.jpg';
-import cake from './img/cake.jpg';
-import middle from './img/package.jpg';
-import cupcakes from './img/rainbowCupcakes.jpg';
+import lady from './img/divImages/ladySmile.jpg';
+import balloons from './img/divImages/balloons.jpg';
+import cake from './img/cakes/cake.jpg';
+import middle from './img/packages/package.jpg';
+import cupcakes from './img/cupcakes/rainbowCupcakes.jpg';
 
-import cake1 from './img/cake1.jpg';
-import cake2 from './img/cake2.jpg';
-import cake3 from './img/cake3.jpg';
-import cake4 from './img/cake4.jpg';
-import cake5 from './img/cake5.jpg';
-import cake6 from './img/cake6.jpg';
-import cake7 from './img/cake7.jpg';
-import cake8 from './img/cake8.jpg';
-import cake9 from './img/cake9.jpg';
-import cake10 from './img/cake10.jpg';
-import cake11 from './img/cake11.jpg';   
+import cake1 from './img/cakes/cake1.jpg';
+import cake2 from './img/cakes/cake2.jpg';
+import cake3 from './img/cakes/cake3.jpg';
+import cake4 from './img/cakes/cake4.jpg';
+import cake5 from './img/cakes/cake5.jpg';
+import cake7 from './img/cakes/cake7.jpg';
+import cake8 from './img/cakes/cake8.jpg';
+import cake9 from './img/cakes/cake9.jpg';
+import cake10 from './img/cakes/cake10.jpg';
+import cake11 from './img/cakes/cake11.jpg';   
 
-import cc1 from './img/cupcakes1.jpg'; 
-import cc2 from './img/cupcakes2.jpg';
-import cc3 from './img/cupcakes3.jpg';
-import cc4 from './img/cupcakes4.jpg';
-import cc5 from './img/cupcakes5.jpg';
-import cc6 from './img/cupcakes6.jpg';
+import cc1 from './img/cupcakes/cupcakes1.jpg'; 
+import cc2 from './img/cupcakes/cupcakes2.jpg';
+import cc3 from './img/cupcakes/cupcakes3.jpg';
+import cc4 from './img/cupcakes/cupcakes4.jpg';
+import cc5 from './img/cupcakes/cupcakes5.jpg';
+import cc6 from './img/cupcakes/cupcakes6.jpg';
+import cc7 from './img/cupcakes/cupcakes7.jpg';
+import cc8 from './img/cupcakes/cupcakes8.jpg';
+import cc10 from './img/cupcakes/cupcakes10.jpg';
 
-import pack1 from './img/package1.jpg';
-import pack2 from './img/package2.jpg';
-import pack3 from './img/package3.jpg';
+import pack1 from './img/packages/package1.jpg';
+import pack2 from './img/packages/package2.jpg';
+import pack3 from './img/packages/package3.jpg';
+import pack4 from './img/packages/package4.jpg';
 
 const cakeImages = [cake, cake1, cake2, cake3, cake4, cake5, cake7, cake8, cake9, cake10, cake11];
-const cupcakeImages = [cupcakes, cc1, cc2, cc3, cc4, cc5, cc6];
-const packageImages = [middle, pack1, pack2, pack3];
+const cupcakeImages = [cupcakes, cc1, cc2, cc3, cc4, cc5, cc6, cc7, cc8, cc10];
+const packageImages = [middle, pack1, pack2, pack3, pack4];
 
 const NextArrow = ({onClick}) => {
     return (
@@ -164,7 +167,7 @@ export function Cakes() {
     return (
         <div className="content-flex">
             <s.productsDivContent className="product-text-div">
-                <s.smallerP>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam neque lacus, ultrices sed aliquam nec, consectetur ac augue. Maecenas fringilla arcu augue, sit amet egestas tellus vestibulum eu. <br/><br/>Suspendisse potenti. Cras dignissim, elit non hendrerit elementum, odio nibh consectetur mauris, a pretium lorem justo eget mi.</s.smallerP>
+                <s.smallerP className="products-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam neque lacus, ultrices sed aliquam nec, consectetur ac augue. Maecenas fringilla arcu augue, sit amet egestas tellus vestibulum eu.</s.smallerP>
                 <Link to="/order"><s.pinkButton className="button" type="button">ORDER NOW</s.pinkButton></Link>
             </s.productsDivContent>
             <div className="image-slider-div">
@@ -200,7 +203,7 @@ export function Cupcakes() {
     return (
         <div className="content-flex">
             <s.productsDivContent className="product-text-div">
-                <s.smallerP>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam neque lacus, ultrices sed aliquam nec, consectetur ac augue. Maecenas fringilla arcu augue, sit amet egestas tellus vestibulum eu. <br/><br/>Suspendisse potenti. Cras dignissim, elit non hendrerit elementum, odio nibh consectetur mauris, a pretium lorem justo eget mi.</s.smallerP>
+                <s.smallerP className="products-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam neque lacus, ultrices sed aliquam nec, consectetur ac augue. Maecenas fringilla arcu augue, sit amet egestas tellus vestibulum eu.</s.smallerP>
                 <Link to="/order"><s.pinkButton className="button" type="button">ORDER NOW</s.pinkButton></Link>
             </s.productsDivContent>
             <div className="image-slider-div">
@@ -236,7 +239,7 @@ export function Packages() {
     return (
         <div className="content-flex">
             <s.productsDivContent className="product-text-div">
-                <s.smallerP>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam neque lacus, ultrices sed aliquam nec, consectetur ac augue. Maecenas fringilla arcu augue, sit amet egestas tellus vestibulum eu. <br/><br/>Suspendisse potenti. Cras dignissim, elit non hendrerit elementum, odio nibh consectetur mauris, a pretium lorem justo eget mi.</s.smallerP>
+                <s.smallerP className="products-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam neque lacus, ultrices sed aliquam nec, consectetur ac augue. Maecenas fringilla arcu augue, sit amet egestas tellus vestibulum eu.</s.smallerP>
                 <Link to="/order"><s.pinkButton className="button" type="button">ORDER NOW</s.pinkButton></Link>
             </s.productsDivContent>
             <div className="image-slider-div">

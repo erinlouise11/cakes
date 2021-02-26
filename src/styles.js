@@ -80,7 +80,6 @@ export const darkButton = styled.button`
 export const H1 = styled.h1`
     margin: 0;
     font-size: 40px;
-    font-weight: bold;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: 2px;
     color: #222;
@@ -144,8 +143,7 @@ export const smallerP = styled.p`
 
 export const H2 = styled.h2`
     margin: 0;
-    font-size: 28px;
-    font-weight: bold;
+    font-size: 27px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: 2px;
     color: #222;
@@ -310,7 +308,7 @@ export const HeroDivSmall = styled.div`
         display: block;
         position: absolute;
         background-color: #fff;
-        opacity: 0.1;
+        opacity: 0.25;
         width: 100%;
         height: 100%;
     }
@@ -391,17 +389,22 @@ export const homeHeroFlex = styled.div`
 `;
 
 export const heroTitleFlex = styled.div`
-    width: 100%;
+    width: 80%;
     height: 100px;
+    padding-left: 50px;
     position: absolute;
     z-index: 1;
-    bottom: 11%;
+    bottom: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
+    justify-content: flex-end;
 
     @media (min-width: 600px) {
+        width: 100%;
+        padding-left: 0px;
+        align-items: center;
+        justify-content: center;
         bottom: 35%;        
     }
 
@@ -552,21 +555,13 @@ export const productsDiv = styled.div`
 
 export const productsDivContent = styled.div`
     width: auto;
-    height: 400px;   
+    height: 300px;   
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;     
-
-    @media (min-width: 600px) {
-        
-    }
-
-    @media (min-width: 1000px) {
-        /* padding-right: 15px; */
-    }
+    justify-content: space-evenly; 
 
     @media (min-width: 1440px) {
-        /* padding-right: 30px; */
+        padding-right: 30px;
     }
 `;
