@@ -91,10 +91,6 @@ export const H1 = styled.h1`
     @media (min-width: 1000px) {
         font-size: 70px;
     }
-
-    @media (min-width: 1440px) {
-        font-size: 80px;
-    }
 `;
 
 export const largerP = styled.p`
@@ -364,21 +360,19 @@ export const homeHeroFlex = styled.div`
     @media (min-width: 600px) {
         width: 400px;
         height: 270px;
-        bottom: 5%;
+        bottom: 50px;
         left: 70px;
     }
 
     @media (min-width: 1000px) {
         width: 500px;
-        height: 270px;
-        bottom: 7%;
+        bottom: 60px;
         left: 80px;
     }
 
     @media (min-width: 1440px) {
         width: 600px;
-        height: 270px;
-        bottom: 20%;
+        bottom: 130px;
         left: 150px;
     }
 `;
@@ -557,6 +551,7 @@ export const productsDivContent = styled.div`
     justify-content: space-evenly; 
 
     @media (min-width: 1440px) {
+        height: 380px;
         padding-right: 30px;
     }
 `;
