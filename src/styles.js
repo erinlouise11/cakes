@@ -223,6 +223,26 @@ export const divImg = styled.img`
     }
 `;
 
+export const occasionImg = styled.img`
+    width: 300px;
+    height: 200px;    
+    object-fit: cover;
+    object-position: center;
+
+    @media (min-width: 600px) {
+        width: 400px;
+        height: 300px;
+    }
+
+    @media (min-width: 1000px) {
+        width: 550px;
+    }
+
+    @media (min-width: 1440px) {
+        width: 1000px;
+    }
+`;
+
 export const sideImg = styled.img`
     width: 100px;
     height: 140px;    
@@ -299,7 +319,7 @@ export const HeroDivSmall = styled.div`
         display: block;
         position: absolute;
         background-color: #fafafa;
-        opacity: 0.2;
+        opacity: 0.3;
         width: 100%;
         height: 100%;
     }
@@ -553,5 +573,46 @@ export const productsDivContent = styled.div`
     @media (min-width: 1440px) {
         height: 380px;
         padding-right: 30px;
+    }
+`;
+
+export const smallWhiteDiv = styled.div`
+    width: 100%;
+    height: 230px;    
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;    
+
+    @media (min-width: 600px) {
+        height: 260px; 
+        padding-bottom: 20px;  
+    }
+
+    @media (min-width: 1440px) {
+        height: 280px;   
+    }
+`;
+
+export const occasionDiv = styled.div`
+    width: 100%;
+    height: 400px;    
+    padding: 20px 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;  
+    
+    @media (min-width: 600px) {
+        height: 300px;
+        padding: 0;
+        flex-direction: row;
+        justify-content: flex-start; 
+    }
+
+    @media (min-width: 1440px) {
+        height: 400px;
     }
 `;

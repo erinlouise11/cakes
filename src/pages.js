@@ -11,6 +11,12 @@ import balloons from './img/divImages/balloons.jpg';
 import cake from './img/cakes/cake.jpg';
 import middle from './img/packages/package.jpg';
 import cupcakes from './img/cupcakes/rainbowCupcakes.jpg';
+import birthday from './img/divImages/birthday.jpg';
+import wedding from './img/divImages/wedding.jpg';
+import workfunction from './img/divImages/work.jpg';
+import gender from './img/divImages/genderreveal.jpg';
+import tragedy from './img/divImages/tragedy.jpg';
+import fun from './img/divImages/forfun.jpg';
 
 import cake1 from './img/cakes/cake1.jpg';
 import cake2 from './img/cakes/cake2.jpg';
@@ -273,45 +279,58 @@ export function Occasions() {
                 </s.Ul>
             </s.Nav>
 
-            <s.whiteDiv className="bio-div white">
-                <s.divImg src={lady} />
+            <s.smallWhiteDiv className="occasions-info white">
+                <s.smallerP className="occasion-info-p">Any reason is a reason to have a piece of cake and that's where we come in! Place an order now so we can make your cake and cupcake dreams come true, even if it's for your sister's goldfish's funeral or a stupid ex!</s.smallerP>
+                <Link to="/order"><s.pinkButton className="button" type="button" style={{margin: '0'}}>ORDER NOW</s.pinkButton></Link>
+            </s.smallWhiteDiv>
+
+            <s.occasionDiv className="occasion-div white">
+                <s.occasionImg src={birthday} />
                 <s.divInfo>
                     <s.H2>birthday parties</s.H2>
                     <s.smallerP>Since a love for baking arose from a high school bake sale, the art of cakes and cupcakes have been what I live for. I can't wait for you to experience some Cool AF Cakes!</s.smallerP>
                 </s.divInfo>
-            </s.whiteDiv>
+            </s.occasionDiv>
 
-            <s.whiteDiv className="products-div white">
+            <s.occasionDiv className="occasion-div white">                
                 <s.divInfo>
                     <s.H2>weddings</s.H2>
-                    <s.smallerP>We offer 'cake with cupcakes' packages for the special occasions that need a little extra!</s.smallerP>
+                    <s.smallerP>Since a love for baking arose from a high school bake sale, the art of cakes and cupcakes have been what I live for. I can't wait for you to experience some Cool AF Cakes!</s.smallerP>
                 </s.divInfo>
-                <s.divImages>
-                    <s.sideImg src={cake} />
-                    <s.midImg src={middle} /> 
-                    <s.sideImg src={cupcakes} />
-                </s.divImages>
-            </s.whiteDiv>
-   
-            <s.whiteDiv className="occasions-div white">
-                <s.divImg src={balloons} />
-                <s.divInfo>
-                    <s.H2>work functions</s.H2>
-                    <s.smallerP>No matter the occasion, make it special with a Cool AF Cakes product!</s.smallerP>
-                </s.divInfo>
-            </s.whiteDiv>
+                <s.occasionImg src={wedding} />
+            </s.occasionDiv>
 
-            <s.whiteDiv className="products-div white">
+            <s.occasionDiv className="occasion-div white">
+                <s.occasionImg src={workfunction} />
                 <s.divInfo>
-                    <s.H2>other events</s.H2>
-                    <s.smallerP>We offer 'cake with cupcakes' packages for the special occasions that need a little extra!</s.smallerP>
+                    <s.H2>work fucntions &amp; other events</s.H2>
+                    <s.smallerP>Since a love for baking arose from a high school bake sale, the art of cakes and cupcakes have been what I live for. I can't wait for you to experience some Cool AF Cakes!</s.smallerP>
                 </s.divInfo>
-                <s.divImages>
-                    <s.sideImg src={cake} />
-                    <s.midImg src={middle} /> 
-                    <s.sideImg src={cupcakes} />
-                </s.divImages>
-            </s.whiteDiv>
+            </s.occasionDiv>
+
+            <s.occasionDiv className="occasion-div white">                
+                <s.divInfo>
+                    <s.H2>gender reveals</s.H2>
+                    <s.smallerP>Since a love for baking arose from a high school bake sale, the art of cakes and cupcakes have been what I live for. I can't wait for you to experience some Cool AF Cakes!</s.smallerP>
+                </s.divInfo>
+                <s.occasionImg src={gender} />
+            </s.occasionDiv>
+
+            <s.occasionDiv className="occasion-div white">
+                <s.occasionImg src={tragedy} />
+                <s.divInfo>
+                    <s.H2>tragedies</s.H2>
+                    <s.smallerP>Since a love for baking arose from a high school bake sale, the art of cakes and cupcakes have been what I live for. I can't wait for you to experience some Cool AF Cakes!</s.smallerP>
+                </s.divInfo>
+            </s.occasionDiv>
+
+            <s.occasionDiv className="occasion-div white">                
+                <s.divInfo>
+                    <s.H2>just for fun</s.H2>
+                    <s.smallerP>Since a love for baking arose from a high school bake sale, the art of cakes and cupcakes have been what I live for. I can't wait for you to experience some Cool AF Cakes!</s.smallerP>
+                </s.divInfo>
+                <s.occasionImg src={fun} />
+            </s.occasionDiv>
         </>        
     );
 }
