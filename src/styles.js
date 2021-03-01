@@ -587,13 +587,12 @@ export const smallWhiteDiv = styled.div`
     justify-content: space-evenly;    
 
     @media (min-width: 600px) {
-        height: 260px; 
-        padding-bottom: 20px;  
+        height: 260px;                 
+        padding-bottom: 0; 
     }
 
     @media (min-width: 1440px) {
-        height: 280px;           
-        padding-bottom: 0;  
+        height: 280px;      
     }
 `;
 
@@ -617,5 +616,27 @@ export const occasionDiv = styled.div`
         height: 350px;   
         margin: 0 auto;
         flex-direction: row;
+    }
+`;
+
+export const backTopDiv = styled.a`
+    width: 120px;
+    height: 40px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-decoration: none;
+`;
+
+export const toTopP = styled.p`
+    margin: 0;
+    font-size: 15px;
+    font-family: 'Segoe Print', Tahoma, Geneva, Verdana, sans-serif;
+    color: #222;
+    text-align:center;
+
+    ${backTopDiv}:hover & {
+        color: #CC84BD;
     }
 `;

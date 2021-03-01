@@ -208,6 +208,14 @@
   color: #CC84BD;
 }
 
+.up-arrow svg {
+  color: #222;  
+}
+
+.back-top-a:hover .up-arrow svg {
+  color: #CC84BD;
+}
+
 .next {
   right: 0;
   top: 50%;

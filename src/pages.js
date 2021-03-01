@@ -3,7 +3,7 @@ import './App.css';
 import Slider from 'react-slick';
 import * as s from './styles';
 import {Link, NavLink, Outlet} from 'react-router-dom';
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import { FaArrowLeft, FaArrowRight, FaArrowUp } from 'react-icons/fa';
 
 import logo from './img/logo222.png';
 import lady from './img/divImages/ladySmile.jpg';
@@ -279,7 +279,7 @@ export function Occasions() {
                 </s.Ul>
             </s.Nav>
 
-            <s.smallWhiteDiv className="occasions-info white">
+            <s.smallWhiteDiv id="top" className="occasions-info white">
                 <s.smallerP className="occasion-info-p">Any reason is a reason to have a piece of cake and that's where we come in! Place an order now so we can make your cake and cupcake dreams come true, even if it's for your sister's goldfish's funeral or a stupid ex!</s.smallerP>
                 <Link to="/order"><s.pinkButton className="button" type="button" style={{margin: '0'}}>ORDER NOW</s.pinkButton></Link>
             </s.smallWhiteDiv>
@@ -334,6 +334,13 @@ export function Occasions() {
                 </s.divInfo>
                 <s.occasionImg className="not-mobile" src={fun} />
             </s.occasionDiv>
+
+            <s.backTopDiv className="back-top-a" href="#top">
+                <backTopDiv className="up-arrow">
+                    <FaArrowUp />                
+                </backTopDiv>
+                <s.toTopP>back to top</s.toTopP>
+            </s.backTopDiv>
         </>        
     );
 }
