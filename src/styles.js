@@ -93,6 +93,28 @@ export const H1 = styled.h1`
     }
 `;
 
+export const H2 = styled.h2`
+    margin: 0;
+    font-size: 27px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 2px;
+    color: #222;
+    text-align: center;
+
+    @media (min-width: 600px) {
+        font-size: 35px;  
+        text-align: left; 
+    }
+
+    @media (min-width: 1000px) {
+        font-size: 40px; 
+    }
+
+    @media (min-width: 1440px) {
+        font-size: 45px;
+    }
+`;
+
 export const largerP = styled.p`
     margin: 0;
     font-size: 16px;
@@ -137,28 +159,6 @@ export const smallerP = styled.p`
     }
 `;
 
-export const H2 = styled.h2`
-    margin: 0;
-    font-size: 27px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    letter-spacing: 2px;
-    color: #222;
-    text-align: center;
-
-    @media (min-width: 600px) {
-        font-size: 35px;  
-        text-align: left; 
-    }
-
-    @media (min-width: 1000px) {
-        font-size: 40px; 
-    }
-
-    @media (min-width: 1440px) {
-        font-size: 45px;
-    }
-`;
-
 export const Ul = styled.ul`
     width: 300px;
     height: 110px;
@@ -184,6 +184,10 @@ export const Li = styled.li`
     font-size: 16px;
     font-family: 'Segoe Print', Tahoma, Geneva, Verdana, sans-serif;
     color: #222;
+
+    &:hover {
+        color: #CC84BD; 
+    }
 
     @media (min-width: 600px) {
         font-size: 19px;
