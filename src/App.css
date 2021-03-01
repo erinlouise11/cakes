@@ -259,8 +259,23 @@
   text-align: center !important;
 }
 
+.not-mobile {
+  display: none;
+}
+
 @media (min-width: 600px) {
   .occasion-info-p {
     width: 500px !important;
   }
 }
+
+@media (min-width: 1000px) {
+  .mobile {
+    display: none;
+  }
+
+  .not-mobile {
+    display: block;
+  }
+}
+

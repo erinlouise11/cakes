@@ -292,12 +292,13 @@ export function Occasions() {
                 </s.divInfo>
             </s.occasionDiv>
 
-            <s.occasionDiv className="occasion-div white">                
+            <s.occasionDiv className="occasion-div white">             
+                <s.occasionImg className="mobile" src={wedding} />   
                 <s.divInfo>
                     <s.H2>weddings</s.H2>
                     <s.smallerP>Since a love for baking arose from a high school bake sale, the art of cakes and cupcakes have been what I live for. I can't wait for you to experience some Cool AF Cakes!</s.smallerP>
                 </s.divInfo>
-                <s.occasionImg src={wedding} />
+                <s.occasionImg className="not-mobile" src={wedding} />
             </s.occasionDiv>
 
             <s.occasionDiv className="occasion-div white">
@@ -308,12 +309,13 @@ export function Occasions() {
                 </s.divInfo>
             </s.occasionDiv>
 
-            <s.occasionDiv className="occasion-div white">                
+            <s.occasionDiv className="occasion-div white">     
+                <s.occasionImg className="mobile" src={gender} />           
                 <s.divInfo>
                     <s.H2>gender reveals</s.H2>
                     <s.smallerP>Since a love for baking arose from a high school bake sale, the art of cakes and cupcakes have been what I live for. I can't wait for you to experience some Cool AF Cakes!</s.smallerP>
                 </s.divInfo>
-                <s.occasionImg src={gender} />
+                <s.occasionImg className="not-mobile" src={gender} />
             </s.occasionDiv>
 
             <s.occasionDiv className="occasion-div white">
@@ -324,12 +326,13 @@ export function Occasions() {
                 </s.divInfo>
             </s.occasionDiv>
 
-            <s.occasionDiv className="occasion-div white">                
+            <s.occasionDiv className="occasion-div white">        
+                <s.occasionImg className="mobile" src={fun} />        
                 <s.divInfo>
                     <s.H2>just for fun</s.H2>
                     <s.smallerP>Since a love for baking arose from a high school bake sale, the art of cakes and cupcakes have been what I live for. I can't wait for you to experience some Cool AF Cakes!</s.smallerP>
                 </s.divInfo>
-                <s.occasionImg src={fun} />
+                <s.occasionImg className="not-mobile" src={fun} />
             </s.occasionDiv>
         </>        
     );
