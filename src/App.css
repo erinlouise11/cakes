@@ -25,7 +25,7 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
   .sub-nav-link  {
     height: 50px;
     font-size: 25px;
@@ -81,7 +81,7 @@
   background-position: left 50% top 35%;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
   .occasions-hero {
     background-position: left 50% top 63%;
   }
@@ -111,7 +111,7 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
   .dark-p {
     text-align: left;
   }
@@ -164,7 +164,7 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
   .image-slider-div {
     width: 515px;
     height: 300px;
@@ -267,15 +267,25 @@
   .occasion-info-p {
     width: 500px !important;
   }
+
+  .occasion-divInfo {
+    padding-left: 0px !important;
+    align-items: center !important;
+  }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1440px) {
   .mobile {
     display: none;
   }
 
   .not-mobile {
     display: block;
+  }
+
+  .occasion-divInfo {
+    padding-left: 50px;
+    align-items: flex-start;
   }
 }
 

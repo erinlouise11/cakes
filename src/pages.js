@@ -286,51 +286,51 @@ export function Occasions() {
 
             <s.occasionDiv className="occasion-div white">
                 <s.occasionImg src={birthday} />
-                <s.divInfo>
+                <s.divInfo className="occasion-divInfo">
                     <s.H2>birthday parties</s.H2>
-                    <s.smallerP>Since a love for baking arose from a high school bake sale, the art of cakes and cupcakes have been what I live for. I can't wait for you to experience some Cool AF Cakes!</s.smallerP>
+                    <s.smallerP className="occasion-info-p">Since a love for baking arose from a high school bake sale, the art of cakes and cupcakes have been what I live for. I can't wait for you to experience some Cool AF Cakes!</s.smallerP>
                 </s.divInfo>
             </s.occasionDiv>
 
             <s.occasionDiv className="occasion-div white">             
                 <s.occasionImg className="mobile" src={wedding} />   
-                <s.divInfo>
+                <s.divInfo className="occasion-divInfo">
                     <s.H2>weddings</s.H2>
-                    <s.smallerP>Since a love for baking arose from a high school bake sale, the art of cakes and cupcakes have been what I live for. I can't wait for you to experience some Cool AF Cakes!</s.smallerP>
+                    <s.smallerP className="occasion-info-p">Since a love for baking arose from a high school bake sale, the art of cakes and cupcakes have been what I live for. I can't wait for you to experience some Cool AF Cakes!</s.smallerP>
                 </s.divInfo>
                 <s.occasionImg className="not-mobile" src={wedding} />
             </s.occasionDiv>
 
             <s.occasionDiv className="occasion-div white">
                 <s.occasionImg src={workfunction} />
-                <s.divInfo>
+                <s.divInfo className="occasion-divInfo">
                     <s.H2>work fucntions &amp; other events</s.H2>
-                    <s.smallerP>Since a love for baking arose from a high school bake sale, the art of cakes and cupcakes have been what I live for. I can't wait for you to experience some Cool AF Cakes!</s.smallerP>
+                    <s.smallerP className="occasion-info-p">Since a love for baking arose from a high school bake sale, the art of cakes and cupcakes have been what I live for. I can't wait for you to experience some Cool AF Cakes!</s.smallerP>
                 </s.divInfo>
             </s.occasionDiv>
 
             <s.occasionDiv className="occasion-div white">     
                 <s.occasionImg className="mobile" src={gender} />           
-                <s.divInfo>
+                <s.divInfo className="occasion-divInfo">
                     <s.H2>gender reveals</s.H2>
-                    <s.smallerP>Since a love for baking arose from a high school bake sale, the art of cakes and cupcakes have been what I live for. I can't wait for you to experience some Cool AF Cakes!</s.smallerP>
+                    <s.smallerP className="occasion-info-p">Since a love for baking arose from a high school bake sale, the art of cakes and cupcakes have been what I live for. I can't wait for you to experience some Cool AF Cakes!</s.smallerP>
                 </s.divInfo>
                 <s.occasionImg className="not-mobile" src={gender} />
             </s.occasionDiv>
 
             <s.occasionDiv className="occasion-div white">
                 <s.occasionImg src={tragedy} />
-                <s.divInfo>
+                <s.divInfo className="occasion-divInfo">
                     <s.H2>tragedies</s.H2>
-                    <s.smallerP>Since a love for baking arose from a high school bake sale, the art of cakes and cupcakes have been what I live for. I can't wait for you to experience some Cool AF Cakes!</s.smallerP>
+                    <s.smallerP className="occasion-info-p">Since a love for baking arose from a high school bake sale, the art of cakes and cupcakes have been what I live for. I can't wait for you to experience some Cool AF Cakes!</s.smallerP>
                 </s.divInfo>
             </s.occasionDiv>
 
             <s.occasionDiv className="occasion-div white">        
                 <s.occasionImg className="mobile" src={fun} />        
-                <s.divInfo>
+                <s.divInfo className="occasion-divInfo">
                     <s.H2>just for fun</s.H2>
-                    <s.smallerP>Since a love for baking arose from a high school bake sale, the art of cakes and cupcakes have been what I live for. I can't wait for you to experience some Cool AF Cakes!</s.smallerP>
+                    <s.smallerP className="occasion-info-p">Since a love for baking arose from a high school bake sale, the art of cakes and cupcakes have been what I live for. I can't wait for you to experience some Cool AF Cakes!</s.smallerP>
                 </s.divInfo>
                 <s.occasionImg className="not-mobile" src={fun} />
             </s.occasionDiv>

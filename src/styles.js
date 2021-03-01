@@ -231,7 +231,7 @@ export const occasionImg = styled.img`
 
     @media (min-width: 600px) {
         width: 400px;
-        height: 300px;
+        height: 270px;
     }
 
     @media (min-width: 1000px) {
@@ -239,7 +239,8 @@ export const occasionImg = styled.img`
     }
 
     @media (min-width: 1440px) {
-        width: 1000px;
+        width: 680px;
+        height: 350px;
     }
 `;
 
@@ -591,7 +592,8 @@ export const smallWhiteDiv = styled.div`
     }
 
     @media (min-width: 1440px) {
-        height: 280px;   
+        height: 280px;           
+        padding-bottom: 0;  
     }
 `;
 
@@ -603,16 +605,17 @@ export const occasionDiv = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;  
-    
+    justify-content: space-evenly;   
+
     @media (min-width: 600px) {
-        height: 300px;
-        padding: 0;
-        flex-direction: row;
-        justify-content: flex-start; 
-    }
+        height: 450px;          
+        padding: 30px 0;
+    }    
 
     @media (min-width: 1440px) {
-        height: 400px;
+        width: 1440px;
+        height: 350px;   
+        margin: 0 auto;
+        flex-direction: row;
     }
 `;
