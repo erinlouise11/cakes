@@ -81,7 +81,7 @@
   background-position: left 50% top 35%;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
   .occasions-hero {
     background-position: left 50% top 63%;
   }
@@ -111,13 +111,9 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
   .dark-p {
-    text-align: left;
-  }
-
-  .products-p {
-  
+    text-align: left !important;
   }
 }
 

@@ -248,6 +248,28 @@ export const occasionImg = styled.img`
     }
 `;
 
+export const orderImg = styled.img`
+    width: 300px;
+    height: 200px;    
+    object-fit: cover;
+    object-position: center;
+
+    @media (min-width: 600px) {
+        width: 300px;
+        height: 220px;
+    }
+
+    @media (min-width: 1000px) {
+        width: 350px;
+        height: 250px;
+    }
+
+    @media (min-width: 1440px) {
+        width: 550px;
+        height: 480px;
+    }
+`;
+
 export const sideImg = styled.img`
     width: 100px;
     height: 140px;    
@@ -642,5 +664,65 @@ export const toTopP = styled.p`
 
     ${backTopDiv}:hover & {
         color: #CC84BD;
+    }
+`;
+
+export const orderDiv = styled.div`
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    @media (min-width: 600px) {
+    }    
+
+    @media (min-width: 1440px) {
+        flex-direction: column;
+    }
+`;
+
+export const contactDiv = styled.div`
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    @media (min-width: 600px) {
+        flex-direction: row;
+    }    
+
+    @media (min-width: 1440px) {
+        flex-direction: column;
+    }
+`;
+
+export const contactDetails = styled.div`
+    width: 300px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    @media (min-width: 600px) {
+    }    
+
+    @media (min-width: 1440px) {
+    }
+`;
+
+export const contactItem = styled.div`
+    width: 100%;
+    display: flex;    
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+    @media (min-width: 600px) {
+    }    
+
+    @media (min-width: 1440px) {
     }
 `;

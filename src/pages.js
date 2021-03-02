@@ -17,6 +17,7 @@ import workfunction from './img/divImages/work.jpg';
 import gender from './img/divImages/genderreveal.jpg';
 import tragedy from './img/divImages/tragedy.jpg';
 import fun from './img/divImages/forfun.jpg';
+import boxed from './img/divImages/boxed.jpg';
 
 import cake1 from './img/cakes/cake1.jpg';
 import cake2 from './img/cakes/cake2.jpg';
@@ -336,9 +337,9 @@ export function Occasions() {
             </s.occasionDiv>
 
             <s.backTopDiv className="back-top-a" href="#top">
-                <backTopDiv className="up-arrow">
+                <div className="up-arrow">
                     <FaArrowUp />                
-                </backTopDiv>
+                </div>
                 <s.toTopP>back to top</s.toTopP>
             </s.backTopDiv>
         </>        
@@ -383,6 +384,22 @@ export function Order() {
                 <NavLink activeClassName="selected" className="nav-link" to="/order"><s.Li>Order</s.Li></NavLink>
             </s.Ul>
         </s.Nav>
+
+        <s.orderDiv>
+            <s.contactDiv>
+                <s.contactDetails>
+                    <s.contactItem>
+                        <s.H2>contact</s.H2>
+                        <s.smallerP style={{textAlign: 'left', width: '115px'}}>555 420 6969</s.smallerP>
+                    </s.contactItem>
+                    <s.contactItem>
+                        <s.H2>location</s.H2>
+                        <s.smallerP style={{textAlign: 'left', width: '115px'}}>Cool AF Cakes<br/>420 Sugar Street<br/>New York<br/>NY, 10696</s.smallerP>
+                    </s.contactItem>
+                </s.contactDetails>
+                <s.orderImg src={boxed} />
+            </s.contactDiv>
+        </s.orderDiv>
     </>        
     );
 }
