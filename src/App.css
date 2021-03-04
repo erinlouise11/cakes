@@ -36,6 +36,10 @@
   cursor: pointer;
 }
 
+.button:hover {
+  opacity: 0.8;
+}
+
 .selected {
   border-bottom: solid 3px #CC84BD;
 }

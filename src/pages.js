@@ -374,7 +374,7 @@ export function About() {
         </s.flexImages>         
         <s.aboutInfo className="about-info-flex">
             <s.smallerP className="about-p">Any reason is a reason to have a piece of cake and that's where we come in! Place an order now so we can make your cake and cupcake dreams come true, even if its for your sister's goldfish's funeral or a stupid ex!</s.smallerP>
-            <Link to="/products"><s.pinkButton className="button" type="button" >SEE PRODUCTS</s.pinkButton></Link> 
+            <Link to="/products/cakes"><s.pinkButton className="button" type="button" >SEE PRODUCTS</s.pinkButton></Link> 
         </s.aboutInfo>           
         <s.flexImages className="about-image-flex">
             <s.aboutImg style={{objectPosition: 'bottom'}} src={dripcake} />

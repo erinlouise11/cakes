@@ -363,7 +363,7 @@ export const HeroDivSmall = styled.div`
         display: block;
         position: absolute;
         background-color: #fafafa;
-        opacity: 0.3;
+        opacity: 0.25;
         width: 100%;
         height: 100%;
     }
