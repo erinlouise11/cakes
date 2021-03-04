@@ -248,6 +248,23 @@ export const occasionImg = styled.img`
     }
 `;
 
+export const aboutImg = styled.img`
+    width: 250px;
+    height: 150px;    
+    object-fit: cover;
+    object-position: center;
+
+    @media (min-width: 600px) {
+        width: 280px;
+        height: 200px;
+    }
+
+    @media (min-width: 1440px) {
+        width: 550px;
+        height: 350px;
+    }
+`;
+
 export const orderImg = styled.img`
     width: 300px;
     height: 200px;    
@@ -725,4 +742,38 @@ export const contactItem = styled.div`
 
     @media (min-width: 1440px) {
     }
+`;
+
+export const flexImages = styled.div`
+    width: 100%;
+    height: 350px;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    @media (min-width: 600px) {
+        width: 600px;
+        height: 200px;
+        margin-top: 40px;
+        flex-direction: row;
+    }    
+
+    @media (min-width: 1440px) {
+        width: 1300px;
+        height: 350px;
+        margin-top: 50px;
+    }
+`;
+
+export const aboutInfo = styled.div`
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 `;

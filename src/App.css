@@ -293,3 +293,8 @@
   }
 }
 
+.about-p {
+  width: 300px !important;
+  margin: 0 auto !important;
+  padding-top: 20px !important;
+}

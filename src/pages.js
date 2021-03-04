@@ -18,6 +18,10 @@ import gender from './img/divImages/genderreveal.jpg';
 import tragedy from './img/divImages/tragedy.jpg';
 import fun from './img/divImages/forfun.jpg';
 import boxed from './img/divImages/boxed.jpg';
+import lady1 from './img/divImages/lady1.jpg';
+import lady2 from './img/divImages/lady2.jpg';
+import dripcake from './img/divImages/dripcake.jpg';
+import baking from './img/divImages/baking1.jpg';
 
 import cake1 from './img/cakes/cake1.jpg';
 import cake2 from './img/cakes/cake2.jpg';
@@ -363,11 +367,25 @@ export function About() {
                 <NavLink className="nav-link" to="/order"><s.Li>Order</s.Li></NavLink>
             </s.Ul>
         </s.Nav>
+
+        <s.smallerP className="about-p">Any reason is a reason to have a piece of cake and that's where we come in! Place an order now so we can make your cake and cupcake dreams come true, even if its for your sister's goldfish's funeral or a stupid ex!</s.smallerP>
+        <s.flexImages className="about-image-flex">
+            <s.aboutImg src={lady1} />
+            <s.aboutImg src={lady2} />
+        </s.flexImages>         
+        <s.aboutInfo className="about-info-flex">
+            <s.smallerP className="about-p">Any reason is a reason to have a piece of cake and that's where we come in! Place an order now so we can make your cake and cupcake dreams come true, even if its for your sister's goldfish's funeral or a stupid ex!</s.smallerP>
+            <Link to="/products"><s.darkButton className="button" type="button" >SEE PRODUCTS</s.darkButton></Link> 
+        </s.aboutInfo>           
+        <s.flexImages className="about-image-flex">
+            <s.aboutImg style={{objectPosition: 'bottom'}} src={dripcake} />
+            <s.aboutImg src={baking} />
+        </s.flexImages>
     </>        
     );
 }
 
-export function Order() {
+export function Order() { 
     return (
         <>
         <s.HeroDivSmall className="order-hero bg">
