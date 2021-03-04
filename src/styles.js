@@ -776,4 +776,8 @@ export const aboutInfo = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+
+    @media (min-width: 600px) {
+        height: 230px;
+    }    
 `;
