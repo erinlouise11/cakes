@@ -15,11 +15,11 @@ exports.handler = function(event, context, callback) {
     transporter.sendMail({
         from: "erin.test.email@zohomail.com",
         to: "erin.web.email.tester@gmail.com",
-        subject: `Cool AF Cakes Email Submission`,
+        subject: `${data.name} Cool AF Cakes Email Submission`,
         html: `
             <h3>Message from ${data.name}<h3>
             <p>Email address ${data.email}<p>
-            <p>${data.message}<p>
+            "<p>${data.message}<p>"
             `
     }, function(error, info) {
             if (error) {
@@ -37,11 +37,11 @@ exports.handler = function(event, context, callback) {
     transporter.sendMail({
         from: "erin.test.email@zohomail.com",
         to: `${data.email}`,
-        subject: `Cool AF Cakes Email Submission`,
+        subject: `Your Cool AF Cakes Email Submission`,
         html: `
             <h3>You sent an email to Cool AF Cakes<h3>
             <p>Your message was:<p>
-            <p>${data.message}<p>
+            "<p>${data.message}<p>"
             <p>You may respond to this email<p>
             `
     }, function(error, info) {

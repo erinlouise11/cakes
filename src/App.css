@@ -271,6 +271,10 @@
   display: none;
 }
 
+.ipad-desktop {
+  display: none;
+}
+
 .about-p {
   width: 300px !important;
   margin: 0 auto !important;
@@ -288,6 +292,14 @@
     align-items: center !important;
   }
 
+  .not-ipad-desktop {
+    display: none;
+  }
+
+  .ipad-desktop {
+    display: block;
+  }
+  
   .about-p {
     width: 500px !important;
     padding-top: 30px !important;    

@@ -470,38 +470,41 @@ export function Order() {
         </s.Nav>
 
         <s.orderDiv>
-            <s.contactDiv>
-                <s.contactDetails>
+            <s.contactDiv>          
+                <s.orderImg className="not-ipad-desktop" src={boxed} />              
+                <s.contactDetails>                    
                     <s.contactItem>
                         <s.H2>contact</s.H2>
-                        <s.smallerP style={{textAlign: 'left', width: '115px'}}>555 420 6969</s.smallerP>
+                        <s.smallerP style={{textAlign: 'left', width: '150px'}}>555 420 6969</s.smallerP>
                     </s.contactItem>
                     <s.contactItem>
                         <s.H2>location</s.H2>
-                        <s.smallerP style={{textAlign: 'left', width: '115px'}}>Cool AF Cakes<br/>420 Sugar Street<br/>New York<br/>NY, 10696</s.smallerP>
+                        <s.smallerP style={{textAlign: 'left', width: '150px'}}>Cool AF Cakes<br/>420 Sugar Street<br/>New York<br/>NY, 10696</s.smallerP>
                     </s.contactItem>
                 </s.contactDetails>
-                <s.orderImg src={boxed} />
+                <s.orderImg className="ipad-desktop" src={boxed} />
             </s.contactDiv>
 
-            <FormControl fullWidth={true}>
-                <TextField required label="Full name" variant="filled" id="full-name" name="name" className="form-field" value={data.name} onChange={handleChange} />
-            </FormControl>
-            <FormControl fullWidth={true}>
-                <TextField required label="Email" id="email" name="email" variant="filled" className="form-field" value={data.email} onChange={handleChange} />
-            </FormControl>
-            <FormControl fullWidth={true}>
-                <TextField required label="Message" variant="filled" name="message" multiline={true} rows="10" value={data.message} onChange={handleChange} />
-            </FormControl>
-            <FormControl>
-                <div style={{padding: 20}}>
-                    <Grid container spacing={2}>
-                        <div className="form-submit">
-                            <Button variant="contained" color="primary" onClick={formSubmit}>{data.buttonText}</Button>
-                        </div>
-                    </Grid>
-                </div>
-            </FormControl>
+            <s.Form>
+                <FormControl fullWidth={true}>
+                    <TextField required label="Full name" variant="filled" id="full-name" name="name" className="form-field" value={data.name} onChange={handleChange} />
+                </FormControl>
+                <FormControl fullWidth={true}>
+                    <TextField required label="Email" id="email" name="email" variant="filled" className="form-field" value={data.email} onChange={handleChange} />
+                </FormControl>
+                <FormControl fullWidth={true}>
+                    <TextField required label="Message" variant="filled" name="message" multiline={true} rows="10" value={data.message} onChange={handleChange} />
+                </FormControl>
+                <FormControl>
+                    <div style={{padding: 20}}>
+                        <Grid container spacing={2}>
+                            <div className="form-submit">
+                                <Button variant="contained" color="primary" onClick={formSubmit}>{data.buttonText}</Button>
+                            </div>
+                        </Grid>
+                    </div>
+                </FormControl>
+            </s.Form>                 
         </s.orderDiv>
     </>        
     );
