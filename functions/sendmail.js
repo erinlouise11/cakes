@@ -19,6 +19,9 @@ exports.handler = function(event, context, callback) {
         html: `
             <h3>Message from ${data.name}<h3>
             <p>Email address ${data.email}<p>
+            <p>Product type ${data.product}<p>
+            <p>Event type ${data.event}<p>
+            <p>Date of event ${data.date}<p>
             "<p>${data.message}<p>"
             `
     }, function(error, info) {
@@ -40,6 +43,9 @@ exports.handler = function(event, context, callback) {
         subject: `Your Cool AF Cakes Email Submission`,
         html: `
             <h3>You sent an email to Cool AF Cakes<h3>
+            <p>Product type ${data.product}<p>
+            <p>Event type ${data.event}<p>
+            <p>Date of event ${data.date}<p>
             <p>Your message was:<p>
             "<p>${data.message}<p>"
             <p>You may respond to this email<p>

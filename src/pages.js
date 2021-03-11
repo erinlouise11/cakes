@@ -8,6 +8,10 @@ import FormControl from '@material-ui/core/FormControl';
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormHelperText from '@material-ui/core/FormHelperText';
+import Select from '@material-ui/core/Select';
 
 import logo from './img/logo222.png';
 import lady from './img/divImages/ladySmile.jpg';
@@ -390,7 +394,7 @@ export function About() {
 
 export function Order() { 
     const axios = require('axios').default;
-    const [data, setData] = useState({name: '', email: '', message: '', sent: false, buttonText: 'Submit', err: ''})
+    const [data, setData] = useState({name: '', email: '', product: '', event: '', message: '', sent: false, buttonText: 'Submit', err: ''});
 
     const handleChange = (e) => {
         const {name, value} = e.target
@@ -445,6 +449,8 @@ export function Order() {
         setData({
             name: '',
             email: '',
+            product: '',
+            event: '', 
             message: '',
             sent: false,
             buttonText: 'Submit',
@@ -487,13 +493,28 @@ export function Order() {
 
             <s.Form>
                 <FormControl fullWidth={true}>
-                    <TextField required label="Full name" variant="filled" id="full-name" name="name" className="form-field" value={data.name} onChange={handleChange} />
+                    <TextField className="form-textfield form-field" required label="Full name" variant="filled" id="full-name" name="name" value={data.name} onChange={handleChange} />
                 </FormControl>
                 <FormControl fullWidth={true}>
-                    <TextField required label="Email" id="email" name="email" variant="filled" className="form-field" value={data.email} onChange={handleChange} />
+                    <TextField className="form-textfield form-field" required label="Email" id="email" name="email" variant="filled" value={data.email} onChange={handleChange} />
+                </FormControl>
+                <FormControl required fullWidth={true} >
+                    <InputLabel style={{padding: '0 10px'}} className="form-textfield form-field" id="product-label">Product</InputLabel>
+                    <Select className="form-textfield form-field" label="Product" id="product" name="product" variant="filled" value={data.product} onChange={handleChange}>
+                        <MenuItem value={'Cake'}>Cake</MenuItem>
+                        <MenuItem value={'Cupcakes'}>Cupcakes</MenuItem>
+                        <MenuItem value={'Package'}>Package</MenuItem>
+                        <MenuItem value={'Unsure'}>Unsure</MenuItem>
+                    </Select>
                 </FormControl>
                 <FormControl fullWidth={true}>
-                    <TextField required label="Message" variant="filled" name="message" multiline={true} rows="10" value={data.message} onChange={handleChange} />
+                    <TextField className="form-textfield form-field" label="Event type" id="event" name="event" variant="filled" value={data.event} onChange={handleChange} />
+                </FormControl>
+                <FormControl noValidate fullWidth={true}>
+                    <TextField className="form-textfield form-field" label="Date of Event" id="date" type="date" variant="filled" name="date" value={data.date} onChange={handleChange} InputLabelProps={{shrink: true}} />
+                </FormControl>
+                <FormControl fullWidth={true}>
+                    <TextField className="form-textfield form-field" required label="Message" variant="filled" name="message" multiline={true} rows="10" value={data.message} onChange={handleChange} />
                 </FormControl>
                 <FormControl>
                     <div style={{padding: 20}}>
