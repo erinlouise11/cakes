@@ -755,6 +755,7 @@ export const Form = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 
     @media (min-width: 600px) {
         width: 600px;

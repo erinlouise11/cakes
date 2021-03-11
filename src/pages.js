@@ -481,7 +481,7 @@ export function Order() {
                 <s.contactDetails>                    
                     <s.contactItem>
                         <s.H2>contact</s.H2>
-                        <s.smallerP className="order-smaller-p">555 420 6969</s.smallerP>
+                        <s.smallerP className="order-smaller-p">(555) 420-6969</s.smallerP>
                     </s.contactItem>
                     <s.contactItem>
                         <s.H2>location</s.H2>
@@ -492,6 +492,11 @@ export function Order() {
             </s.contactDiv>
 
             <s.Form>
+                <s.divInfo style={{height: '150px', paddingLeft: 0, alignItems: 'center', justifyContent: 'space-evenly'}}>
+                    <s.H2>have an idea for an order?</s.H2>
+                    <s.smallerP className="occasion-info-p">Send us a message and let's make your Cool AF Cakes dreams come true</s.smallerP>
+                </s.divInfo>
+                
                 <FormControl fullWidth={true}>
                     <TextField className="form-textfield form-field" required label="Full name" variant="filled" id="full-name" name="name" value={data.name} onChange={handleChange} />
                 </FormControl>
