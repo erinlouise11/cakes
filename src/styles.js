@@ -278,7 +278,7 @@ export const orderImg = styled.img`
 
     @media (min-width: 1440px) {
         width: 400px;
-        height: 260px;
+        height: 300px;
     }
 `;
 
@@ -681,7 +681,7 @@ export const toTopP = styled.p`
 
 export const orderDiv = styled.div`
     width: 100%;
-    height: 1050px;
+    height: 1200px;
     padding-top: 10px;
     display: flex;
     flex-direction: column;
@@ -689,18 +689,18 @@ export const orderDiv = styled.div`
     justify-content: center;
 
     @media (min-width: 600px) {
-        height: 900px;
+        height: 1050px;
         padding-top: 0;
         justify-content: space-evenly;
     }    
 
     @media (min-width: 1440px) {
         width: 1300px;
-        height: 700px;
+        height: 750px;
         margin: 0 auto;
-        padding: 50px 0;
+        padding: 20px 0;
         flex-direction: row;
-        align-items: flex-start;
+        align-items: center;
         justify-content: space-between;
     }
 `;
