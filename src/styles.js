@@ -278,7 +278,7 @@ export const orderImg = styled.img`
 
     @media (min-width: 1440px) {
         width: 400px;
-        height: 300px;
+        height: 260px;
     }
 `;
 
@@ -681,7 +681,7 @@ export const toTopP = styled.p`
 
 export const orderDiv = styled.div`
     width: 100%;
-    height: 850px;
+    height: 1050px;
     padding-top: 10px;
     display: flex;
     flex-direction: column;
@@ -689,15 +689,16 @@ export const orderDiv = styled.div`
     justify-content: center;
 
     @media (min-width: 600px) {
-        height: 700px;
+        height: 900px;
         padding-top: 0;
         justify-content: space-evenly;
     }    
 
     @media (min-width: 1440px) {
         width: 1300px;
+        height: 700px;
         margin: 0 auto;
-        padding-top: 50px;
+        padding: 50px 0;
         flex-direction: row;
         align-items: flex-start;
         justify-content: space-between;
@@ -718,14 +719,14 @@ export const contactDiv = styled.div`
     }    
 
     @media (min-width: 1440px) {
-        height: 650px;
+        height: 630px;
         flex-direction: column;
         justify-content: space-evenly;
     }
 `;
 
 export const contactDetails = styled.div`
-    width: 350px;
+    width: 300px;
     height: 220px;
     display: flex;
     align-items: center;
@@ -733,6 +734,7 @@ export const contactDetails = styled.div`
     justify-content: space-evenly;
 
     @media (min-width: 600px) {
+        width: 380px;
     }    
 
     @media (min-width: 1440px) {

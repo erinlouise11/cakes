@@ -282,6 +282,11 @@
   text-align: center !important;
 }
 
+.order-smaller-p {
+  width: 120px !important;
+  text-align: left !important;  
+}
+
 @media (min-width: 600px) {
   .occasion-info-p {
     width: 500px !important;
@@ -304,6 +309,10 @@
     width: 500px !important;
     padding-top: 30px !important;    
   }
+
+  .order-smaller-p {
+    width: 150px !important;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -323,5 +332,9 @@
   .about-p {
     width: 650px !important;
     padding-top: 40px !important;    
+  }
+
+  .order-smaller-p {
+    width: 160px !important;
   }
 }

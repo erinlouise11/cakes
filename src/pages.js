@@ -10,7 +10,6 @@ import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
-import FormHelperText from '@material-ui/core/FormHelperText';
 import Select from '@material-ui/core/Select';
 
 import logo from './img/logo222.png';
@@ -394,7 +393,7 @@ export function About() {
 
 export function Order() { 
     const axios = require('axios').default;
-    const [data, setData] = useState({name: '', email: '', product: '', event: '', message: '', sent: false, buttonText: 'Submit', err: ''});
+    const [data, setData] = useState({name: '', email: '', product: '', event: '', date: '', message: '', sent: false, buttonText: 'Submit', err: ''});
 
     const handleChange = (e) => {
         const {name, value} = e.target
@@ -451,6 +450,7 @@ export function Order() {
             email: '',
             product: '',
             event: '', 
+            date: '',
             message: '',
             sent: false,
             buttonText: 'Submit',
@@ -481,11 +481,11 @@ export function Order() {
                 <s.contactDetails>                    
                     <s.contactItem>
                         <s.H2>contact</s.H2>
-                        <s.smallerP style={{textAlign: 'left', width: '150px'}}>555 420 6969</s.smallerP>
+                        <s.smallerP className="order-smaller-p">555 420 6969</s.smallerP>
                     </s.contactItem>
                     <s.contactItem>
                         <s.H2>location</s.H2>
-                        <s.smallerP style={{textAlign: 'left', width: '150px'}}>Cool AF Cakes<br/>420 Sugar Street<br/>New York<br/>NY, 10696</s.smallerP>
+                        <s.smallerP className="order-smaller-p">Cool AF Cakes<br/>420 Sugar Street<br/>New York<br/>NY, 10696</s.smallerP>
                     </s.contactItem>
                 </s.contactDetails>
                 <s.orderImg className="ipad-desktop" src={boxed} />
