@@ -6,11 +6,11 @@ import {Link, NavLink, Outlet} from 'react-router-dom';
 import { FaArrowLeft, FaArrowRight, FaArrowUp } from 'react-icons/fa';
 import FormControl from '@material-ui/core/FormControl';
 import TextField from "@material-ui/core/TextField";
-import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
+import FormHelperText from '@material-ui/core/FormHelperText';
 
 import logo from './img/logo222.png';
 import lady from './img/divImages/ladySmile.jpg';
@@ -29,6 +29,9 @@ import lady1 from './img/divImages/lady1.jpg';
 import lady2 from './img/divImages/lady2.jpg';
 import dripcake from './img/divImages/dripcake.jpg';
 import baking from './img/divImages/baking1.jpg';
+import facebook from './img/facebook-icon.png';
+import instagram from './img/insta-icon.png';
+import twitter from './img/twitter-icon.png';
 
 import cake1 from './img/cakes/cake1.jpg';
 import cake2 from './img/cakes/cake2.jpg';
@@ -60,6 +63,38 @@ const cakeImages = [cake, cake1, cake2, cake3, cake4, cake5, cake7, cake8, cake9
 const cupcakeImages = [cupcakes, cc1, cc2, cc3, cc4, cc5, cc6, cc7, cc8, cc10];
 const packageImages = [middle, pack1, pack2, pack3, pack4];
 
+const HeaderNavs = () => {
+    return (
+        <s.Nav>
+            <s.Ul>
+                <NavLink activeClassName="selected" className="nav-link" to="/products/cakes"><s.Li>Products</s.Li></NavLink>
+                <NavLink activeClassName="selected" className="nav-link" to="/occasions"><s.Li>Occasions</s.Li></NavLink>
+                <NavLink className="nav-link" to="/"><s.Li><s.Logo src={logo} /></s.Li></NavLink>
+                <NavLink activeClassName="selected" className="nav-link" to="/about"><s.Li>Our Story</s.Li></NavLink>
+                <NavLink activeClassName="selected" className="nav-link" to="/order"><s.Li>Order</s.Li></NavLink>
+            </s.Ul>
+        </s.Nav>
+    );
+}
+
+const Footer = () => {
+    return (
+        <s.footerDiv>
+            <s.footerFlex>
+                <s.footerNavs>
+                    
+                </s.footerNavs>
+                <s.footerSocials>
+                    
+                </s.footerSocials>
+            </s.footerFlex>
+            <s.footerCopy>
+                
+            </s.footerCopy>
+        </s.footerDiv>
+    );
+}
+
 const NextArrow = ({onClick}) => {
     return (
         <div className="arrow next" onClick={onClick}>
@@ -89,15 +124,7 @@ export function Home() {
                     </s.buttonDiv>                    
                 </s.homeHeroFlex>
             </s.HeroDivBig>           
-            <s.Nav>
-                <s.Ul>
-                    <NavLink className="nav-link" to="/products/cakes"><s.Li>Products</s.Li></NavLink>
-                    <NavLink className="nav-link" to="/occasions"><s.Li>Occasions</s.Li></NavLink>
-                    <NavLink className="nav-link" to="/"><s.Li><s.Logo src={logo} /></s.Li></NavLink>
-                    <NavLink className="nav-link" to="/about"><s.Li>Our Story</s.Li></NavLink>
-                    <NavLink className="nav-link" to="/order"><s.Li>Order</s.Li></NavLink>
-                </s.Ul>
-            </s.Nav>
+            <HeaderNavs />
 
             <s.whiteDiv className="bio-div white">
                 <s.divImg src={lady} />
@@ -133,6 +160,8 @@ export function Home() {
             <s.darkDiv className="reviews-div dark">
 
             </s.darkDiv>
+
+            <Footer />
         </>       
     );
 }
@@ -145,15 +174,7 @@ export function Products() {
                     <s.H1>products</s.H1>
                 </s.heroTitleFlex>
             </s.HeroDivSmall> 
-            <s.Nav>
-                <s.Ul>
-                    <NavLink activeClassName="selected" className="nav-link" to="/products/cakes"><s.Li>Products</s.Li></NavLink>
-                    <NavLink activeClassName="selected" className="nav-link" to="/occasions"><s.Li>Occasions</s.Li></NavLink>
-                    <NavLink className="nav-link" to="/"><s.Li><s.Logo src={logo} /></s.Li></NavLink>
-                    <NavLink activeClassName="selected" className="nav-link" to="/about"><s.Li>Our Story</s.Li></NavLink>
-                    <NavLink activeClassName="selected" className="nav-link" to="/order"><s.Li>Order</s.Li></NavLink>
-                </s.Ul>
-            </s.Nav>
+            <HeaderNavs />
 
             <s.divSubNav>
                 <NavLink activeClassName="sub-selected" className="sub-nav-link" to="/products/cakes">cakes</NavLink>
@@ -161,6 +182,8 @@ export function Products() {
                 <NavLink activeClassName="sub-selected" className="sub-nav-link" to="/products/packages">packages</NavLink>
             </s.divSubNav>
             <Outlet />    
+
+            <Footer />
         </>        
     );
 }
@@ -281,15 +304,7 @@ export function Occasions() {
                     <s.H1>occasions</s.H1>
                 </s.heroTitleFlex>
             </s.HeroDivSmall> 
-            <s.Nav>
-                <s.Ul>
-                    <NavLink className="nav-link" to="/products/cakes"><s.Li>Products</s.Li></NavLink>
-                    <NavLink activeClassName="selected" className="nav-link" to="/occasions"><s.Li>Occasions</s.Li></NavLink>
-                    <NavLink className="nav-link" to="/"><s.Li><s.Logo src={logo} /></s.Li></NavLink>
-                    <NavLink className="nav-link" to="/about"><s.Li>Our Story</s.Li></NavLink>
-                    <NavLink className="nav-link" to="/order"><s.Li>Order</s.Li></NavLink>
-                </s.Ul>
-            </s.Nav>
+            <HeaderNavs />
 
             <s.smallWhiteDiv id="top" className="occasions-info white">
                 <s.smallerP className="occasion-info-p">Any reason is a reason to have a piece of cake and that's where we come in! Place an order now so we can make your cake and cupcake dreams come true, even if it's for your sister's goldfish's funeral or a stupid ex!</s.smallerP>
@@ -353,6 +368,8 @@ export function Occasions() {
                 </div>
                 <s.toTopP>back to top</s.toTopP>
             </s.backTopDiv>
+
+            <Footer />
         </>        
     );
 }
@@ -365,15 +382,7 @@ export function About() {
                 <s.H1>our story</s.H1>
             </s.heroTitleFlex>
         </s.HeroDivSmall> 
-        <s.Nav>
-            <s.Ul>
-                <NavLink className="nav-link" to="/products/cakes"><s.Li>Products</s.Li></NavLink>
-                <NavLink className="nav-link" to="/occasions"><s.Li>Occasions</s.Li></NavLink>
-                <NavLink className="nav-link" to="/"><s.Li><s.Logo src={logo} /></s.Li></NavLink>
-                <NavLink activeClassName="selected" className="nav-link" to="/about"><s.Li>Our Story</s.Li></NavLink>
-                <NavLink className="nav-link" to="/order"><s.Li>Order</s.Li></NavLink>
-            </s.Ul>
-        </s.Nav>
+        <HeaderNavs />
 
         <s.smallerP className="about-p">Any reason is a reason to have a piece of cake and that's where we come in! Place an order now so we can make your cake and cupcake dreams come true, even if its for your sister's goldfish's funeral or a stupid ex!</s.smallerP>
         <s.flexImages className="about-image-flex">
@@ -387,13 +396,15 @@ export function About() {
             <s.aboutImg style={{objectPosition: 'bottom'}} src={dripcake} />
             <s.aboutImg src={baking} />
         </s.flexImages>
+
+        <Footer />
     </>        
     );
 }
 
 export function Order() { 
     const axios = require('axios').default;
-    const [data, setData] = useState({name: '', email: '', product: '', event: '', date: '', message: '', sent: false, buttonText: 'Submit', err: ''});
+    const [data, setData] = useState({name: '', email: '', product: '', event: '', date: '', message: '', sent: false, buttonText: 'submit', err: ''});
 
     const handleChange = (e) => {
         const {name, value} = e.target
@@ -408,7 +419,7 @@ export function Order() {
 
         setData({
             ...data,
-            buttonText: 'Sending...'
+            buttonText: 'sending...'
         })
 
         axios.post('/api/sendmail', data)
@@ -416,7 +427,7 @@ export function Order() {
             if(res.data.result !=='success') {
                 setData({
                     ...data,
-                    buttonText: 'Failed to send',
+                    buttonText: 'failed to send',
                     sent: false,
                     err: 'fail'
                 })
@@ -427,7 +438,7 @@ export function Order() {
                 setData({
                     ...data,
                     sent: true,
-                    buttonText: 'Sent',
+                    buttonText: 'sent',
                     err: 'success'
                 })
                 setTimeout(() => {
@@ -438,7 +449,7 @@ export function Order() {
             console.log(err.response.status)
             setData({
                 ...data,
-                buttonText: 'Failed to send',
+                buttonText: 'failed to send',
                 err: 'fail'
             })
         })
@@ -453,7 +464,7 @@ export function Order() {
             date: '',
             message: '',
             sent: false,
-            buttonText: 'Submit',
+            buttonText: 'submit',
             err: ''
         });
     }
@@ -465,15 +476,7 @@ export function Order() {
                 <s.H1>order now</s.H1>
             </s.heroTitleFlex>
         </s.HeroDivSmall> 
-        <s.Nav>
-            <s.Ul>
-                <NavLink className="nav-link" to="/products/cakes"><s.Li>Products</s.Li></NavLink>
-                <NavLink className="nav-link" to="/occasions"><s.Li>Occasions</s.Li></NavLink>
-                <NavLink className="nav-link" to="/"><s.Li><s.Logo src={logo} /></s.Li></NavLink>
-                <NavLink className="nav-link" to="/about"><s.Li>Our Story</s.Li></NavLink>
-                <NavLink activeClassName="selected" className="nav-link" to="/order"><s.Li>Order</s.Li></NavLink>
-            </s.Ul>
-        </s.Nav>
+        <HeaderNavs />
 
         <s.orderDiv>
             <s.contactDiv>          
@@ -493,45 +496,47 @@ export function Order() {
 
             <s.Form>
                 <s.divInfo style={{height: '150px', paddingLeft: 0, alignItems: 'center', justifyContent: 'space-evenly'}}>
-                    <s.H2>have an idea for an order?</s.H2>
+                    <s.H2>have an order idea?</s.H2>
                     <s.smallerP className="occasion-info-p">Send us a message and let's make your Cool AF Cakes dreams come true</s.smallerP>
                 </s.divInfo>
                 
                 <FormControl fullWidth={true}>
-                    <TextField className="form-textfield form-field" required label="Full name" variant="filled" id="full-name" name="name" value={data.name} onChange={handleChange} />
+                    <TextField className="form-textfield form-field" required label="Full name" variant="filled" id="full-name" name="name" value={data.name} type="input" onChange={handleChange} />
                 </FormControl>
                 <FormControl fullWidth={true}>
-                    <TextField className="form-textfield form-field" required label="Email" id="email" name="email" variant="filled" value={data.email} onChange={handleChange} />
+                    <TextField className="form-textfield form-field" required label="Email address" id="email" name="email" variant="filled" value={data.email} type="input" onChange={handleChange} />
                 </FormControl>
                 <FormControl required fullWidth={true} >
-                    <InputLabel style={{padding: '0 10px'}} className="form-textfield form-field" id="product-label">Product</InputLabel>
-                    <Select className="form-textfield form-field" label="Product" id="product" name="product" variant="filled" value={data.product} onChange={handleChange}>
+                    <InputLabel style={{padding: '0 10px'}} className="form-textfield form-field" id="product-label">Choose product type</InputLabel>
+                    <Select className="form-textfield form-field" id="product" name="product" variant="filled" value={data.product} onChange={handleChange}>
                         <MenuItem value={'Cake'}>Cake</MenuItem>
                         <MenuItem value={'Cupcakes'}>Cupcakes</MenuItem>
                         <MenuItem value={'Package'}>Package</MenuItem>
                         <MenuItem value={'Unsure'}>Unsure</MenuItem>
-                    </Select>
+                    </Select>                    
                 </FormControl>
                 <FormControl fullWidth={true}>
-                    <TextField className="form-textfield form-field" label="Event type" id="event" name="event" variant="filled" value={data.event} onChange={handleChange} />
+                    <TextField className="form-textfield form-field" label="What's the occasion" id="event" name="event" variant="filled" value={data.event} type="input" onChange={handleChange} />
                 </FormControl>
                 <FormControl noValidate fullWidth={true}>
-                    <TextField className="form-textfield form-field" label="Date of Event" id="date" type="date" variant="filled" name="date" value={data.date} onChange={handleChange} InputLabelProps={{shrink: true}} />
+                    <TextField className="form-textfield form-field" label="Expected date" id="date" type="date" variant="filled" name="date" value={data.date} onChange={handleChange} InputLabelProps={{shrink: true}} />
                 </FormControl>
                 <FormControl fullWidth={true}>
-                    <TextField className="form-textfield form-field" required label="Message" variant="filled" name="message" multiline={true} rows="10" value={data.message} onChange={handleChange} />
+                    <TextField className="form-textfield form-field" required label="Message" variant="filled" name="message" multiline={true} rows="10" value={data.message} type="input" onChange={handleChange} />
                 </FormControl>
                 <FormControl>
                     <div style={{padding: 20}}>
                         <Grid container spacing={2}>
                             <div className="form-submit">
-                                <Button variant="contained" color="primary" onClick={formSubmit}>{data.buttonText}</Button>
+                                <s.pinkButton variant="contained" onClick={formSubmit}>{data.buttonText}</s.pinkButton>
                             </div>
                         </Grid>
                     </div>
                 </FormControl>
             </s.Form>                 
         </s.orderDiv>
+
+        <Footer />
     </>        
     );
 }

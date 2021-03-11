@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import footerBG from './img/backgrounds/footerBG.jpg';
 
 export const pinkButton = styled.button`
     width: auto;
@@ -698,7 +699,7 @@ export const orderDiv = styled.div`
         width: 1300px;
         height: 750px;
         margin: 0 auto;
-        padding: 20px 0;
+        padding: 50px 0;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
@@ -803,4 +804,29 @@ export const aboutInfo = styled.div`
     @media (min-width: 600px) {
         height: 230px;
     }    
+`;
+
+export const footerDiv = styled.div`
+    width: 100%;
+    height: 350px;
+    background-image: url(${footerBG});
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+`;
+
+export const footerFlex = styled.div`
+
+`;
+
+export const footerNavs = styled.div`
+
+`;
+
+export const footerCopy = styled.div`
+
+`;
+
+export const footerSocials = styled.div`
+
 `;
