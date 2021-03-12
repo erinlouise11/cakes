@@ -82,14 +82,29 @@ const Footer = () => {
         <s.footerDiv>
             <s.footerFlex>
                 <s.footerNavs>
-                    
+                    <Link to="/">home</Link>
+                    <div>
+                        <Link to="/products/cakes" className="main-footer-nav">products</Link>
+                        <Link to="/products/cakes" className="sub-footer-nav">cakes</Link>
+                        <Link to="/products/cupcakes" className="sub-footer-nav">cupcakes</Link>
+                        <Link to="/products/packages" className="sub-footer-nav">packages</Link>
+                    </div>
+                    <Link to="/occasions">occasions</Link>
+                    <Link to="/about">our story</Link>
+                    <Link to="/order">contact</Link>
                 </s.footerNavs>
                 <s.footerSocials>
-                    
+                    <s.H2>follow us on social media</s.H2>
+                    <div>
+                        <img src={twitter} />
+                        <img src={instagram} />
+                        <img src={facebook} />
+                    </div>
                 </s.footerSocials>
             </s.footerFlex>
             <s.footerCopy>
-                
+                <s.smallerP>Copyright Cool AF Cakes 2021</s.smallerP>
+                <s.smallerP>Website made with &hearts; by Erin Murphy</s.smallerP>                
             </s.footerCopy>
         </s.footerDiv>
     );
@@ -157,9 +172,9 @@ export function Home() {
                 </s.divInfo>
             </s.whiteDiv>
             
-            <s.darkDiv className="reviews-div dark">
+            {/* <s.darkDiv className="reviews-div dark">
 
-            </s.darkDiv>
+            </s.darkDiv> */}
 
             <Footer />
         </>       

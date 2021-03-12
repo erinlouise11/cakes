@@ -808,15 +808,28 @@ export const aboutInfo = styled.div`
 
 export const footerDiv = styled.div`
     width: 100%;
-    height: 350px;
-    background-image: url(${footerBG});
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: 300px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
 `;
 
 export const footerFlex = styled.div`
+    width: 300px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
 
+    @media (min-width: 600px) {
+
+    }    
+
+    @media (min-width: 1440px) {
+        width: 1300px;
+    }
 `;
 
 export const footerNavs = styled.div`
