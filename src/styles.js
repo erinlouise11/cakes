@@ -806,40 +806,108 @@ export const aboutInfo = styled.div`
     }    
 `;
 
+export const footerIcon = styled.img`
+    width: 30px;
+    height: 30px;
+
+    @media (min-width: 600px) {
+        width: 40px;
+        height: 40px;
+    }    
+
+    @media (min-width: 1440px) {
+        width: 50px;
+        height: 50px;
+    }
+`;
 export const footerDiv = styled.div`
     width: 100%;
-    height: 300px;
-    background-color: #fff;
+    height: 230px;
+    background-color: #CC84BD;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 
+    @media (min-width: 600px) {
+        height: 250px;
+    }    
+
+    @media (min-width: 1000px) {
+        height: 200px;
+        justify-content: center;
+    }  
+
+    @media (min-width: 1440px) {
+        height: 230px;
+    }
+
 `;
 
 export const footerFlex = styled.div`
-    width: 300px;
+    width: 320px;
+    height: 100%;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
 
     @media (min-width: 600px) {
-
+        width: 500px;
     }    
 
+    @media (min-width: 1000px) {
+        width: 800px;
+        height: 100px;
+        align-items: flex-start;
+    }   
+
     @media (min-width: 1440px) {
-        width: 1300px;
+        width: 1000px;
     }
 `;
 
 export const footerNavs = styled.div`
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
 
+    @media (min-width: 1000px) {
+        width: 500px;
+        height: 100px;
+        flex-direction: row;
+    }   
 `;
 
-export const footerCopy = styled.div`
-
+export const subFooterNavs = styled.nav`
+    padding-left: 8px;
+    display: flex;
+    flex-direction: column;
 `;
 
 export const footerSocials = styled.div`
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 
+    @media (min-width: 1000px) {
+        height: 80px;
+        justify-content: space-between;
+    } 
+`;
+
+export const socialIcons = styled.div`
+    width: 150px;
+    height: 35px;
+    display: flex;
+    justify-content: space-evenly;
+`;
+
+export const footerCopy = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
 `;

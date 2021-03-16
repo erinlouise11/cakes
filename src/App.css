@@ -338,3 +338,18 @@
     width: 160px !important;
   }
 }
+
+.main-footer-text {
+  margin: 0;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #222;
+}
+
+.sub-footer-text {
+  margin: 0;
+  font-family: 'Segoe Print', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 13px;
+  color: #222;  
+}

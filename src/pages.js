@@ -82,29 +82,35 @@ const Footer = () => {
         <s.footerDiv>
             <s.footerFlex>
                 <s.footerNavs>
-                    <Link to="/">home</Link>
+                    <Link className="main-footer-text nav-link" to="/">home</Link>
                     <div>
-                        <Link to="/products/cakes" className="main-footer-nav">products</Link>
-                        <Link to="/products/cakes" className="sub-footer-nav">cakes</Link>
-                        <Link to="/products/cupcakes" className="sub-footer-nav">cupcakes</Link>
-                        <Link to="/products/packages" className="sub-footer-nav">packages</Link>
+                        <Link className="nav-link" to="/products/cakes" className="main-footer-text nav-link">products</Link>
+                        <s.subFooterNavs>
+                            <Link className="sub-footer-text nav-link" to="/products/cakes" >cakes</Link>
+                            <Link className="sub-footer-text nav-link" to="/products/cupcakes">cupcakes</Link>
+                            <Link className="sub-footer-text nav-link" to="/products/packages">packages</Link>
+                        </s.subFooterNavs>                        
                     </div>
-                    <Link to="/occasions">occasions</Link>
-                    <Link to="/about">our story</Link>
-                    <Link to="/order">contact</Link>
+                    <Link className="main-footer-text nav-link" to="/occasions">occasions</Link>
+                    <Link className="main-footer-text nav-link" to="/about">our story</Link>
+                    <Link className="main-footer-text nav-link" to="/order">contact</Link>
                 </s.footerNavs>
                 <s.footerSocials>
-                    <s.H2>follow us on social media</s.H2>
-                    <div>
-                        <img src={twitter} />
-                        <img src={instagram} />
-                        <img src={facebook} />
-                    </div>
+                    <p className="main-footer-text">follow us on social media</p>
+                    <s.socialIcons>        
+                        <a href="#"><s.footerIcon src={instagram} /></a>  
+                        <a href="#"><s.footerIcon src={facebook} /></a>                        
+                        <a href="#"><s.footerIcon src={twitter} /></a>
+                    </s.socialIcons>
+                    {/* <s.footerCopy className="not-ipad-desktop">
+                        <p className="sub-footer-text">Copyright 2021 Cool AF Cakes</p>
+                        <p className="sub-footer-text">Made with &hearts; by Erin Murphy</p>                
+                    </s.footerCopy> */}
                 </s.footerSocials>
             </s.footerFlex>
-            <s.footerCopy>
-                <s.smallerP>Copyright Cool AF Cakes 2021</s.smallerP>
-                <s.smallerP>Website made with &hearts; by Erin Murphy</s.smallerP>                
+            <s.footerCopy className="ipad-desktop">
+                <p className="sub-footer-text">Copyright 2021 Cool AF Cakes</p>
+                <p className="sub-footer-text">Made with &hearts; by Erin Murphy</p>                
             </s.footerCopy>
         </s.footerDiv>
     );
