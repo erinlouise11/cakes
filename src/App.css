@@ -133,6 +133,10 @@
   }
 }
 
+.dark-h2 {
+  width: 300px;
+}
+
 .dark-p {
   width: 300px !important;
 }
@@ -142,6 +146,10 @@
 }
 
 @media (min-width: 600px) {
+  .dark-h2 {
+    width: 440px;
+  }
+
   .dark-p {
     width: 370px !important;
     text-align: center !important;
@@ -152,6 +160,10 @@
 }
 
 @media (min-width: 1000px) {
+  .dark-h2 {
+    width: 500px;
+  }
+
   .dark-p {
     width: 500px !important;
   }
@@ -323,6 +335,11 @@
 
 .review {
   width: 230px !important;
+}
+
+.review-p {
+  width: 250px !important;
+  text-align: center !important;
 }
 
 .footer-text {

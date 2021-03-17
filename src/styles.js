@@ -354,8 +354,8 @@ export const sideImg = styled.img`
     }
 
     @media (min-width: 1440px) {
-        width: 270px;
-        height: 360px;
+        width: 200px;
+        height: 300px;
     }
 `;
 
@@ -377,8 +377,8 @@ export const midImg = styled.img`
     }
 
     @media (min-width: 1440px) {
-        width: 340px;
-        height: 440px;
+        width: 300px;
+        height: 400px;
     }
 `;
 
@@ -629,7 +629,7 @@ export const divImages = styled.div`
     }
 
     @media (min-width: 1440px) {
-        width: 870px;
+        width: 600px;
         height: 440px;  
     }
 `;
@@ -662,6 +662,16 @@ export const reviewsContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;   
+
+    @media (min-width: 600px) {
+        height: 1250px;   
+    }
+
+    @media (min-width: 1440px) {
+        width: 1000px;
+        height: 450px;   
+        flex-direction: row;
+    }
 `;
 
 export const review = styled.div`
@@ -672,6 +682,16 @@ export const review = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;   
+
+    @media (min-width: 600px) {
+        width: 330px;
+        height: 380px;   
+    }
+
+    @media (min-width: 1440px) {
+        width: 280px;
+        height: 380px;  
+    }
 `;
 
 export const reviewHeader = styled.div`
