@@ -82,18 +82,18 @@ const Footer = () => {
         <s.footerDiv>
             <s.footerFlex>
                 <s.footerNavs>
-                    <Link className="main-footer-text footer-text nav-link" to="/">home</Link>
+                    <Link className="main-footer-text footer-text footer-link nav-link" to="/">home</Link>
                     <div>
-                        <Link className="nav-link" to="/products/cakes" className="main-footer-text footer-text nav-link">products</Link>
+                        <Link className="nav-link" to="/products/cakes" className="main-footer-text footer-text footer-link nav-link">products</Link>
                         <s.subFooterNavs>
-                            <Link className="sub-footer-text footer-text nav-link" to="/products/cakes" >Cakes</Link>
-                            <Link className="sub-footer-text footer-text nav-link" to="/products/cupcakes">Cupcakes</Link>
-                            <Link className="sub-footer-text footer-text nav-link" to="/products/packages">Packages</Link>
+                            <Link className="sub-footer-text footer-text footer-link nav-link" to="/products/cakes" >Cakes</Link>
+                            <Link className="sub-footer-text footer-text footer-link nav-link" to="/products/cupcakes">Cupcakes</Link>
+                            <Link className="sub-footer-text footer-text footer-link nav-link" to="/products/packages">Packages</Link>
                         </s.subFooterNavs>                        
                     </div>
-                    <Link className="main-footer-text footer-text nav-link" to="/occasions">occasions</Link>
-                    <Link className="main-footer-text footer-text nav-link" to="/about">our story</Link>
-                    <Link className="main-footer-text footer-text nav-link" to="/order">contact</Link>
+                    <Link className="main-footer-text footer-text footer-link nav-link" to="/occasions">occasions</Link>
+                    <Link className="main-footer-text footer-text footer-link nav-link" to="/about">our story</Link>
+                    <Link className="main-footer-text footer-text footer-link nav-link" to="/order">contact</Link>
                 </s.footerNavs>
                 <s.footerSocials>
                     <p className="main-footer-text footer-text">follow us on social media</p>

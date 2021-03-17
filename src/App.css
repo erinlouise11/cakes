@@ -326,6 +326,10 @@
   color: #222;
 }
 
+.footer-link:hover {
+  color: white;
+}
+
 .main-footer-text {  
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 18px;
