@@ -82,35 +82,35 @@ const Footer = () => {
         <s.footerDiv>
             <s.footerFlex>
                 <s.footerNavs>
-                    <Link className="main-footer-text nav-link" to="/">home</Link>
+                    <Link className="main-footer-text footer-text nav-link" to="/">home</Link>
                     <div>
-                        <Link className="nav-link" to="/products/cakes" className="main-footer-text nav-link">products</Link>
+                        <Link className="nav-link" to="/products/cakes" className="main-footer-text footer-text nav-link">products</Link>
                         <s.subFooterNavs>
-                            <Link className="sub-footer-text nav-link" to="/products/cakes" >cakes</Link>
-                            <Link className="sub-footer-text nav-link" to="/products/cupcakes">cupcakes</Link>
-                            <Link className="sub-footer-text nav-link" to="/products/packages">packages</Link>
+                            <Link className="sub-footer-text footer-text nav-link" to="/products/cakes" >Cakes</Link>
+                            <Link className="sub-footer-text footer-text nav-link" to="/products/cupcakes">Cupcakes</Link>
+                            <Link className="sub-footer-text footer-text nav-link" to="/products/packages">Packages</Link>
                         </s.subFooterNavs>                        
                     </div>
-                    <Link className="main-footer-text nav-link" to="/occasions">occasions</Link>
-                    <Link className="main-footer-text nav-link" to="/about">our story</Link>
-                    <Link className="main-footer-text nav-link" to="/order">contact</Link>
+                    <Link className="main-footer-text footer-text nav-link" to="/occasions">occasions</Link>
+                    <Link className="main-footer-text footer-text nav-link" to="/about">our story</Link>
+                    <Link className="main-footer-text footer-text nav-link" to="/order">contact</Link>
                 </s.footerNavs>
                 <s.footerSocials>
-                    <p className="main-footer-text">follow us on social media</p>
+                    <p className="main-footer-text footer-text">follow us on social media</p>
                     <s.socialIcons>        
                         <a href="#"><s.footerIcon src={instagram} /></a>  
                         <a href="#"><s.footerIcon src={facebook} /></a>                        
                         <a href="#"><s.footerIcon src={twitter} /></a>
                     </s.socialIcons>
-                    {/* <s.footerCopy className="not-ipad-desktop">
-                        <p className="sub-footer-text">Copyright 2021 Cool AF Cakes</p>
-                        <p className="sub-footer-text">Made with &hearts; by Erin Murphy</p>                
-                    </s.footerCopy> */}
+                    <s.footerCopy className="mobile-ipad">
+                        <p className="sub-footer-text footer-text">Copyright 2021 Cool AF Cakes</p>
+                        <p className="sub-footer-text footer-text">Made with &hearts; by Erin Murphy</p>                
+                    </s.footerCopy>
                 </s.footerSocials>
             </s.footerFlex>
-            <s.footerCopy className="ipad-desktop">
-                <p className="sub-footer-text">Copyright 2021 Cool AF Cakes</p>
-                <p className="sub-footer-text">Made with &hearts; by Erin Murphy</p>                
+            <s.footerCopy className="not-mobile-ipad">
+                <p className="sub-footer-text footer-text">Copyright 2021 Cool AF Cakes</p>
+                <p className="sub-footer-text footer-text">Made with &hearts; by Erin Murphy</p>                
             </s.footerCopy>
         </s.footerDiv>
     );
@@ -178,9 +178,9 @@ export function Home() {
                 </s.divInfo>
             </s.whiteDiv>
             
-            {/* <s.darkDiv className="reviews-div dark">
+            <s.darkDiv className="reviews-div dark">
 
-            </s.darkDiv> */}
+            </s.darkDiv>
 
             <Footer />
         </>       

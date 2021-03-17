@@ -1,6 +1,48 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
+.not-mobile {
+  display: none !important;
+}
+
+.ipad-desktop {
+  display: none !important;
+}
+
+.not-mobile-ipad {
+  display: none !important;
+}
+
+@media (min-width: 600px) {
+  .not-ipad-desktop {
+    display: none !important;
+  }
+
+  .ipad-desktop {
+    display: block !important;
+  }
+}
+
+@media (min-width: 1000px) {
+  .mobile-ipad {
+    display: none !important;
+  }
+
+  .not-mobile-ipad {
+    display: flex !important;
+  }
+}
+
+@media (min-width: 1440px) {
+  .mobile {
+    display: none !important;
+  }
+
+  .not-mobile {
+    display: block !important;
+  }
+}
+
 .nav-link {
   text-decoration: none;
 }
@@ -267,14 +309,6 @@
   text-align: center !important;
 }
 
-.not-mobile {
-  display: none;
-}
-
-.ipad-desktop {
-  display: none;
-}
-
 .about-p {
   width: 300px !important;
   margin: 0 auto !important;
@@ -287,6 +321,22 @@
   text-align: left !important;  
 }
 
+.footer-text {
+  margin: 0;
+  color: #222;
+}
+
+.main-footer-text {  
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 18px;
+  letter-spacing: 1px;  
+}
+
+.sub-footer-text {
+  font-family: 'Segoe Print', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 13px;
+}
+
 @media (min-width: 600px) {
   .occasion-info-p {
     width: 500px !important;
@@ -297,14 +347,6 @@
     align-items: center !important;
   }
 
-  .not-ipad-desktop {
-    display: none;
-  }
-
-  .ipad-desktop {
-    display: block;
-  }
-  
   .about-p {
     width: 500px !important;
     padding-top: 30px !important;    
@@ -313,17 +355,27 @@
   .order-smaller-p {
     width: 150px !important;
   }
+
+  .main-footer-text {  
+    font-size: 20px;
+  }
+  
+  .sub-footer-text {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .main-footer-text {  
+    font-size: 21px;
+  }
+  
+  .sub-footer-text {
+    font-size: 17px;
+  }
 }
 
 @media (min-width: 1440px) {
-  .mobile {
-    display: none;
-  }
-
-  .not-mobile {
-    display: block;
-  }
-
   .occasion-divInfo {
     padding-left: 50px;
     align-items: flex-start;
@@ -337,19 +389,12 @@
   .order-smaller-p {
     width: 160px !important;
   }
-}
 
-.main-footer-text {
-  margin: 0;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 18px;
-  letter-spacing: 1px;
-  color: #222;
-}
-
-.sub-footer-text {
-  margin: 0;
-  font-family: 'Segoe Print', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 13px;
-  color: #222;  
+  .main-footer-text {  
+    font-size: 23px;
+  }
+  
+  .sub-footer-text {
+    font-size: 19px;
+  }
 }

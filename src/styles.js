@@ -816,8 +816,8 @@ export const footerIcon = styled.img`
     }    
 
     @media (min-width: 1440px) {
-        width: 50px;
-        height: 50px;
+        width: 45px;
+        height: 45px;
     }
 `;
 export const footerDiv = styled.div`
@@ -830,7 +830,7 @@ export const footerDiv = styled.div`
     justify-content: space-evenly;
 
     @media (min-width: 600px) {
-        height: 250px;
+        height: 260px;
     }    
 
     @media (min-width: 1000px) {
@@ -839,9 +839,8 @@ export const footerDiv = styled.div`
     }  
 
     @media (min-width: 1440px) {
-        height: 230px;
+        height: 250px;
     }
-
 `;
 
 export const footerFlex = styled.div`
@@ -856,18 +855,19 @@ export const footerFlex = styled.div`
     }    
 
     @media (min-width: 1000px) {
-        width: 800px;
+        width: 850px;
         height: 100px;
         align-items: flex-start;
     }   
 
     @media (min-width: 1440px) {
-        width: 1000px;
+        width: 1100px;
+        height: 120px;
     }
 `;
 
 export const footerNavs = styled.div`
-    height: 90%;
+    height: 92%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -877,11 +877,16 @@ export const footerNavs = styled.div`
         width: 500px;
         height: 100px;
         flex-direction: row;
+        justify-content: space-between;
     }   
+
+    @media (min-width: 1440px) {
+        width: 550px;
+    }
 `;
 
 export const subFooterNavs = styled.nav`
-    padding-left: 8px;
+    padding-left: 5px;
     display: flex;
     flex-direction: column;
 `;
@@ -894,7 +899,7 @@ export const footerSocials = styled.div`
     justify-content: space-evenly;
 
     @media (min-width: 1000px) {
-        height: 80px;
+        height: 90px;
         justify-content: space-between;
     } 
 `;
@@ -907,7 +912,20 @@ export const socialIcons = styled.div`
 `;
 
 export const footerCopy = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
+    width: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: 600px) {
+        width: 260px;
+    }
+
+    @media (min-width: 1000px) {
+        width: 280px;
+    }
+
+    @media (min-width: 1440px) {
+        width: 300px;
+    }
 `;
