@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import footerBG from './img/backgrounds/footerBG.jpg';
 
 export const pinkButton = styled.button`
     width: auto;
@@ -116,6 +115,47 @@ export const H2 = styled.h2`
     }
 `;
 
+export const H3 = styled.h2`
+    margin: 0;
+    font-size: 21px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 2px;
+    color: #222;
+    text-align: center;
+
+    @media (min-width: 600px) {
+        font-size: 23px;  
+    }
+
+    @media (min-width: 1000px) {
+        font-size: 25px; 
+    }
+
+    @media (min-width: 1440px) {
+        font-size: 26px;
+    }
+`;
+
+export const H4 = styled.h2`
+    margin: 0;
+    font-size: 18px;
+    font-family: 'Segoe Print', Tahoma, Geneva, Verdana, sans-serif;
+    color: #CC84BD;
+    text-align: center;
+
+    @media (min-width: 600px) {
+        font-size: 19px;  
+    }
+
+    @media (min-width: 1000px) {
+        font-size: 21px; 
+    }
+
+    @media (min-width: 1440px) {
+        font-size: 23px;
+    }
+`;
+
 export const largerP = styled.p`
     margin: 0;
     font-size: 16px;
@@ -206,6 +246,21 @@ export const Li = styled.li`
 export const Logo = styled.img`
     width: 110px;
     height: 110px;
+`;
+
+export const footerIcon = styled.img`
+    width: 30px;
+    height: 30px;
+
+    @media (min-width: 600px) {
+        width: 40px;
+        height: 40px;
+    }    
+
+    @media (min-width: 1440px) {
+        width: 45px;
+        height: 45px;
+    }
 `;
 
 export const divImg = styled.img`
@@ -579,6 +634,55 @@ export const divImages = styled.div`
     }
 `;
 
+export const reviewsDiv = styled.div`
+    width: 100%;
+    height: auto;   
+    padding: 30px 0; 
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;   
+`;
+
+export const reviewInfoDark = styled.div`
+    width: 100%;
+    height: 80px;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;     
+`;
+
+export const reviewsContainer = styled.div`
+    width: 100%;
+    height: 1100px;    
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;   
+`;
+
+export const review = styled.div`
+    width: 280px;
+    height: 330px;   
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;   
+`;
+
+export const reviewHeader = styled.div`
+    width: 250px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+`;
+
 export const productsDiv = styled.div`
     width: 100%;
     height: 700px;
@@ -806,20 +910,6 @@ export const aboutInfo = styled.div`
     }    
 `;
 
-export const footerIcon = styled.img`
-    width: 30px;
-    height: 30px;
-
-    @media (min-width: 600px) {
-        width: 40px;
-        height: 40px;
-    }    
-
-    @media (min-width: 1440px) {
-        width: 45px;
-        height: 45px;
-    }
-`;
 export const footerDiv = styled.div`
     width: 100%;
     height: 230px;

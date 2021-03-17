@@ -178,9 +178,35 @@ export function Home() {
                 </s.divInfo>
             </s.whiteDiv>
             
-            <s.darkDiv className="reviews-div dark">
-
-            </s.darkDiv>
+            <s.reviewsDiv className="reviews-div dark">
+                <s.reviewInfoDark>
+                    <s.H2 className="dark-h2">cool af clients</s.H2>
+                    <s.smallerP className="dark-p">What our clients have to say</s.smallerP>
+                </s.reviewInfoDark>
+                <s.reviewsContainer>
+                    <s.review>
+                        <s.reviewHeader>
+                            <s.H3>Wanda Maximoff</s.H3>
+                            <s.H4>birthday: package</s.H4>
+                        </s.reviewHeader>
+                        <s.smallerP className="occasion-info-p review">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</s.smallerP>
+                    </s.review>
+                    <s.review>
+                        <s.reviewHeader>
+                            <s.H3>Tony Stark</s.H3>
+                            <s.H4>work event: cupcakes</s.H4>
+                        </s.reviewHeader>                        
+                        <s.smallerP className="occasion-info-p review">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</s.smallerP>
+                    </s.review>
+                    <s.review>
+                        <s.reviewHeader>
+                            <s.H3>Stephen Strange</s.H3>
+                            <s.H4>work event: cupcakes</s.H4>
+                        </s.reviewHeader>                        
+                        <s.smallerP className="occasion-info-p review">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</s.smallerP>
+                    </s.review>
+                </s.reviewsContainer>
+            </s.reviewsDiv>
 
             <Footer />
         </>       
@@ -201,7 +227,7 @@ export function Products() {
                 <NavLink activeClassName="sub-selected" className="sub-nav-link" to="/products/cakes">cakes</NavLink>
                 <NavLink activeClassName="sub-selected" className="sub-nav-link" to="/products/cupcakes">cupcakes</NavLink>
                 <NavLink activeClassName="sub-selected" className="sub-nav-link" to="/products/packages">packages</NavLink>
-            </s.divSubNav>
+            </s.divSubNav> 
             <Outlet />    
 
             <Footer />

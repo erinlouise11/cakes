@@ -321,6 +321,10 @@
   text-align: left !important;  
 }
 
+.review {
+  width: 230px !important;
+}
+
 .footer-text {
   margin: 0;
   color: #222;
@@ -360,6 +364,10 @@
     width: 150px !important;
   }
 
+  .review {
+    width: 280px !important;
+  }
+
   .main-footer-text {  
     font-size: 20px;
   }
@@ -369,7 +377,7 @@
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1000px) {  
   .main-footer-text {  
     font-size: 21px;
   }
