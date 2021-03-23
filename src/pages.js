@@ -3,14 +3,14 @@ import './App.css';
 import Slider from 'react-slick';
 import * as s from './styles';
 import {Link, NavLink, Outlet} from 'react-router-dom';
-import { FaArrowLeft, FaArrowRight, FaArrowUp } from 'react-icons/fa';
+import { FaArrowLeft, FaArrowRight, FaArrowUp, FaArrowDown, FaBars } from 'react-icons/fa';
+import { AiOutlineClose } from 'react-icons/ai';
 import FormControl from '@material-ui/core/FormControl';
 import TextField from "@material-ui/core/TextField";
 import Grid from "@material-ui/core/Grid";
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
-import FormHelperText from '@material-ui/core/FormHelperText';
 
 import logo from './img/logo222.png';
 import lady from './img/divImages/ladySmile.jpg';
@@ -26,7 +26,6 @@ import tragedy from './img/divImages/tragedy.jpg';
 import fun from './img/divImages/forfun.jpg';
 import boxed from './img/divImages/boxed.jpg';
 import lady1 from './img/divImages/lady1.jpg';
-import lady2 from './img/divImages/lady2.jpg';
 import dripcake from './img/divImages/dripcake.jpg';
 import baking from './img/divImages/baking1.jpg';
 import facebook from './img/facebook-icon.png';
@@ -35,7 +34,7 @@ import twitter from './img/twitter-icon.png';
 
 import cake1 from './img/cakes/cake1.jpg';
 import cake2 from './img/cakes/cake2.jpg';
-import cake3 from './img/cakes/cake3.jpg';
+import cake3 from './img/cakes/cake3.jpg'
 import cake4 from './img/cakes/cake4.jpg';
 import cake5 from './img/cakes/cake5.jpg';
 import cake7 from './img/cakes/cake7.jpg';
@@ -132,9 +131,96 @@ const PrevArrow = ({onClick}) => {
     );
 }
 
+const sidebarData = [
+    {
+        title: 'Home', 
+        path: '/'
+    },
+    {
+        title: 'Products', 
+        path: '#', 
+        iconClosed: <FaArrowDown style={{color: '#222'}} />,
+        iconOpen: <FaArrowUp />,
+        subNav: [
+            {
+                title: 'Cakes', 
+                path: '/products/cakes'
+            }, 
+            {
+                title: 'Cupcakes', 
+                path: '/products/cupcakes'
+            }, 
+            {
+                title: 'Packages', 
+                path: '/products/packages'
+            }
+        ]
+    }, 
+    {
+        title: 'Occasions', 
+        path: '/occasions'
+    },
+    {
+        title: 'Our Story', 
+        path: '/about'
+    },
+    {
+        title: 'Contact Us', 
+        path: '/order'
+    },
+]
+
+const SubMenu = ({item}) => {
+    const [subnav, setSubnav] = useState(false);
+    const showSubnav = () => setSubnav(!subnav);
+
+    return (
+        <>
+            <s.SidebarLink to={item.path} onClick={item.subNav && showSubnav}>
+                <s.SidebarLabel>{item.title}</s.SidebarLabel>
+                <div >
+                    {item.subNav && subnav ? item.iconOpened : item.subNav ? item.iconClosed : null}
+                </div>
+            </s.SidebarLink>
+            {subnav && item.subNav.map((item, index) => {
+                return (
+                    <s.DropdownLink to={item.path} key={index}>
+                        <s.SidebarLabel>{item.title}</s.SidebarLabel>
+                    </s.DropdownLink>                    
+                )
+            })}
+        </>
+    );
+}
+
+const Sidebar = () => {
+    const [sidebar, setSidebar] = useState(false);
+    const showSidebar = () => setSidebar(!sidebar);
+        return (
+        <>
+            <s.Sidebar>
+                <s.NavIcon to='#'>
+                    <FaBars onClick={showSidebar} />
+                </s.NavIcon>
+            </s.Sidebar>
+            <s.SidebarNav sidebar={sidebar}>
+                <s.SidebarWrap>
+                    <s.NavIcon to='#'>
+                        <AiOutlineClose onClick={showSidebar} />
+                    </s.NavIcon>
+                    {sidebarData.map((item, index) => {
+                        return <SubMenu item={item} key={index} />;
+                    })}
+                </s.SidebarWrap>
+            </s.SidebarNav>
+        </>
+    );
+}
+
 export function Home() {
     return (
         <>
+        <Sidebar />
             <s.HeroDivBig className="home-hero bg">
                 <s.homeHeroFlex className="hero-intro-div">
                     <s.H1>yummm...</s.H1>
@@ -180,7 +266,7 @@ export function Home() {
             
             <s.reviewsDiv className="reviews-div dark">
                 <s.reviewInfoDark>
-                    <s.H2 className="dark-h2">cool af clients</s.H2>
+                    <s.H2 className="dark-h2 rewiew-h2">cool af clients</s.H2>
                     <s.smallerP className="dark-p review-p">What our clients have to say</s.smallerP>
                 </s.reviewInfoDark>
                 <s.reviewsContainer>
@@ -190,7 +276,7 @@ export function Home() {
                             <s.H4>birthday: package</s.H4>
                             <s.smallerP className="occasion-info-p review">01/03/2021</s.smallerP>
                         </s.reviewHeader>
-                        <s.smallerP className="occasion-info-p review">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</s.smallerP>
+                        <s.smallerP className="occasion-info-p review">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi.</s.smallerP>
                     </s.review>
                     <s.review>
                         <s.reviewHeader>
@@ -198,7 +284,7 @@ export function Home() {
                             <s.H4>work event: cupcakes</s.H4>
                             <s.smallerP className="occasion-info-p review">11/11/2020</s.smallerP>
                         </s.reviewHeader>                        
-                        <s.smallerP className="occasion-info-p review">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</s.smallerP>
+                        <s.smallerP className="occasion-info-p review">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi. Class aptent taciti sociosqu.</s.smallerP>
                     </s.review>
                     <s.review>
                         <s.reviewHeader>
@@ -206,7 +292,7 @@ export function Home() {
                             <s.H4>work event: cupcakes</s.H4>
                             <s.smallerP className="occasion-info-p review">06/09/2020</s.smallerP>
                         </s.reviewHeader>                        
-                        <s.smallerP className="occasion-info-p review">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</s.smallerP>
+                        <s.smallerP className="occasion-info-p review">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi.</s.smallerP>
                     </s.review>
                 </s.reviewsContainer>
             </s.reviewsDiv>
@@ -365,7 +451,7 @@ export function Occasions() {
                 <s.occasionImg src={birthday} />
                 <s.divInfo className="occasion-divInfo">
                     <s.H2>birthday parties</s.H2>
-                    <s.smallerP className="occasion-info-p">Since a love for baking arose from a high school bake sale, the art of cakes and cupcakes have been what I live for. I can't wait for you to experience some Cool AF Cakes!</s.smallerP>
+                    <s.smallerP className="occasion-info-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</s.smallerP>
                 </s.divInfo>
             </s.occasionDiv>
 
@@ -373,7 +459,7 @@ export function Occasions() {
                 <s.occasionImg className="mobile" src={wedding} />   
                 <s.divInfo className="occasion-divInfo">
                     <s.H2>weddings</s.H2>
-                    <s.smallerP className="occasion-info-p">Since a love for baking arose from a high school bake sale, the art of cakes and cupcakes have been what I live for. I can't wait for you to experience some Cool AF Cakes!</s.smallerP>
+                    <s.smallerP className="occasion-info-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam neque lacus, ultrices sed aliquam nec, consectetur ac augue.</s.smallerP>
                 </s.divInfo>
                 <s.occasionImg className="not-mobile" src={wedding} />
             </s.occasionDiv>
@@ -382,7 +468,7 @@ export function Occasions() {
                 <s.occasionImg src={workfunction} />
                 <s.divInfo className="occasion-divInfo">
                     <s.H2>work fucntions &amp; other events</s.H2>
-                    <s.smallerP className="occasion-info-p">Since a love for baking arose from a high school bake sale, the art of cakes and cupcakes have been what I live for. I can't wait for you to experience some Cool AF Cakes!</s.smallerP>
+                    <s.smallerP className="occasion-info-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam neque lacus, ultrices sed aliquam nec, consectetur ac augue. Maecenas fringilla arcu augue, sit amet egestas tellus vestibulum eu.</s.smallerP>
                 </s.divInfo>
             </s.occasionDiv>
 
@@ -390,7 +476,7 @@ export function Occasions() {
                 <s.occasionImg className="mobile" src={gender} />           
                 <s.divInfo className="occasion-divInfo">
                     <s.H2>gender reveals</s.H2>
-                    <s.smallerP className="occasion-info-p">Since a love for baking arose from a high school bake sale, the art of cakes and cupcakes have been what I live for. I can't wait for you to experience some Cool AF Cakes!</s.smallerP>
+                    <s.smallerP className="occasion-info-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi. Aliquam erat volutpat.</s.smallerP>
                 </s.divInfo>
                 <s.occasionImg className="not-mobile" src={gender} />
             </s.occasionDiv>
@@ -399,7 +485,7 @@ export function Occasions() {
                 <s.occasionImg src={tragedy} />
                 <s.divInfo className="occasion-divInfo">
                     <s.H2>tragedies</s.H2>
-                    <s.smallerP className="occasion-info-p">Since a love for baking arose from a high school bake sale, the art of cakes and cupcakes have been what I live for. I can't wait for you to experience some Cool AF Cakes!</s.smallerP>
+                    <s.smallerP className="occasion-info-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi. Aliquam erat volutpat.</s.smallerP>
                 </s.divInfo>
             </s.occasionDiv>
 
@@ -407,7 +493,7 @@ export function Occasions() {
                 <s.occasionImg className="mobile" src={fun} />        
                 <s.divInfo className="occasion-divInfo">
                     <s.H2>just for fun</s.H2>
-                    <s.smallerP className="occasion-info-p">Since a love for baking arose from a high school bake sale, the art of cakes and cupcakes have been what I live for. I can't wait for you to experience some Cool AF Cakes!</s.smallerP>
+                    <s.smallerP className="occasion-info-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</s.smallerP>
                 </s.divInfo>
                 <s.occasionImg className="not-mobile" src={fun} />
             </s.occasionDiv>
@@ -434,12 +520,12 @@ export function About() {
         </s.HeroDivSmall> 
         <HeaderNavs />
 
-        <s.smallerP className="about-p">Any reason is a reason to have a piece of cake and that's where we come in! Place an order now so we can make your cake and cupcake dreams come true, even if its for your sister's goldfish's funeral or a stupid ex!</s.smallerP>
+        <s.smallerP className="about-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam neque lacus, ultrices sed aliquam nec, consectetur ac augue. Maecenas fringilla arcu augue, sit amet egestas tellus vestibulum eu.</s.smallerP>
         <s.flexImages className="about-image-flex">
             <s.aboutImg src={lady1} />
         </s.flexImages>         
         <s.aboutInfo className="about-info-flex">
-            <s.smallerP className="about-p">Any reason is a reason to have a piece of cake and that's where we come in! Place an order now so we can make your cake and cupcake dreams come true, even if its for your sister's goldfish's funeral or a stupid ex!</s.smallerP>
+            <s.smallerP className="about-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</s.smallerP>
             <Link to="/products/cakes"><s.pinkButton className="button" type="button" >SEE PRODUCTS</s.pinkButton></Link> 
         </s.aboutInfo>           
         <s.flexImages className="about-image-flex">

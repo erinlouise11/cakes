@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {Link} from 'react-router-dom'; 
 
 export const pinkButton = styled.button`
     width: auto;
@@ -140,6 +141,7 @@ export const H4 = styled.h2`
     margin: 0;
     font-size: 18px;
     font-family: 'Segoe Print', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
     color: #CC84BD;
     text-align: center;
 
@@ -149,10 +151,6 @@ export const H4 = styled.h2`
 
     @media (min-width: 1000px) {
         font-size: 21px; 
-    }
-
-    @media (min-width: 1440px) {
-        font-size: 23px;
     }
 `;
 
@@ -1038,4 +1036,70 @@ export const footerCopy = styled.div`
     @media (min-width: 1440px) {
         width: 300px;
     }
+`;
+
+export const Sidebar = styled.div`
+    width: 300px;
+    height: 80px;
+    color: #222;
+    position: fixed;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;    
+`;
+
+export const NavIcon = styled.div`
+    height: 80px;
+    margin-left: 2rem;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+`;
+
+export const SidebarNav = styled.nav`
+    width: 300px;
+    height: auto;
+    padding: 20px 0;
+    background: #CC84BD; 
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
+    transition: 300ms;
+    z-index: 10;
+`;
+
+export const SidebarWrap = styled.div`
+    width: 100%;
+`;
+
+export const SidebarLink = styled(Link)`
+    width: 230px;
+    height: 35px;
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+    color: #222;
+    text-decoration: none;
+    list-style: none;
+    font-size: 16px;
+`;
+
+export const SidebarLabel = styled.span`
+    font-family: 'Segoe Print', Tahoma, Geneva, Verdana, sans-serif;
+`;
+
+export const DropdownLink = styled(Link)`
+    margin-left: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #222;
+    text-decoration: none;
+    list-style: none;
+    font-size: 16px;
 `;
