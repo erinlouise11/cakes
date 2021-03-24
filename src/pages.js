@@ -66,11 +66,11 @@ const HeaderNavs = () => {
     return (
         <s.Nav>
             <s.Ul>
-                <NavLink activeClassName="selected" className="nav-link" to="/products/cakes"><s.Li>Products</s.Li></NavLink>
-                <NavLink activeClassName="selected" className="nav-link" to="/occasions"><s.Li>Occasions</s.Li></NavLink>
+                <NavLink activeClassName="selected" className="nav-link not-mobile-ipad" to="/products/cakes"><s.Li>Products</s.Li></NavLink>
+                <NavLink activeClassName="selected" className="nav-link not-mobile-ipad" to="/occasions"><s.Li>Occasions</s.Li></NavLink>
                 <NavLink className="nav-link" to="/"><s.Li><s.Logo src={logo} /></s.Li></NavLink>
-                <NavLink activeClassName="selected" className="nav-link" to="/about"><s.Li>Our Story</s.Li></NavLink>
-                <NavLink activeClassName="selected" className="nav-link" to="/order"><s.Li>Order</s.Li></NavLink>
+                <NavLink activeClassName="selected" className="nav-link not-mobile-ipad" to="/about"><s.Li>Our Story</s.Li></NavLink>
+                <NavLink activeClassName="selected" className="nav-link not-mobile-ipad" to="/order"><s.Li>Order</s.Li></NavLink>
             </s.Ul>
         </s.Nav>
     );
@@ -140,7 +140,7 @@ const sidebarData = [
         title: 'Products', 
         path: '#', 
         iconClosed: <FaArrowDown style={{color: '#222'}} />,
-        iconOpen: <FaArrowUp />,
+        iconOpen: <FaArrowUp style={{color: '#222'}} />,
         subNav: [
             {
                 title: 'Cakes', 
@@ -179,7 +179,7 @@ const SubMenu = ({item}) => {
             <s.SidebarLink to={item.path} onClick={item.subNav && showSubnav}>
                 <s.SidebarLabel>{item.title}</s.SidebarLabel>
                 <div >
-                    {item.subNav && subnav ? item.iconOpened : item.subNav ? item.iconClosed : null}
+                    {item.subNav && subnav ? item.iconOpened : item.subNav ? item.iconClosed : 'null'}
                 </div>
             </s.SidebarLink>
             {subnav && item.subNav.map((item, index) => {
@@ -196,14 +196,15 @@ const SubMenu = ({item}) => {
 const Sidebar = () => {
     const [sidebar, setSidebar] = useState(false);
     const showSidebar = () => setSidebar(!sidebar);
+
         return (
         <>
-            <s.Sidebar>
+            <s.Sidebar className="mobile-ipad">
                 <s.NavIcon to='#'>
                     <FaBars onClick={showSidebar} />
                 </s.NavIcon>
             </s.Sidebar>
-            <s.SidebarNav sidebar={sidebar}>
+            <s.SidebarNav className="mobile-ipad" sidebar={sidebar}>
                 <s.SidebarWrap>
                     <s.NavIcon to='#'>
                         <AiOutlineClose onClick={showSidebar} />

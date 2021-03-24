@@ -1042,7 +1042,7 @@ export const Sidebar = styled.div`
     width: 300px;
     height: 80px;
     color: #222;
-    position: fixed;
+    position: absolute;
     z-index: 5;
     display: flex;
     align-items: center;
@@ -1061,7 +1061,7 @@ export const NavIcon = styled.div`
 export const SidebarNav = styled.nav`
     width: 300px;
     height: auto;
-    padding: 20px 0;
+    padding: 20px 0 40px 0;
     background: #CC84BD; 
     display: flex;
     justify-content: center;

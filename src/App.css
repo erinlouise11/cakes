@@ -41,6 +41,10 @@
   .not-mobile {
     display: block !important;
   }
+
+  .mobile-ipad {
+    display: none !important;
+  }
 }
 
 .nav-link {
