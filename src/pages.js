@@ -177,9 +177,9 @@ const SubMenu = ({item}) => {
     return (
         <>
             <s.SidebarLink to={item.path} onClick={item.subNav && showSubnav}>
-                <s.SidebarLabel>{item.title}</s.SidebarLabel>
+                <s.SidebarLabel style={{fontWeight: 'bold'}}>{item.title}</s.SidebarLabel>
                 <div >
-                    {item.subNav && subnav ? item.iconOpened : item.subNav ? item.iconClosed : 'null'}
+                    {item.subNav && subnav ? item.iconOpen : item.subNav ? item.iconClosed : null}
                 </div>
             </s.SidebarLink>
             {subnav && item.subNav.map((item, index) => {
@@ -306,6 +306,7 @@ export function Home() {
 export function Products() {
     return (
         <>
+            <Sidebar />
             <s.HeroDivSmall className="products-hero bg">
                 <s.heroTitleFlex className="hero-intro-div">
                     <s.H1>products</s.H1>
@@ -436,6 +437,7 @@ export function Packages() {
 export function Occasions() {
     return (
         <>
+            <Sidebar />
             <s.HeroDivSmall className="occasions-hero bg">
                 <s.heroTitleFlex className="hero-intro-div">
                     <s.H1>occasions</s.H1>
@@ -514,28 +516,29 @@ export function Occasions() {
 export function About() {
     return (
         <>
-        <s.HeroDivSmall className="about-hero bg">
-            <s.heroTitleFlex className="hero-intro-div">
-                <s.H1>our story</s.H1>
-            </s.heroTitleFlex>
-        </s.HeroDivSmall> 
-        <HeaderNavs />
+            <Sidebar />
+            <s.HeroDivSmall className="about-hero bg">
+                <s.heroTitleFlex className="hero-intro-div">
+                    <s.H1>our story</s.H1>
+                </s.heroTitleFlex>
+            </s.HeroDivSmall> 
+            <HeaderNavs />
 
-        <s.smallerP className="about-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam neque lacus, ultrices sed aliquam nec, consectetur ac augue. Maecenas fringilla arcu augue, sit amet egestas tellus vestibulum eu.</s.smallerP>
-        <s.flexImages className="about-image-flex">
-            <s.aboutImg src={lady1} />
-        </s.flexImages>         
-        <s.aboutInfo className="about-info-flex">
-            <s.smallerP className="about-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</s.smallerP>
-            <Link to="/products/cakes"><s.pinkButton className="button" type="button" >SEE PRODUCTS</s.pinkButton></Link> 
-        </s.aboutInfo>           
-        <s.flexImages className="about-image-flex">
-            <s.aboutImg style={{objectPosition: 'bottom'}} src={dripcake} />
-            <s.aboutImg src={baking} />
-        </s.flexImages>
+            <s.smallerP className="about-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam neque lacus, ultrices sed aliquam nec, consectetur ac augue. Maecenas fringilla arcu augue, sit amet egestas tellus vestibulum eu.</s.smallerP>
+            <s.flexImages className="about-image-flex">
+                <s.aboutImg src={lady1} />
+            </s.flexImages>         
+            <s.aboutInfo className="about-info-flex">
+                <s.smallerP className="about-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</s.smallerP>
+                <Link to="/products/cakes"><s.pinkButton className="button" type="button" >SEE PRODUCTS</s.pinkButton></Link> 
+            </s.aboutInfo>           
+            <s.flexImages className="about-image-flex">
+                <s.aboutImg style={{objectPosition: 'bottom'}} src={dripcake} />
+                <s.aboutImg src={baking} />
+            </s.flexImages>
 
-        <Footer />
-    </>        
+            <Footer />
+        </>        
     );
 }
 
@@ -608,72 +611,73 @@ export function Order() {
 
     return (
         <>
-        <s.HeroDivSmall className="order-hero bg">
-            <s.heroTitleFlex className="hero-intro-div">
-                <s.H1>order now</s.H1>
-            </s.heroTitleFlex>
-        </s.HeroDivSmall> 
-        <HeaderNavs />
+            <Sidebar />
+            <s.HeroDivSmall className="order-hero bg">
+                <s.heroTitleFlex className="hero-intro-div">
+                    <s.H1>order now</s.H1>
+                </s.heroTitleFlex>
+            </s.HeroDivSmall> 
+            <HeaderNavs />
 
-        <s.orderDiv>
-            <s.contactDiv>          
-                <s.orderImg className="not-ipad-desktop" src={boxed} />              
-                <s.contactDetails>                    
-                    <s.contactItem>
-                        <s.H2>contact</s.H2>
-                        <s.smallerP className="order-smaller-p">(555) 420-6969</s.smallerP>
-                    </s.contactItem>
-                    <s.contactItem>
-                        <s.H2>location</s.H2>
-                        <s.smallerP className="order-smaller-p">Cool AF Cakes<br/>420 Sugar Street<br/>New York<br/>NY, 10696</s.smallerP>
-                    </s.contactItem>
-                </s.contactDetails>
-                <s.orderImg className="ipad-desktop" src={boxed} />
-            </s.contactDiv>
+            <s.orderDiv>
+                <s.contactDiv>          
+                    <s.orderImg className="not-ipad-desktop" src={boxed} />              
+                    <s.contactDetails>                    
+                        <s.contactItem>
+                            <s.H2>contact</s.H2>
+                            <s.smallerP className="order-smaller-p">(555) 420-6969</s.smallerP>
+                        </s.contactItem>
+                        <s.contactItem>
+                            <s.H2>location</s.H2>
+                            <s.smallerP className="order-smaller-p">Cool AF Cakes<br/>420 Sugar Street<br/>New York<br/>NY, 10696</s.smallerP>
+                        </s.contactItem>
+                    </s.contactDetails>
+                    <s.orderImg className="ipad-desktop" src={boxed} />
+                </s.contactDiv>
 
-            <s.Form>
-                <s.divInfo style={{height: '150px', paddingLeft: 0, alignItems: 'center', justifyContent: 'space-evenly'}}>
-                    <s.H2>have an order idea?</s.H2>
-                    <s.smallerP className="occasion-info-p">Send us a message and let's make your Cool AF Cakes dreams come true</s.smallerP>
-                </s.divInfo>
-                
-                <FormControl fullWidth={true}>
-                    <TextField className="form-textfield form-field" required label="Full name" variant="filled" id="full-name" name="name" value={data.name} type="input" onChange={handleChange} />
-                </FormControl>
-                <FormControl fullWidth={true}>
-                    <TextField className="form-textfield form-field" required label="Email address" id="email" name="email" variant="filled" value={data.email} type="input" onChange={handleChange} />
-                </FormControl>
-                <FormControl required fullWidth={true} >
-                    <InputLabel style={{padding: '0 10px'}} className="form-textfield form-field" id="product-label">Choose product type</InputLabel>
-                    <Select className="form-textfield form-field" id="product" name="product" variant="filled" value={data.product} onChange={handleChange}>
-                        <MenuItem value={'Cake'}>Cake</MenuItem>
-                        <MenuItem value={'Cupcakes'}>Cupcakes</MenuItem>
-                        <MenuItem value={'Package'}>Package</MenuItem>
-                        <MenuItem value={'Unsure'}>Unsure</MenuItem>
-                    </Select>                    
-                </FormControl>
-                <FormControl fullWidth={true}>
-                    <TextField className="form-textfield form-field" label="What's the occasion" id="event" name="event" variant="filled" value={data.event} type="input" onChange={handleChange} />
-                </FormControl>
-                <FormControl noValidate fullWidth={true}>
-                    <TextField className="form-textfield form-field" label="Expected date" id="date" type="date" variant="filled" name="date" value={data.date} onChange={handleChange} InputLabelProps={{shrink: true}} />
-                </FormControl>
-                <FormControl fullWidth={true}>
-                    <TextField className="form-textfield form-field" required label="Message" variant="filled" name="message" multiline={true} rows="10" value={data.message} type="input" onChange={handleChange} />
-                </FormControl>
-                <FormControl>
-                    <div style={{padding: 20}}>
-                        <Grid container spacing={2}>
-                            <div className="form-submit">
-                                <s.pinkButton variant="contained" onClick={formSubmit}>{data.buttonText}</s.pinkButton>
-                            </div>
-                        </Grid>
-                    </div>
-                </FormControl>
-            </s.Form>                 
-        </s.orderDiv>
+                <s.Form>
+                    <s.divInfo style={{height: '150px', paddingLeft: 0, alignItems: 'center', justifyContent: 'space-evenly'}}>
+                        <s.H2>have an order idea?</s.H2>
+                        <s.smallerP className="occasion-info-p">Send us a message and let's make your Cool AF Cakes dreams come true</s.smallerP>
+                    </s.divInfo>
+                    
+                    <FormControl fullWidth={true}>
+                        <TextField className="form-textfield form-field" required label="Full name" variant="filled" id="full-name" name="name" value={data.name} type="input" onChange={handleChange} />
+                    </FormControl>
+                    <FormControl fullWidth={true}>
+                        <TextField className="form-textfield form-field" required label="Email address" id="email" name="email" variant="filled" value={data.email} type="input" onChange={handleChange} />
+                    </FormControl>
+                    <FormControl required fullWidth={true} >
+                        <InputLabel style={{padding: '0 10px'}} className="form-textfield form-field" id="product-label">Choose product type</InputLabel>
+                        <Select className="form-textfield form-field" id="product" name="product" variant="filled" value={data.product} onChange={handleChange}>
+                            <MenuItem value={'Cake'}>Cake</MenuItem>
+                            <MenuItem value={'Cupcakes'}>Cupcakes</MenuItem>
+                            <MenuItem value={'Package'}>Package</MenuItem>
+                            <MenuItem value={'Unsure'}>Unsure</MenuItem>
+                        </Select>                    
+                    </FormControl>
+                    <FormControl fullWidth={true}>
+                        <TextField className="form-textfield form-field" label="What's the occasion" id="event" name="event" variant="filled" value={data.event} type="input" onChange={handleChange} />
+                    </FormControl>
+                    <FormControl noValidate fullWidth={true}>
+                        <TextField className="form-textfield form-field" label="Expected date" id="date" type="date" variant="filled" name="date" value={data.date} onChange={handleChange} InputLabelProps={{shrink: true}} />
+                    </FormControl>
+                    <FormControl fullWidth={true}>
+                        <TextField className="form-textfield form-field" required label="Message" variant="filled" name="message" multiline={true} rows="10" value={data.message} type="input" onChange={handleChange} />
+                    </FormControl>
+                    <FormControl>
+                        <div style={{padding: 20}}>
+                            <Grid container spacing={2}>
+                                <div className="form-submit">
+                                    <s.pinkButton variant="contained" onClick={formSubmit}>{data.buttonText}</s.pinkButton>
+                                </div>
+                            </Grid>
+                        </div>
+                    </FormControl>
+                </s.Form>                 
+            </s.orderDiv>
 
-        <Footer />
-    </>        
+            <Footer />
+        </>        
     );
 }

@@ -1039,29 +1039,38 @@ export const footerCopy = styled.div`
 `;
 
 export const Sidebar = styled.div`
-    width: 300px;
+    width: 240px;
     height: 80px;
+    padding-top: 10px;
     color: #222;
     position: absolute;
     z-index: 5;
     display: flex;
     align-items: center;
     justify-content: flex-start;    
+
+    @media (min-width: 600px) {
+        width: 290px;
+    }
 `;
 
 export const NavIcon = styled.div`
-    height: 80px;
-    margin-left: 2rem;
+    height: 60px;
+    margin-left: 1.5rem;
     font-size: 2rem;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+
+    @media (min-width: 600px) {
+        margin-left: 2rem;
+    }
 `;
 
 export const SidebarNav = styled.nav`
-    width: 300px;
+    width: 240px;
     height: auto;
-    padding: 20px 0 40px 0;
+    padding: 10px 0 20px 0;
     background: #CC84BD; 
     display: flex;
     justify-content: center;
@@ -1070,6 +1079,11 @@ export const SidebarNav = styled.nav`
     left: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
     transition: 300ms;
     z-index: 10;
+
+    @media (min-width: 600px) {
+        width: 290px;
+        padding: 18px 0 30px 0;
+    }
 `;
 
 export const SidebarWrap = styled.div`
@@ -1077,7 +1091,7 @@ export const SidebarWrap = styled.div`
 `;
 
 export const SidebarLink = styled(Link)`
-    width: 230px;
+    width: 180px;
     height: 35px;
     margin-left: 2rem;
     display: flex;
@@ -1086,7 +1100,13 @@ export const SidebarLink = styled(Link)`
     color: #222;
     text-decoration: none;
     list-style: none;
-    font-size: 16px;
+    font-size: 14px;
+
+    @media (min-width: 600px) {
+        width: 200px;
+        margin-left: 3rem;
+        font-size: 16px;
+    }
 `;
 
 export const SidebarLabel = styled.span`
@@ -1102,4 +1122,9 @@ export const DropdownLink = styled(Link)`
     text-decoration: none;
     list-style: none;
     font-size: 16px;
+
+    @media (min-width: 600px) {
+        margin-left: 4rem;
+        font-size: 16px;
+    }
 `;
