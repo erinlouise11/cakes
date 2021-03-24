@@ -1041,7 +1041,6 @@ export const footerCopy = styled.div`
 export const Sidebar = styled.div`
     width: 240px;
     height: 80px;
-    padding-top: 10px;
     color: #222;
     position: absolute;
     z-index: 5;
@@ -1051,6 +1050,7 @@ export const Sidebar = styled.div`
 
     @media (min-width: 600px) {
         width: 290px;
+            padding-top: 10px;
     }
 `;
 

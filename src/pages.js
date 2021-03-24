@@ -26,6 +26,7 @@ import tragedy from './img/divImages/tragedy.jpg';
 import fun from './img/divImages/forfun.jpg';
 import boxed from './img/divImages/boxed.jpg';
 import lady1 from './img/divImages/lady1.jpg';
+import lady2 from './img/divImages/lady2.jpg';
 import dripcake from './img/divImages/dripcake.jpg';
 import baking from './img/divImages/baking1.jpg';
 import facebook from './img/facebook-icon.png';
@@ -176,15 +177,15 @@ const SubMenu = ({item}) => {
 
     return (
         <>
-            <s.SidebarLink to={item.path} onClick={item.subNav && showSubnav}>
+            <s.SidebarLink to={item.path} onClick={item.subNav && showSubnav} activeClassName="burger-active">
                 <s.SidebarLabel style={{fontWeight: 'bold'}}>{item.title}</s.SidebarLabel>
-                <div >
+                <div>
                     {item.subNav && subnav ? item.iconOpen : item.subNav ? item.iconClosed : null}
                 </div>
             </s.SidebarLink>
             {subnav && item.subNav.map((item, index) => {
                 return (
-                    <s.DropdownLink to={item.path} key={index}>
+                    <s.DropdownLink to={item.path} key={index} activeClassName="burger-active">
                         <s.SidebarLabel>{item.title}</s.SidebarLabel>
                     </s.DropdownLink>                    
                 )
@@ -527,12 +528,13 @@ export function About() {
             <s.smallerP className="about-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam neque lacus, ultrices sed aliquam nec, consectetur ac augue. Maecenas fringilla arcu augue, sit amet egestas tellus vestibulum eu.</s.smallerP>
             <s.flexImages className="about-image-flex">
                 <s.aboutImg src={lady1} />
+                <s.aboutImg src={lady2} />
             </s.flexImages>         
             <s.aboutInfo className="about-info-flex">
                 <s.smallerP className="about-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec pellentesque lectus, ac fringilla nisi. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</s.smallerP>
                 <Link to="/products/cakes"><s.pinkButton className="button" type="button" >SEE PRODUCTS</s.pinkButton></Link> 
             </s.aboutInfo>           
-            <s.flexImages className="about-image-flex">
+            <s.flexImages className="about-image-flex bottom-images">
                 <s.aboutImg style={{objectPosition: 'bottom'}} src={dripcake} />
                 <s.aboutImg src={baking} />
             </s.flexImages>

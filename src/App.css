@@ -435,3 +435,24 @@
     font-size: 19px;
   }
 }
+
+.burger-active {
+  color: white !important;
+  background-color: #222 !important;
+}
+
+.bottom-images {
+  padding-bottom: 30px;
+}
+
+@media (min-width: 600px) {
+  .bottom-images {
+    padding-bottom: 45px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .bottom-images {
+    padding-bottom: 50px;
+  }
+}
